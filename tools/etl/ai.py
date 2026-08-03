@@ -7,6 +7,9 @@ import os
 import json
 import time
 import logging
+import asyncio
+import httpx
+from bs4 import BeautifulSoup
 from typing import Literal
 from pydantic import BaseModel, Field
 from google import genai
@@ -26,7 +29,7 @@ ISTQBDomain = Literal[
 class ArticleDecision(BaseModel):
     id: int
     keep: bool = Field(
-        description="True ONLY if the article is relevant for a QA Engineer (Testing theory, QA automation, networks, databases, API). False if it is pure software development (RxJava, Android Studio) or irrelevant hardware/OS."
+        description="True ONLY if the article is relevant for a QA Engineer (Testing theory, QA automation, networks, databases, API) OR if it is a training course that contains a syllabus or curriculum. False if it is pure software development (RxJava, Android Studio), irrelevant hardware/OS, or pure marketing with no syllabus."
     )
     category: ISTQBDomain | None = Field(
         description="""If keep is True, strictly classify the article into one of these ISTQB domains:
@@ -46,10 +49,47 @@ class ArticleDecision(BaseModel):
 Return null if keep is False."""
     )
 
+async def fetch_snippet(client, url):
+    """
+    Fetches the first 500 characters of the main content from a given URL.
+    This provides the AI with actual textual context (a 'snippet') rather than relying purely on the title, 
+    significantly improving categorization accuracy and preventing hallucination.
+    
+    Args:
+        client (httpx.AsyncClient): The async HTTP client.
+        url (str): The target article URL.
+        
+    Returns:
+        str: A truncated string of the article's text content.
+    """
+    try:
+        resp = await client.get(url, timeout=5.0)
+        soup = BeautifulSoup(resp.content, 'html.parser')
+        content = soup.select_one('div.single-knowledge-base-content') or soup.body
+        text = content.get_text(separator=' ', strip=True) if content else ""
+        return text[:500]
+    except Exception:
+        return ""
+
+async def fetch_all_snippets(chunk):
+    """
+    Asynchronously fetches content snippets for a batch (chunk) of articles concurrently.
+    This optimizes network I/O during the classification phase without causing major bottlenecks.
+    
+    Args:
+        chunk (list): A list of article dictionaries containing 'url' keys.
+        
+    Returns:
+        list: A list of text snippets corresponding to the articles in the chunk.
+    """
+    async with httpx.AsyncClient() as client:
+        tasks = [fetch_snippet(client, a['url']) for a in chunk]
+        return await asyncio.gather(*tasks)
+
 class BatchDecision(BaseModel):
     decisions: list[ArticleDecision]
 
-def classify_articles(articles: list, chunk_size: int = 30) -> list:
+async def classify_articles(articles: list, chunk_size: int = 30) -> list:
     """
     Evaluates a list of articles using Gemini. Implements a sliding window rate limiter
     to comply with free tier API limits (5 Requests Per Minute).
@@ -93,13 +133,21 @@ def classify_articles(articles: list, chunk_size: int = 30) -> list:
         # ------------------------------------------
         
         chunk = articles[i:i+chunk_size]
+        
+        logger.info(f"Fetching content snippets for {len(chunk)} articles to improve AI accuracy...")
+        try:
+            snippets = await fetch_all_snippets(chunk)
+        except Exception as e:
+            logger.warning(f"Snippet fetching failed: {e}")
+            snippets = ["" for _ in chunk]
+            
         # We only send necessary fields to save tokens
-        prompt_data = [{"id": a['id'], "title": a['title'], "url": a['url']} for a in chunk]
+        prompt_data = [{"id": a['id'], "title": a['title'], "url": a['url'], "content_snippet": snippets[idx]} for idx, a in enumerate(chunk)]
         
         prompt = (
             "You are an expert QA Manager strictly adhering to the ISTQB syllabus.\n"
-            "Evaluate the following articles. Discard irrelevant ones (keep: False). "
-            "For relevant ones, assign the single most accurate ISTQB domain category.\n\n"
+            "Evaluate the following articles using their titles, URLs, and text snippets. Discard irrelevant ones (keep: False). "
+            "For relevant ones, assign the single most accurate ISTQB domain category based on the actual content.\n\n"
             f"{json.dumps(prompt_data, ensure_ascii=False)}"
         )
         
@@ -115,20 +163,27 @@ def classify_articles(articles: list, chunk_size: int = 30) -> list:
                     temperature=0.0 # Deterministic classification to prevent hallucination
                 ),
             )
-            res_dict = json.loads(response.text)
-            decision_map = {d['id']: d for d in res_dict['decisions']}
+            res_data = BatchDecision.model_validate_json(response.text)
+            decision_map = {d.id: d for d in res_data.decisions}
             
             # Map AI decisions back to our article objects
-            for a in chunk:
-                decision = decision_map.get(a['id'])
-                if decision and decision.get('keep'):
-                    a['keep'] = True
-                    a['category'] = decision.get('category')
-                    logger.debug(f"[KEEP -> {a['category']}] {a['title'][:40]}")
+            for article in chunk:
+                decision = decision_map.get(article['id'])
+                if decision:
+                    article['keep'] = decision.keep
+                    
+                    # HARD OVERRIDE: We bypass AI classification for training courses.
+                    # Any URL containing '/kursy/' is guaranteed to be physically placed in the 'courses' directory.
+                    # This completely eliminates the risk of AI misclassifying informative articles (like dictionaries) as courses.
+                    if article['keep'] and '/kursy/' in article['url']:
+                        article['category'] = 'courses'
+                    else:
+                        article['category'] = decision.category
                 else:
-                    a['keep'] = False
-                    logger.debug(f"[DISCARD] {a['title'][:40]}")
-                classified.append(a)
+                    article['keep'] = False
+                
+                classified.append(article)
+                logger.info(f"Classified '{article['title']}': keep={article.get('keep')}, category={article.get('category')}")
                 
         except Exception as e:
             logger.error(f"Batch classification failed. Marking chunk as discarded. Error: {e}")

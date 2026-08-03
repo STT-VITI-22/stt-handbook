@@ -28,18 +28,29 @@ async def download_article(client: httpx.AsyncClient, item: dict, base_dir: str,
     url = item['url']
     source_name = item.get('source_name') or 'unknown_source'
     
-    # Routing Logic
-    if strategy == 'topic':
-        folder_name = item.get('category') or 'uncategorized'
+    # ---------------------------------------------------------
+    # ROUTING LOGIC: Determine the target output folder
+    # ---------------------------------------------------------
+    category = item.get('category')
+    if category == 'courses':
+        # HARD OVERRIDE: Educational courses must always be physically isolated in the 'courses' folder.
+        # This takes precedence even if the user selected the 'source' (original menu) strategy.
+        folder_name = 'courses'
+    elif strategy == 'topic':
+        # 'topic' strategy uses the strict ISTQB domain provided by the AI classification
+        folder_name = category or 'uncategorized'
     else:
+        # 'source' strategy preserves the original hierarchical folder structure from the website
         folder_name = source_name
         
     target_dir = os.path.join(base_dir, folder_name)
     os.makedirs(target_dir, exist_ok=True)
     
     # Find the specific config for this source to get the content_selector
-    source_cfg = next((s for s in sources_config if s['name'] == source_name), {})
+    # Because source_name can contain subdirectories (e.g., 'qalight_baza/osnovi'), we use startswith
+    source_cfg = next((s for s in sources_config if source_name.startswith(s['name'])), {})
     content_selector = source_cfg.get('content_selector')
+    exclude_selectors = source_cfg.get('exclude_selectors', [])
     
     try:
         resp = await client.get(url, follow_redirects=True)
@@ -56,7 +67,32 @@ async def download_article(client: httpx.AsyncClient, item: dict, base_dir: str,
                 # Clean up junk elements like scripts and ads within the block
                 for tag in content_block(["script", "style", "nav", "footer", "iframe"]):
                     tag.decompose()
-                markdown_text = markdownify.markdownify(str(content_block), heading_style="ATX").strip()
+                    
+                # Clean up specific elements passed from config (like embedded menus/sidebars)
+                for sel in exclude_selectors:
+                    for tag in content_block.select(sel):
+                        tag.decompose()
+                        
+                import re
+                # ---------------------------------------------------------
+                # CONTENT SANITIZATION & MARKDOWN CONVERSION
+                # ---------------------------------------------------------
+                # 1. Escape literal HTML tags (e.g., <html>) found in the text.
+                # Standard markdown parsers treat raw HTML tags as invisible structural elements.
+                # By wrapping them in backticks (`<html>`), they are safely rendered as inline code blocks.
+                for text_node in content_block.find_all(string=True):
+                    if '<' in text_node and '>' in text_node:
+                        new_text = re.sub(r'(<[^>]+>)', r'`\1`', text_node)
+                        text_node.replace_with(new_text)
+                        
+                # 2. Convert the sanitized HTML to Markdown format.
+                # The 'keep_inline_images_in' parameter prevents markdownify from destroying <img> tags 
+                # that are nested inside headers (h1-h6), paragraphs, or links.
+                markdown_text = markdownify.markdownify(
+                    str(content_block), 
+                    heading_style="ATX",
+                    keep_inline_images_in=['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'a', 'td', 'th', 'span', 'strong', 'em', 'b', 'i']
+                ).strip()
             else:
                 logger.warning(f"Selector '{content_selector}' not found on {url}. Falling back to Trafilatura.")
         

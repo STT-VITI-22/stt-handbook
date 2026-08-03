@@ -34,12 +34,12 @@ async def main():
     parser = argparse.ArgumentParser(description="Universal AI-Driven ETL Pipeline")
     parser.add_argument('action', choices=['discover', 'classify', 'download', 'run_all'], 
                         help="The pipeline phase to execute.")
-    parser.add_argument('--config', default="sources.yaml", help="Path to sources configuration.")
+    parser.add_argument('--config', default="tools/sources.yaml", help="Path to sources configuration.")
     parser.add_argument('--input', default="raw_discovery.jsonl", help="Input file for phases.")
     parser.add_argument('--output', default="manifest.jsonl", help="Output file for phases.")
     parser.add_argument('--outdir', default="data", help="Target directory for downloaded markdown files.")
-    parser.add_argument('--strategy', choices=['source', 'topic'], default='source', 
-                        help="Determines the output folder structure. 'source' preserves website origins. 'topic' sorts by AI-classified ISTQB domains.")
+    parser.add_argument('--strategy', choices=['source', 'topic'], default='topic', 
+                        help="Structuring strategy: 'source' preserves the original website menu paths, 'topic' uses strict AI categorization (e.g. ISTQB domains).")
     
     args = parser.parse_args()
     config = load_config(args.config)
@@ -68,7 +68,7 @@ async def main():
         with open(args.input, 'r', encoding='utf-8') as f:
             articles = [json.loads(line) for line in f]
             
-        classified = classify_articles(articles)
+        classified = await classify_articles(articles)
         
         with open(args.output, 'w', encoding='utf-8') as f:
             for item in classified:
@@ -84,6 +84,18 @@ async def main():
         if not os.path.exists(args.output):
             logger.error(f"Manifest file {args.output} not found. Did you run 'classify' phase?")
             sys.exit(1)
+            
+        # ---------------------------------------------------------
+        # IDEMPOTENCY ENFORCEMENT:
+        # Before downloading new files, we must completely wipe the target output directory.
+        # This prevents "ghost" files from previous pipeline runs (where an article might have 
+        # been classified into a different folder) from persisting in the final dataset.
+        # ---------------------------------------------------------
+        if os.path.exists(args.outdir):
+            import shutil
+            logger.info(f"Clearing output directory: {args.outdir}")
+            shutil.rmtree(args.outdir)
+        os.makedirs(args.outdir, exist_ok=True)
             
         with open(args.output, 'r', encoding='utf-8') as f:
             # Load only the articles that were approved by the AI

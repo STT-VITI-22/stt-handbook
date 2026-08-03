@@ -1,41 +1,41 @@
-# QA Knowledge Base Dataset & AI Pipeline
+# QA Dataset ETL Pipeline
 
-Цей репозиторій містить зібраний датасет матеріалів для QA-інженерів та універсальний AI-Driven ETL-пайплайн для його автономного наповнення.
+This repository contains an Extract-Transform-Load (ETL) pipeline for scraping, classifying, and formatting QA engineering articles into a structured dataset. Classification is performed via the Gemini API using Pydantic structured outputs to map content to ISTQB Foundation Level domains.
 
-## Структура датасету (Єдина гілка)
+## Architecture
 
-Ми відмовилися від використання різних Git-гілок для різних способів сортування даних. Тепер структура датасету формується динамічно під час запуску пайплайну. Усі дані зберігаються в папці `data/`, а їхня архітектура залежить від обраної вами стратегії:
+The pipeline is coordinated by `tools/main.py` and consists of three sequential phases:
 
-1. **Стратегія `source` (За джерелом):**
-   Матеріали зберігаються у папках, що відповідають їхнім першоджерелам (наприклад, `data/qalight_baza/automation/`). Цей режим зберігає ієрархію категорій з меню оригінального сайту, забезпечуючи зручний огляд.
-2. **Стратегія `topic` (За темами ISTQB):**
-   Штучний інтелект аналізує контент кожної статті і автоматично розкладає їх по 13 жорстко заданих доменах (наприклад, `data/test_levels/`, `data/api_testing/`).
+### 1. Discovery (`etl/discovery.py`)
+Fetches configured target URLs from `sources.yaml` and extracts article links via asynchronous HTTP requests (`httpx`) and CSS selector parsing (`BeautifulSoup`). Outputs to `raw_discovery.jsonl`.
 
-## Універсальний інструмент збору (`tools/main.py`)
+### 2. Classification (`etl/ai.py`)
+Evaluates discovered articles and assigns categories based on the ISTQB syllabus.
+- **Content Analysis**: Fetches a 500-character content snippet for each URL before submitting the prompt, reducing classification errors caused by ambiguous titles.
+- **Categorization**: Uses Gemini's structured output to assign a strict ISTQB domain (e.g., `test_levels`, `defect_management`). Irrelevant content is marked for deletion (`keep: False`).
+- **Course Routing**: Articles containing `/kursy/` in their URL are forcefully overridden to the `courses` category via application logic, bypassing LLM classification.
+Outputs to `manifest.jsonl`.
 
-Пайплайн повністю модульний і керується зовнішнім конфігом `tools/sources.yaml`. У конфігу ви вказуєте URL-адреси та CSS-селектори для точного парсингу статей та ієрархії меню, що робить скрипт сумісним з будь-яким блогом чи базою знань.
+### 3. Download & Formatting (`etl/downloader.py`)
+Downloads and converts the approved HTML articles to Markdown.
+- **Idempotency**: The target `data/` directory is cleared prior to execution to prevent stale files from persisting.
+- **Markdown Conversion**: Uses `markdownify`. Inline images nested within headings or structural tags are preserved via `keep_inline_images_in`. Escapes literal HTML tags (e.g., `<head>`) into code blocks to prevent Markdown rendering issues.
 
-Пайплайн працює у три етапи:
-1. **Розвідка (Discover):** Асинхронний збір посилань (`httpx` + `BeautifulSoup4`) на основі селекторів з `sources.yaml`. Також автоматично відтворює ієрархію меню сайту для збереження контексту (якщо це налаштовано в конфігу).
-2. **Класифікація (AI Classify):** Аналіз через Gemini API (google-genai). Завдяки технології Structured Outputs (Pydantic), модель суворо дотримується словника ISTQB, описаного в її промпті. Вона відкидає сміття (маркетинг курсів, чиста розробка) і призначає релевантним статтям правильну категорію. Діє "ковзне вікно" для захисту від блокувань API (5 запитів на хвилину).
-3. **Екстракція (Download):** Гібридне витягування тексту. Спершу застосовується точний CSS-селектор з конфігу (з очищенням через `markdownify`), що гарантує 100% збереження списків та прикладів. Якщо селектор відсутній — вмикається універсальний алгоритм `trafilatura`.
+## Usage
 
-## Залежності та запуск
-
-Встановіть залежності у віртуальне середовище:
+Set the required environment variable:
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+export GEMINI_API_KEY="your_api_key_here"
 ```
 
-Для етапу ШІ-класифікації обов'язково потрібен ключ:
+Execute the full pipeline:
 ```bash
-export GEMINI_API_KEY="ваш_ключ"
+uv run python tools/main.py run_all --strategy topic
 ```
 
-Запуск пайплайну (всі етапи одразу з поділом за джерелами та категоріями):
-```bash
-python tools/main.py run_all --strategy source
-```
-*(Для перегляду всіх опцій використовуйте `python tools/main.py -h`)*
+### Strategies
+- `--strategy topic` (default): Uses the LLM-assigned ISTQB domains for the output directory structure.
+- `--strategy source`: Uses the original hierarchical paths from the source website. Note that `/kursy/` URLs are still isolated into the `courses/` directory.
+
+## Configuration
+Sources and scraping parameters are defined in `tools/sources.yaml`.

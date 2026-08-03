@@ -1,0 +1,8 @@
+/.idea/
+/local-dev/
+/local-trash/
+/tools/.venv/
+/tools/__pycache__/
+/tools/test_output/
+*.pyc
+.DS_Store

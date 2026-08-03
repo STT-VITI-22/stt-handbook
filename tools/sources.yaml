@@ -3,8 +3,14 @@ sources:
     url: "https://qalight.ua/baza-znan/"
     # CSS-селектор, який вказує, де саме лежать посилання на статті
     link_selector: "ul.innermenu li ul.sub-menu li ul.sub-menu li a"
+    # CSS-селектор для тексту самої статті (виключає помилки trafilatura)
+    content_selector: "div.single-knowledge-base-content"
+    # Селектори для витягування назви категорії з батьківських елементів
+    category_container: "li.menu-item-has-children"
+    category_name_tag: "a"
     
   # Приклад для масштабування на інший ресурс:
   # - name: "dou_qa"
   #   url: "https://dou.ua/lenta/tags/QA/"
   #   link_selector: "article.b-postcard h2.title a"
+  #   content_selector: "div.article-content"

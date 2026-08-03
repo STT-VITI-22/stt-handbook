@@ -1,33 +1,41 @@
-# QA Knowledge Base Dataset (By-Source Branch)
+# QA Knowledge Base Dataset & AI Pipeline
 
-This repository contains a dataset of materials for QA engineers, as well as an ETL pipeline for its population.
+This repository contains a curated dataset of materials for QA engineers and a universal AI-Driven ETL pipeline for autonomous data collection.
 
-## Dataset Structure
+## Dataset Structure (Single Branch)
 
-This branch implements source-based organization. Data is stored in exact accordance with the hierarchy of its original source (e.g., the navigation menu of a website). This approach preserves the context and intent of the authors.
-*An alternative branch `dataset/by-topic` contains the same data, but reorganized into domain categories (e.g., ISTQB).*
+We have abandoned the use of different Git branches for different data sorting methods. The dataset structure is now generated dynamically during the pipeline execution. All data is stored in the `data/` directory, and its architecture depends on your chosen strategy:
 
-Current structure:
-- `data/` (or folders named by domains, e.g., `qalight.ua/`)
-  - `automation-of-testing/`
-  - `databases/`
-  - ...and other original sections of the site.
+1. **`source` Strategy (By Source):**
+   Materials are stored in folders corresponding to their original sources and website categories (e.g., `data/qalight_baza/automation/`). This preserves the authors' original intent and site hierarchy.
+2. **`topic` Strategy (By ISTQB Topics):**
+   Artificial Intelligence analyzes the content of each article and automatically categorizes them into 13 strictly defined domains (e.g., `data/test_levels/`, `data/api_testing/`).
 
-## Collection Tool (`tools/pipeline.py`)
+## Universal Collection Tool (`tools/main.py`)
 
-A custom ETL script is used for automated collection, operating in three stages:
-1. **Discover:** Asynchronous parsing of the site's navigation menu (multi-level lists) to form path structures like `domain/category/subcategory` and save them in `raw_discovery.jsonl`.
-2. **Classify:** LLM analysis (Gemini API) via `google-genai` and `pydantic`. The model acts solely as a filter (`keep: True/False`), discarding irrelevant general IT articles. A sliding window algorithm prevents API blocking (limit of 5 requests/min) during batch processing of 30 articles.
-3. **Download:** Asynchronous downloading (`httpx`), HTML cleaning (`BeautifulSoup4`), and saving in Markdown (`markdownify`) while preserving the generated folder structure.
+The pipeline is fully modular and controlled by an external config `tools/sources.yaml`. In the config, you specify the URL and CSS selectors for finding articles and mapping category hierarchies, making the script compatible with any blog or knowledge base.
 
-### Dependencies and Usage
-The classification stage requires an environment variable:
-`export GEMINI_API_KEY="your_key"`
+The pipeline operates in three stages:
+1. **Discover:** Asynchronous link collection (`httpx` + `BeautifulSoup4`) based on selectors from `sources.yaml`. It also intelligently extracts parent category names to recreate the original menu hierarchy.
+2. **AI Classify:** Analysis via Gemini API (google-genai). Thanks to Structured Outputs (Pydantic), the model strictly adheres to the ISTQB syllabus defined in its prompt. It discards junk (marketing, pure software engineering) and assigns relevant articles to the correct category. A sliding window algorithm protects against API rate limits (5 requests per minute).
+3. **Download & Extract:** Hybrid text extraction. First, it attempts an exact CSS selector extraction from the config (cleaned via `markdownify`), guaranteeing the preservation of lists and code examples. If missing, it falls back to the universal `trafilatura` algorithm.
 
-Run the pipeline:
+## Dependencies and Usage
+
+Install dependencies in a virtual environment:
 ```bash
-python tools/pipeline.py -h
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
 ```
 
-## Next Steps
-- Parsing PDF (PyMuPDF) and DOCX (python-docx). Data from these sources will be placed in separate folders named after their authors or sources.
+The AI classification stage requires an API key:
+```bash
+export GEMINI_API_KEY="your_key"
+```
+
+Run the pipeline (all stages at once, grouped by source hierarchy):
+```bash
+python tools/main.py run_all --strategy source
+```
+*(For all available options, use `python tools/main.py -h`)*

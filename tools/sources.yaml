@@ -1,0 +1,10 @@
+sources:
+  - name: "qalight_baza"
+    url: "https://qalight.ua/baza-znan/"
+    # CSS-селектор, який вказує, де саме лежать посилання на статті
+    link_selector: "ul.innermenu li ul.sub-menu li ul.sub-menu li a"
+    
+  # Приклад для масштабування на інший ресурс:
+  # - name: "dou_qa"
+  #   url: "https://dou.ua/lenta/tags/QA/"
+  #   link_selector: "article.b-postcard h2.title a"

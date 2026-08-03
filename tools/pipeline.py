@@ -3,13 +3,13 @@ import json
 import asyncio
 import httpx
 from bs4 import BeautifulSoup
-from markdownify import markdownify as md
+import yaml
 from pydantic import BaseModel, Field
 import argparse
-from deep_translator import GoogleTranslator
 from slugify import slugify
 import time
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
+import trafilatura
 
 class ArticleDecision(BaseModel):
     id: int
@@ -20,80 +20,66 @@ class ArticleDecision(BaseModel):
 class BatchDecision(BaseModel):
     decisions: list[ArticleDecision]
 
-def get_intelligent_name(ukr_text: str, url: str) -> str:
-    try:
-        eng_text = GoogleTranslator(source='uk', target='en').translate(ukr_text)
-        safe = slugify(eng_text)
-    except Exception:
-        safe = slugify(ukr_text)
-        
+def get_safe_filename(title: str, url: str) -> str:
+    safe = slugify(title)
     if not safe and url:
         safe = slugify(url.split('/')[-2]) if url.endswith('/') else slugify(url.split('/')[-1])
-        
-    if not safe:
-        safe = f"unnamed-article-{hash(url or ukr_text) % 10000}"
-    return safe
+    return safe or f"article-{hash(url) % 10000}"
 
-async def discover(start_url: str, output_file: str):
-    print(f"[*] Етап розвідки (By-Source): Завантажуємо {start_url}")
-    domain_name = urlparse(start_url).netloc
+async def discover(config_file: str, output_file: str):
+    print(f"[*] Етап розвідки (Universal): Читаємо конфіг {config_file}")
+    
+    with open(config_file, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+        
+    discovered = []
+    seen_urls = set()
     
     async with httpx.AsyncClient(timeout=15.0) as client:
-        resp = await client.get(start_url, follow_redirects=True)
-        soup = BeautifulSoup(resp.text, 'lxml')
-        
-        menu = soup.find('ul', class_='innermenu')
-        if not menu:
-            print("[!] Не знайдено навігаційне меню.")
-            return
+        for source in config.get('sources', []):
+            url = source['url']
+            selector = source['link_selector']
+            source_name = source['name']
             
-        discovered = []
-        seen_urls = set()
-        
-        for category_li in menu.find_all('li', recursive=False):
-            category_a = category_li.find('a')
-            if not category_a: continue
-            cat_name = get_intelligent_name(category_a.get_text(strip=True), "")
-            
-            sub_menu = category_li.find('ul', class_='sub-menu')
-            if sub_menu:
-                for sub_category_li in sub_menu.find_all('li', recursive=False):
-                    sub_category_a = sub_category_li.find('a')
-                    if not sub_category_a: continue
-                    subcat_name = get_intelligent_name(sub_category_a.get_text(strip=True), "")
+            print(f"  -> Обробка джерела: {source_name}")
+            try:
+                resp = await client.get(url, follow_redirects=True)
+                soup = BeautifulSoup(resp.text, 'lxml')
+                
+                links = soup.select(selector)
+                for link in links:
+                    href = link.get('href')
+                    if not href or href == '#': continue
                     
-                    articles_menu = sub_category_li.find('ul', class_='sub-menu')
-                    if articles_menu:
-                        for article_li in articles_menu.find_all('li', recursive=False):
-                            article_a = article_li.find('a')
-                            if not article_a: continue
-                            url = article_a.get('href')
-                            title = article_a.get_text(strip=True)
-                            
-                            if not url or url == '#' or url in seen_urls: continue
-                            seen_urls.add(url)
-                            
-                            target_dir = os.path.join(domain_name, cat_name, subcat_name)
-                            discovered.append({"url": url, "title": title, "target_dir": target_dir})
-                            
-        with open(output_file, 'w', encoding='utf-8') as f:
-            for item in discovered:
-                f.write(json.dumps(item, ensure_ascii=False) + '\n')
-        print(f"[+] Знайдено унікальних статей: {len(discovered)}. Збережено у {output_file}")
+                    full_url = urljoin(url, href)
+                    if full_url in seen_urls: continue
+                    seen_urls.add(full_url)
+                    
+                    title = link.get_text(strip=True)
+                    discovered.append({
+                        "url": full_url,
+                        "title": title,
+                        "source_name": source_name
+                    })
+            except Exception as e:
+                print(f"[!] Помилка розвідки {url}: {e}")
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        for item in discovered:
+            f.write(json.dumps(item, ensure_ascii=False) + '\n')
+    print(f"[+] Знайдено унікальних статей: {len(discovered)}. Збережено у {output_file}")
 
 def classify(input_file: str, output_file: str):
     print(f"[*] Етап класифікації (AI Filter): Читаємо {input_file}")
     api_key = os.environ.get("GEMINI_API_KEY")
-    
-    with open(input_file, 'r', encoding='utf-8') as f:
-        articles = [json.loads(line) for line in f]
-        
-    classified = []
-    
     if not api_key:
         print("[!] GEMINI_API_KEY відсутній. Перервано.")
         return
         
+    with open(input_file, 'r', encoding='utf-8') as f:
+        articles = [json.loads(line) for line in f]
+        
+    classified = []
     from google import genai
     from google.genai import types
     client = genai.Client()
@@ -115,11 +101,10 @@ def classify(input_file: str, output_file: str):
                 time.sleep(sleep_time)
         
         request_times.append(time.time())
-        
         chunk = articles[i:i+chunk_size]
         prompt_data = [{"id": a['id'], "title": a['title'], "url": a['url']} for a in chunk]
         
-        prompt = f"Filter these articles for a QA Engineer Knowledge Base. We keep QA/testing topics and network fundamentals. We discard pure hardware or deep native development (e.g., RxJava).\n\n{json.dumps(prompt_data, ensure_ascii=False)}"
+        prompt = f"Filter these articles for a QA Engineer Knowledge Base. Keep QA/testing topics and network fundamentals. Discard pure software engineering or unrelated topics.\n\n{json.dumps(prompt_data, ensure_ascii=False)}"
         
         print(f"[*] Відправляємо пакет {i//chunk_size + 1} ({len(chunk)} статей)...")
         try:
@@ -137,14 +122,9 @@ def classify(input_file: str, output_file: str):
             
             for a in chunk:
                 d = decision_map.get(a['id'])
-                if d:
-                    a['keep'] = d['keep']
-                else:
-                    a['keep'] = False
-                
+                a['keep'] = d['keep'] if d else False
                 classified.append(a)
-                status = "v" if a['keep'] else "x"
-                print(f"  {status} {a['title'][:45]}... -> {a['target_dir']}")
+                print(f"  {'v' if a['keep'] else 'x'} {a['title'][:45]}...")
                 
         except Exception as e:
             print(f"[!] Помилка пакета: {e}")
@@ -156,44 +136,31 @@ def classify(input_file: str, output_file: str):
         for item in classified:
             item.pop('id', None)
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
-    print(f"[+] Фільтрацію завершено. Маніфест згенеровано: {output_file}")
+    print(f"[+] Фільтрацію завершено. Збережено: {output_file}")
 
 async def download_article(client, item, base_dir):
     if not item.get("keep"):
         return
         
     url = item['url']
-    target_dir = os.path.join(base_dir, item['target_dir'])
+    source_name = item['source_name']
+    target_dir = os.path.join(base_dir, source_name)
     os.makedirs(target_dir, exist_ok=True)
     
     try:
         resp = await client.get(url, follow_redirects=True)
-        soup = BeautifulSoup(resp.text, 'lxml')
+        # Використовуємо trafilatura для універсальної екстракції головного тексту з будь-якого сайту
+        markdown_text = trafilatura.extract(resp.text, output_format="markdown", include_links=True)
         
-        title_tag = soup.find('h1')
-        title_ukr = title_tag.get_text(strip=True) if title_tag else item['title']
-        safe_filename = get_intelligent_name(title_ukr, url)
-        
-        content_container = soup.find('div', class_='single-knowledge-base-content')
-        if not content_container:
-            content_container = soup.find('article') or soup.find('main')
-            if content_container:
-                for unwanted in content_container.find_all(['nav', 'footer', 'aside', 'header']):
-                    unwanted.decompose()
-        
-        if not content_container: return
+        if not markdown_text:
+            print(f"[!] Trafilatura не знайшла текст на {url}")
+            return
             
-        for unwanted in content_container.find_all(['script', 'style', 'noscript', 'meta', 'link', 'iframe']):
-            unwanted.decompose()
-            
-        for sidebar in content_container.find_all('div', class_=['sidebar', 'sidebar-mobile', 'menu-block']):
-            sidebar.decompose()
-            
-        markdown_text = md(str(content_container), heading_style="ATX")
-        
+        safe_filename = get_safe_filename(item['title'], url)
         filepath = os.path.join(target_dir, f"{safe_filename}.md")
+        
         with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(f"# {title_ukr}\n\n**Source:** {url}\n\n---\n\n{markdown_text}")
+            f.write(f"# {item['title']}\n\n**Source:** {url}\n\n---\n\n{markdown_text}")
         print(f"[+] Збережено: {safe_filename}.md -> {target_dir}")
     except Exception as e:
         print(f"[!] Помилка завантаження {url}: {e}")
@@ -210,9 +177,9 @@ async def download(input_file: str, base_dir: str):
     print(f"[+] Усі файли успішно завантажені!")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="AI-Driven Source-Based ETL Pipeline")
+    parser = argparse.ArgumentParser(description="Universal AI-Driven ETL Pipeline")
     parser.add_argument('action', choices=['discover', 'classify', 'download'])
-    parser.add_argument('--url', default="https://qalight.ua/baza-znan/")
+    parser.add_argument('--config', default="tools/sources.yaml")
     parser.add_argument('--input', default="raw_discovery.jsonl")
     parser.add_argument('--output', default="manifest.jsonl")
     parser.add_argument('--outdir', default="../data")
@@ -220,7 +187,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     if args.action == 'discover':
-        asyncio.run(discover(args.url, args.output))
+        asyncio.run(discover(args.config, args.output))
     elif args.action == 'classify':
         classify(args.input, args.output)
     elif args.action == 'download':

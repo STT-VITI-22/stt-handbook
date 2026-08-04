@@ -6,3 +6,6 @@
 /tools/test_output/
 *.pyc
 .DS_Store
+/dataset/qalight/zagalne/
+/dataset/qalight/android/
+/dataset/books_pdf/raw/

@@ -1,31 +1,37 @@
-# QA Dataset & Modular Parsers
+# QA Dataset & Documentation Parsers
 
-A QA engineering dataset and a toolkit for data collection, conversion, and formatting.
+A modular toolkit for parsing complex technical documentation, books, presentations, and web articles into clean, LLM-ready Markdown.
 
 ## Architecture
 
-This project uses a modular architecture. Instead of a single universal scraper, a dedicated isolated parser is created for each data source to handle its specific structure and requirements. The entry point is `tools/main.py`.
+The project has evolved into a modular architecture, prioritizing semantic chunking and high-fidelity extraction of complex documents (like PDFs and PPTXs) using Gemini API, alongside traditional web scrapers.
 
-### Parsers (`tools/parsers/`)
-- **`qalight`**: A parser for the QALight knowledge base. It parses the DOM to reconstruct the original site hierarchy while skipping promotional material and courses.
-- **`dou`**: A forum parser for `dou.ua`. It fetches specific QA forum discussions and strips away comments, ads, and author blocks, extracting the primary text content.
-- **`pdf`**: A local file processor that uses `pymupdf4llm` to batch-convert PDF files into Markdown, preserving tables, lists, and headings.
+### 1. Document Parser (`tools/doc_parser/`)
+The primary engine for parsing local documents. It uses a combination of `PyMuPDF` for structural extraction and the `Gemini API` for intelligent Markdown formatting.
 
-All web parsers inherit from `BaseParser`, which provides HTML-to-Markdown conversion, retaining inline images and escaping literal HTML tags for rendering.
+- **PPTX Mode (`--type pptx`)**: Extracts text and images from presentation slides. Intelligently filters out watermarks and repeating background graphics. Uses a `SlideChunker` to semantically group consecutive slides with the same title into single logical sections to avoid breaking sentences across pages.
+- **PDF Mode (`--type pdf`)**: Designed for technical books. Uses PyMuPDF's block-level `dict` extraction to surgically pull out only rendered images (ignoring shadows/lines). Features a dynamic Fallback to OCR mode if the PDF is a scanned book lacking a text layer. It groups pages into chunks (max 5 pages) to prevent token exhaustion.
 
-## Usage
-
-Run the script specifying the target parser:
-
+**Usage:**
 ```bash
-uv run python tools/main.py qalight
-uv run python tools/main.py dou
-uv run python tools/main.py pdf
+# Parse a presentation
+uv run python tools/doc_parser/parse_docs.py "path/to/lecture.pdf" --type pptx
+
+# Parse a book (vector or scanned)
+uv run python tools/doc_parser/parse_docs.py "path/to/book.pdf" --type pdf
 ```
+
+### 2. Web Scrapers (`tools/web_scrapers/`)
+Dedicated parsers for web sources. *(Note: Currently isolated in their own directory).*
+- **`qalight`**: Parses the QALight knowledge base, filtering out promo content.
+- **`dou`**: Parses `dou.ua` forum posts, stripping comments and UI elements.
+
+### 3. Legacy Scripts (`tools/legacy/`)
+Contains deprecated monolithic parsers (e.g., `gemini_pdf_parser.py`, `gemini_pptx_parser.py`) preserved for historical reference and edge-case testing.
 
 ## Dataset Structure
 
-The output is categorized by source in the `dataset/` directory:
-- `dataset/qalight/`: Categorized by the site's original navigational taxonomy.
-- `dataset/dou/articles/`: Technical forum posts.
-- `dataset/books_pdf/`: Markdown conversions of QA literature.
+The extracted and formatted Markdown files are organized by source:
+- `dataset/pptx/parsed/` — Formatted technical presentations.
+- `dataset/books_pdf/parsed/` — Converted IT literature and QA books.
+- `dataset/qalight/`, `dataset/dou/` — Web-scraped articles.

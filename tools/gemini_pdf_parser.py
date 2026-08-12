@@ -322,25 +322,31 @@ def process_pdf(pdf_path, output_dir, keys):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Швидкий парсер PDF у Markdown")
-    parser.add_argument("input_pdf", help="Шлях до вхідного PDF файлу (обов'язково)")
+    parser.add_argument("input_path", help="Шлях до вхідного PDF файлу АБО папки з PDF файлами (обов'язково)")
     parser.add_argument("-o", "--output-dir", default=DEFAULT_OUTPUT_DIR, help="Папка для збереження Markdown")
     parser.add_argument("--keys", nargs="+", default=[], help="Кілька Gemini API ключів через пробіл")
     
     args = parser.parse_args()
     
-    if not os.path.exists(args.input_pdf):
-        print(f"❌ Вхідний файл не знайдено: {args.input_pdf}")
+    if not os.path.exists(args.input_path):
+        print(f"❌ Вхідний шлях не знайдено: {args.input_path}")
         sys.exit(1)
         
     final_keys = args.keys
     if not final_keys:
         env_keys = os.environ.get("GEMINI_API_KEYS")
         if env_keys:
-            final_keys = [k.strip() for k in env_keys.split(",") if k.strip()]
+            final_keys = [k.strip() for k in env_keys.split(",")]
             
     if not final_keys:
-        print("❌ ПОМИЛКА: Не вказано жодного API-ключа!")
+        print("❌ Не вказано жодного API ключа! Передайте їх через --keys або задайте змінну GEMINI_API_KEYS")
         sys.exit(1)
         
-    unique_keys = list(set(final_keys))
-    process_pdf(args.input_pdf, args.output_dir, unique_keys)
+    if os.path.isdir(args.input_path):
+        pdf_files = sorted([os.path.join(args.input_path, f) for f in os.listdir(args.input_path) if f.lower().endswith('.pdf')])
+        print(f"📂 Знайдено {len(pdf_files)} PDF файлів у папці.")
+        for pdf in pdf_files:
+            print(f"\n{'='*60}\nОбробляємо: {pdf}\n{'='*60}")
+            process_pdf(pdf, args.output_dir, final_keys)
+    else:
+        process_pdf(args.input_path, args.output_dir, final_keys)

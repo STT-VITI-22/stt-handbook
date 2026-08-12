@@ -379,11 +379,11 @@ Table 1.3.c — Tester's soft skills
 
 | Subject area | Entry level | Junior or Middle specialist level |
 | :--- | :--- | :--- |
-| \multicolumn{3}{|c|}{Communication skills} |
+| Communication skills | | |
 | Business e-mailing | Minimum skills | Understanding and strict adherence to the rules of business communication using e-mail and instant messenger services |
 | Oral business communication | Minimum skills | Understanding and strict adherence to the rules of oral business communication |
 | Getting interviews | Not required | Initial interviewing experience |
-| \multicolumn{3}{|c|}{Self-management skills} |
+| Self-management skills | | |
 | Time management | Minimum skills, general concepts | Developed time management skills, the use of appropriate tools and the ability to estimate the workload of the tasks assigned |
 | Reporting on their work | Basic skills | Developed skills to report on their work, ability to use appropriate tools |
 
@@ -2071,7 +2071,7 @@ Table 2.3.a — White box, black box and gray box methods pros and cons
 | :--- | :--- | :--- |
 | **White box method** | • Reveals hidden problems and makes it easier to diagnose them.<br>• Allows for quite simple test cases automation and their execution at the earliest stages of project development.<br>• Has a well-developed system of metrics, which can be easily automated for collection and analysis.<br>• Encourages developers to write good code.<br>• Many of the techniques in this method are proven, well-established solutions based on a rigorous technical approach. | • Cannot be performed by testers lacking sufficient programming knowledge.<br>• Testing focuses on the functionality already implemented, which increases the chance of omission of unimplemented requirements.<br>• The application behavior is examined apart from the real execution environment and does not take its impact into account.<br>• The application behavior is examined in isolation from real user scenarios$^{[137]}$. |
 | **Black box method** | • There is no need for the tester to have (in-depth) knowledge of programming.<br>• The application behavior is examined in the context of the actual runtime environment and its impact is taken into account.<br>• The application behavior is examined in the context of real user scenarios$^{[137]}$.<br>• Test cases can already be created at the emergence of stable requirements.<br>• The test case creation process allows to identify requirements defects.<br>• Allows for the creation of test cases that can be used repeatedly on different projects. | • It is likely to repeat some of the test cases that have already been carried out by the developers.<br>• It is highly likely that some of the possible application behavior will remain untested.<br>• Proper documentation is essential for the development of effective and efficient test cases.<br>• The diagnosis of detected defects is more complex compared to white box method.<br>• The wide range of techniques and approaches makes it harder to plan and estimate the workload.<br>• In the case of automation, complex and expensive tools may be required. |
-| **Gray box method** | \multicolumn{2}{c}{Combines the advantages and disadvantages<br>of white box and black box methods.} |
+| **Gray box method** | Combines the advantages and disadvantages<br>of white box and black box methods. | |
 
 ### 2.3.2.4. Classification by automation level
 
@@ -3009,10 +3009,10 @@ The next step will be to test how the application behaves in normal everyday lif
 | Input file encodings | WIN1251 | 100 KB | 50 MB | 10 MB |
 | | CP866 | 10 MB | 100 KB | 50 MB |
 | | KOI8R | 50 MB | 10 MB | 100 KB |
-| | Any | \multicolumn{3}{c|}{0 bytes} |
+| | Any | 0 bytes | | |
 | | Any | 50 MB + 1 B | 50 MB + 1 B | 50 MB + 1 B |
-| | - | \multicolumn{3}{c|}{Any unacceptable format} |
-| | Any | \multicolumn{3}{c|}{Acceptable format, damaged file} |
+| | - | Any unacceptable format | | |
+| | Any | Acceptable format, damaged file | | |
 
     * Inaccessible input files:
         * No access permission.
@@ -3921,10 +3921,10 @@ Table 2.4.d — Formats, encodings and file sizes
 | **Input files encodings** | WIN1251 | 100 KB | 50 MB | 10 MB |
 | | CP866 | 10 MB | 100 KB | 50 MB |
 | | KOI8R | 50 MB | 10 MB | 100 KB |
-| | Any | \multicolumn{3}{c}{0 bytes} |
+| | Any | 0 bytes | | |
 | | Any | 50 MB + 1 B | 50 MB + 1 B | 50 MB + 1 M |
-| | - | \multicolumn{3}{c}{Any unsupported format} |
-| | Any | \multicolumn{3}{c}{Supported format, damaged file} |
+| | - | Any unsupported format | | |
+| | Any | Supported format, damaged file | | |
 
 Is there anything we can do to speed up these checks (because there are a lot of them)? We can. And we even have two complementary techniques:
 * further classification by priority;
@@ -5777,7 +5777,7 @@ Table 2.6.b — Workload estimation
 | **Total number** | 12 | 26.4 |
 | **Time per test case, h** | 0.7 | 0.2 |
 | **Total time, h** | 8.4 | 5.2 |
-| **Total** | \multicolumn{2}{c|}{**13.6 hours**} |
+| **Total** | **13.6 hours** | |
 
 If the productivity of our fictional tester had been measured over short periods of time, the resulting value could not have been used directly, because it would not have included time for writing defect reports, participating in various meetings, correspondence, and other activities. However, this is why we used monthly measurements, because all of these factors were present multiple times during a typical 28 working days, and their influence is already factored into our productivity estimates.
 

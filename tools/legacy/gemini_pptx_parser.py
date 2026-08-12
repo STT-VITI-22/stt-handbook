@@ -22,7 +22,7 @@ from google import genai
 from tqdm import tqdm
 
 # ================= НАЛАШТУВАННЯ =================
-DEFAULT_OUTPUT_DIR = "/home/liulmiti/workspace/22_dep/stt/dataset/dataset/pptx/parsed"
+DEFAULT_OUTPUT_DIR = "dataset/pptx/parsed"
 # 15 RPM = 1 запит на 4 сек. Ми слідкуємо, щоб між ПОЧАТКОМ запитів проходило мінімум 4.1 сек.
 DELAY_SECONDS = 4.1 
 DAILY_LIMIT = 500
@@ -99,7 +99,11 @@ def generate_filename(pdf_path, keys):
     print(f"🧠 Аналізуємо титульні сторінки для генерації назви (Модель: {MODEL_NAME})...")
     doc = fitz.open(pdf_path)
     pages_to_check = min(3, len(doc))
-    images = [NAME_PROMPT]
+    
+    orig_name = os.path.basename(pdf_path)
+    smart_prompt = NAME_PROMPT + f"\n\n[СИСТЕМНЕ ПОВІДОМЛЕННЯ]: Оригінальна назва файлу: '{orig_name}'. Обов'язково зверни увагу на нумерацію в цій назві (наприклад 1.3, 1.4, 2.1) і використай саме її для генерації імені, якщо на самих слайдах нумерація відсутня або неочевидна."
+    
+    images = [smart_prompt]
     matrix = fitz.Matrix(1.5, 1.5)
     for i in range(pages_to_check):
         pix = doc.load_page(i).get_pixmap(matrix=matrix)
@@ -116,10 +120,16 @@ def generate_filename(pdf_path, keys):
             name = "".join(c for c in name if c.isalnum() or c in "_-.")
             print(f"✨ Згенерована назва: {name}")
             return name
-        except Exception:
+        except Exception as e:
+            print(f"Помилка генерації назви (ключ {api_key[:6]}...): {e}")
+            import time
+            time.sleep(2)
             continue
-    print("⚠️ Генерація назви не вдалася (ключі не відповіли).")
-    return "default_book.md"
+    
+    fallback_name = os.path.basename(pdf_path).replace(".pdf", "").replace(".pptx", "").replace(" ", "_")
+    fallback_name = "".join(c for c in fallback_name if c.isalnum() or c in "_-.") + ".md"
+    print(f"⚠️ Генерація назви не вдалася. Використовую оригінальну назву: {fallback_name}")
+    return fallback_name
 
 import hashlib
 
@@ -180,63 +190,69 @@ def worker_thread(api_key, key_index, page_queue, results_dict, failed_list, pdf
     
     while True:
         try:
-            page_num = page_queue.get(timeout=2)
-        except queue.Empty:
-            break
-            
-        if db.get_stats(api_key) >= DAILY_LIMIT:
-            print(f"\n⚠️ Ключ {masked_key} вичерпав денний ліміт ({DAILY_LIMIT}). Потік зупиняється.")
-            page_queue.put(page_num)
-            break
-            
-        # Розумний rate-limiting: спимо ТІЛЬКИ якщо з попереднього запиту пройшло менше 4.1 сек
-        time_since_last = time.time() - last_request_time
-        if time_since_last < DELAY_SECONDS:
-            time.sleep(DELAY_SECONDS - time_since_last)
-            
-        human_page_num = page_num + 1
-        page = doc.load_page(page_num)
-        saved_images = extract_raster_images(doc, page, human_page_num, images_dir, ignore_hashes)
-        
-        matrix = fitz.Matrix(2.0, 2.0)
-        pix = page.get_pixmap(matrix=matrix)
-        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-        
-        dynamic_prompt = PROMPT
-        if saved_images:
-            relative_image_paths = [f"images/{book_name_no_ext}/{img_name}" for img_name in saved_images]
-            dynamic_prompt += f"\n\n[СИСТЕМНЕ ПОВІДОМЛЕННЯ]: На цій сторінці знайдено {len(saved_images)} растрових зображень. Вони збережені тут: {', '.join(relative_image_paths)}. Якщо бачиш їх, обов'язково встав у текст посилання на них у форматі ![Опис](шлях)."
-
-        success = False
-        for attempt in range(3):
-            last_request_time = time.time() # Оновлюємо таймер перед запитом
             try:
-                response = client.models.generate_content(model=MODEL_NAME, contents=[dynamic_prompt, img])
-                results_dict[page_num] = response.text.strip()
-                db.increment(api_key)
-                progress_bar.update(1)
-                success = True
+                page_num = page_queue.get(timeout=2)
+            except queue.Empty:
                 break
-            except Exception as e:
-                err_msg = str(e).lower()
-                if "quota_limit_value': '0'" in err_msg or "billing" in err_msg:
-                    print(f"\n💀 Ключ {masked_key} МЕРТВИЙ. Потік зупиняється.")
-                    page_queue.put(page_num)
-                    active_threads[key_index] = False
-                    return 
-                elif "429" in err_msg or "exhausted" in err_msg or "quota" in err_msg or "503" in err_msg:
-                    time.sleep(5) # Короткий сон, бо інші ключі можуть підстрахувати
-                else:
-                    failed_list.append(human_page_num)
-                    results_dict[page_num] = f"\n\n> [!ERROR] [MISSING_PAGE_{human_page_num}_COPYRIGHT] ({e})\n\n"
+                
+            if db.get_stats(api_key) >= DAILY_LIMIT:
+                print(f"\n⚠️ Ключ {masked_key} вичерпав денний ліміт ({DAILY_LIMIT}). Потік зупиняється.")
+                page_queue.put(page_num)
+                break
+                
+            time_since_last = time.time() - last_request_time
+            if time_since_last < DELAY_SECONDS:
+                time.sleep(DELAY_SECONDS - time_since_last)
+                
+            human_page_num = page_num + 1
+            page = doc.load_page(page_num)
+            saved_images = extract_raster_images(doc, page, human_page_num, images_dir, ignore_hashes)
+            
+            matrix = fitz.Matrix(2.0, 2.0)
+            pix = page.get_pixmap(matrix=matrix)
+            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            
+            dynamic_prompt = PROMPT
+            if saved_images:
+                relative_image_paths = [f"images/{book_name_no_ext}/{img_name}" for img_name in saved_images]
+                dynamic_prompt += f"\n\n[СИСТЕМНЕ ПОВІДОМЛЕННЯ]: На цій сторінці знайдено {len(saved_images)} растрових зображень. Вони збережені тут: {', '.join(relative_image_paths)}. Якщо бачиш їх, обов'язково встав у текст посилання на них у форматі ![Опис](шлях)."
+
+            success = False
+            for attempt in range(3):
+                last_request_time = time.time() # Оновлюємо таймер перед запитом
+                try:
+                    response = client.models.generate_content(model=MODEL_NAME, contents=[dynamic_prompt, img])
+                    results_dict[page_num] = response.text.strip()
                     db.increment(api_key)
                     progress_bar.update(1)
                     success = True
                     break
-        
-        if not success:
-            page_queue.put(page_num)
-            time.sleep(10) # Спимо, якщо ключ забанили надовго
+                except Exception as e:
+                    err_msg = str(e).lower()
+                    if "quota_limit_value': '0'" in err_msg or "billing" in err_msg:
+                        print(f"\n💀 Ключ {masked_key} МЕРТВИЙ. Потік зупиняється.")
+                        page_queue.put(page_num)
+                        active_threads[key_index] = False
+                        return 
+                    elif "429" in err_msg or "exhausted" in err_msg or "quota" in err_msg or "503" in err_msg:
+                        time.sleep(5) # Короткий сон, бо інші ключі можуть підстрахувати
+                    else:
+                        failed_list.append(human_page_num)
+                        results_dict[page_num] = f"\n\n> [!ERROR] [MISSING_PAGE_{human_page_num}_COPYRIGHT] ({e})\n\n"
+                        db.increment(api_key)
+                        progress_bar.update(1)
+                        success = True
+                        break
+            
+            if not success:
+                page_queue.put(page_num)
+                time.sleep(10) # Спимо, якщо ключ забанили надовго
+        except Exception as global_e:
+            print(f"\n🚨 [CRASH] Потік {key_index} впав з критичною помилкою на сторінці {page_num + 1}: {global_e}")
+            failed_list.append(page_num + 1)
+            results_dict[page_num] = f"\n\n> [!ERROR] [CRITICAL_CRASH] ({global_e})\n\n"
+            progress_bar.update(1)
+            # Не кидаємо break, пробуємо взяти наступну сторінку, щоб черга не зависла
             
     active_threads[key_index] = False
 
@@ -290,10 +306,11 @@ def process_pdf(pdf_path, output_dir, keys):
         threads.append(t)
         time.sleep(0.1) # Майже миттєвий запуск, економимо секунди!
         
-    while not page_queue.empty() and any(active_threads.values()):
+    while any(active_threads.values()):
         time.sleep(1)
         
-    if not page_queue.empty() and not any(active_threads.values()):
+    # Якщо після завершення всіх потоків залишились сторінки, значить всі ключі вмерли
+    if not page_queue.empty():
         print("\n💀 КРИТИЧНА ПОМИЛКА: Всі ключі мертві або вичерпали ліміт! Збереження...")
         while not page_queue.empty():
             p = page_queue.get()
@@ -326,25 +343,36 @@ def process_pdf(pdf_path, output_dir, keys):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Швидкий парсер PDF у Markdown")
-    parser.add_argument("input_pdf", help="Шлях до вхідного PDF файлу (обов'язково)")
+    parser.add_argument("input_path", help="Шлях до вхідного PDF файлу АБО папки з PDF файлами (обов'язково)")
     parser.add_argument("-o", "--output-dir", default=DEFAULT_OUTPUT_DIR, help="Папка для збереження Markdown")
-    parser.add_argument("--keys", nargs="+", default=[], help="Кілька Gemini API ключів через пробіл")
+    parser.add_argument("--keys", nargs="+", default=[], help="Кілька Gemini API ключів через пробіл або кому")
     
     args = parser.parse_args()
     
-    if not os.path.exists(args.input_pdf):
-        print(f"❌ Вхідний файл не знайдено: {args.input_pdf}")
+    if not os.path.exists(args.input_path):
+        print(f"❌ Вхідний шлях не знайдено: {args.input_path}")
         sys.exit(1)
         
-    final_keys = args.keys
+    final_keys = []
+    for k_group in args.keys:
+        final_keys.extend([k.strip().strip('"').strip("'") for k in k_group.split(",") if k.strip()])
+        
     if not final_keys:
         env_keys = os.environ.get("GEMINI_API_KEYS")
         if env_keys:
-            final_keys = [k.strip() for k in env_keys.split(",") if k.strip()]
+            final_keys = [k.strip().strip('"').strip("'") for k in env_keys.split(",") if k.strip()]
             
     if not final_keys:
-        print("❌ ПОМИЛКА: Не вказано жодного API-ключа!")
+        print("❌ Не вказано жодного API ключа! Передайте їх через --keys або задайте змінну GEMINI_API_KEYS")
         sys.exit(1)
         
-    unique_keys = list(set(final_keys))
-    process_pdf(args.input_pdf, args.output_dir, unique_keys)
+    final_keys = list(set(final_keys))
+        
+    if os.path.isdir(args.input_path):
+        pdf_files = sorted([os.path.join(args.input_path, f) for f in os.listdir(args.input_path) if f.lower().endswith('.pdf')])
+        print(f"📂 Знайдено {len(pdf_files)} PDF файлів у папці.")
+        for pdf in pdf_files:
+            print(f"\n{'='*60}\nОбробляємо: {pdf}\n{'='*60}")
+            process_pdf(pdf, args.output_dir, final_keys)
+    else:
+        process_pdf(args.input_path, args.output_dir, final_keys)

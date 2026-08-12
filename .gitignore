@@ -9,3 +9,10 @@
 /dataset/qalight/zagalne/
 /dataset/qalight/android/
 /dataset/books_pdf/raw/
+/dataset/books_pdf/gemini/missing_pages/
+*.zip
+/.venv/
+/test_env/
+api_usage.json
+.agents/
+local-dev/

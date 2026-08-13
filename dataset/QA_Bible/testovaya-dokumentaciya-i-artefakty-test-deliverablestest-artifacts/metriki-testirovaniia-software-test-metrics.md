@@ -1,0 +1,107 @@
+# Метрики тестирования (Software Test Metrics)
+
+**Source:** https://vladislaveremeev.gitbook.io/qa_bible/testovaya-dokumentaciya-i-artefakty-test-deliverablestest-artifacts/metriki-testirovaniya-software-test-metrics
+
+---
+
+# Метрики тестирования (Software Test Metrics)
+
+*Метрика (metric): Шкала измерений и метод, используемый для измерений (ISO 14598)*
+
+“Вы не можете контролировать то, что не можете измерить” - Том Демакро.
+
+Основная цель тестирования заключается в предоставлении информации, необходимой для управления рисками. Чтобы контролировать и управлять тестированием, а также предоставлять своевременную информацию заинтересованным сторонам, необходимы эффективные измерения процесса тестирования. Для измерения процесса тестирования нужно определить, какая информация должна быть предоставлена, как ее получить и как она должна быть представлена. Таким образом, для всех действий тестирования необходимо определить и использовать метрики, а также предоставить показатели измерений, как для продуктов, так и для процессов.
+
+Метрики тестирования программного обеспечения подразделяются на два типа:
+
+* **Метрики процесса** (Process metrics): используются в процессе подготовки и выполнения тестирования.
+  * **Продуктивность подготовки тест-кейсов** (Test Case Preparation Productivity): используется для расчета количества подготовленных тест-кейсов и усилий (Effort), затраченных на их подготовку.
+
+    *Test Case Preparation Productivity = (No of Test Case) / (Effort spent for Test Case Preparation)*
+  * **Охват тестового дизайна** (Test Design Coverage): процент покрытия тест-кейсами требований.
+
+    *Test Design Coverage = ((Total number of requirements mapped to test cases) / (Total number of requirements)\*100*
+  * **Продуктивность выполнения тестов** (Test Execution Productivity): определяет количество тест-кейсов, которые могут быть выполнены в час.
+
+    *Test Execution Productivity = (No of Test cases executed) / (Effort spent for execution of test cases)*
+  * **Покрытие выполненных тестов** (Test Execution Coverage): предназначено для измерения количества выполненных тест-кейсов по сравнению с количеством запланированных тест-кейсов.
+
+    *Test Execution Coverage = (Total no. of test cases executed / Total no. of test cases planned to execute)\*100*
+  * **Успешные тест-кейсы** (Test Cases Passed): для измерения процента пройденных успешно тест-кейсов.
+
+    *Test Cases Pass = (Total no. of test cases passed) / (Total no. of test cases executed) \* 100*
+  * **Неуспешные тест-кейсы** (Test Cases Failed): для измерения процента заваленных тест-кейсов.
+
+    *Test Cases Failed = (Total no. of test cases failed) / (Total no. of test cases executed) \* 100*
+  * **Заблокированные тест-кейсы** (Test Cases Blocked): для измерения процента блокированных тест-кейсов.
+
+    *Test Cases Blocked = (Total no. of test cases blocked) / (Total no. of test cases executed) \* 100*
+* **Метрики продукта** (Product metrics):
+  * **Уровень обнаружения ошибок** (Error Discovery Rate): для определения эффективности тест-кейсов.
+
+    *Error Discovery Rate = (Total number of defects found /Total no. of test cases executed)\*100*
+  * **Процент выявления дефектов** (Defect Detection Percentage (DDP)): *Количество дефектов, выявленных в фазе тестирования, поделенное на число дефектов, найденных в этой фазе тестирования, а также во всех последующих фазах. См. также ускользнувший дефект. (ISTQB)*
+  * **Уровень исправления дефектов** (Defect Fix Rate): помогает узнать качество сборки (build) с точки зрения устранения дефектов.
+
+    *Defect Fix Rate = (Total no of Defects reported as fixed - Total no. of defects reopened) / (Total no of Defects reported as fixed + Total no. of new Bugs due to fix)\*100*
+  * **Плотность дефектов** (Defect Density): *количество дефектов, обнаруженных в компоненте или системе, поделенное на размер компонента или системы (выраженный в стандартных единицах измерения, например строках кода, числе классов или функций). (ISTQB)*
+
+    *Defect Density = Total no. of defects identified / Actual Size (requirements)*
+  * **Утечка дефектов** (Defect Leakage): используется для проверки эффективности процесса тестирования перед UAT.
+
+    *Defect Leakage = ((Total no. of defects found in UAT)/(Total no. of defects found before UAT)) \* 100*
+  * **Эффективность устранения дефектов** (Defect Removal Efficiency): позволяет сравнивать общую (дефекты, обнаруженные до и после поставки) эффективность устранения дефектов.
+
+    *Defect Removal Efficiency = ((Total no. of defects found pre-delivery) /( (Total no. of defects found pre-delivery )+ (Total no. of defects found post-delivery)))\* 100*
+
+**Тестовое покрытие (Test Coverage)**
+
+Тестовое Покрытие - это одна из метрик оценки качества тестирования, представляющая из себя плотность покрытия тестами требований либо исполняемого кода. Сложность современного ПО и инфраструктуры сделало невыполнимой задачу проведения тестирования со 100% тестовым покрытием. Поэтому для разработки набора тестов, обеспечивающего более-менее высокий уровень покрытия можно использовать специальные инструменты либо техники тест дизайна.
+
+Существуют следующие подходы к оценке и измерению тестового покрытия:
+
+* [Покрытие требований (Requirements Coverage)](http://www.protesting.ru/testing/testcoverage.html#requirements) - оценка покрытия тестами функциональных и нефункциональных требований к продукту путем построения матриц трассировки (traceability matrix).
+* [Покрытие кода (Code Coverage)](http://www.protesting.ru/testing/testcoverage.html#code) - оценка покрытия исполняемого кода тестами, путем отслеживания непроверенных в процессе тестирования частей ПО.
+* [Тестовое покрытие на базе анализа потока управления](http://www.protesting.ru/testing/testcoverage.html#flow) - это одна из техник тестирования белого ящика, основанная на определении путей выполнения кода программного модуля и создания выполняемых тест кейсов для покрытия этих путей.
+
+Различия:\
+Метод покрытия требований сосредоточен на проверке соответствия набора проводимых тестов требованиям к продукту, в то время как анализ покрытия кода - на полноте проверки тестами разработанной части продукта (исходного кода), а анализ потока управления - на прохождении путей в графе или модели выполнения тестируемых функций (Control Flow Graph).
+
+Ограничения:
+
+* Метод оценки покрытия кода не выявит нереализованные требования, так как работает не с конечным продуктом, а с существующим исходным кодом.
+* Метод покрытия требований может оставить непроверенными некоторые участки кода, потому что не учитывает конечную реализацию.
+
+***Альтернативное мнение***
+
+Покрытие кода - совершенно бесполезная метрика. Не существует «правильного» показателя. Это вопрос-ловушка. У вас может быть проект с близким к 100% покрытием кода, в котором по-прежнему остаются баги и проблемы. В реальности нужно следить за другими метриками - хорошо известными показателям CTM (Codepipes testing Metrics).
+
+![](https://lh5.googleusercontent.com/ycWdGw8XfGW_7xun6DdJ2HLdCP5FaAIht4em7L99M4Pu58zUki4bgk6V0o4VjnGCxPcxyZFsXKep5rwyJP-KVQa9daBeK0XdCUgOkSUvBsPJyLOTxnYOHunUBfvIOrgMuUeH7f61)
+
+* **PDWT** (процент разработчиков, пишущих тесты) - вероятно, самый важный показатель. Нет смысла говорить об антипаттернах тестирования ПО, если у вас вообще нет тестов. Все разработчики в команде должны писать тесты. Любую новую функцию можно объявлять сделанной только если она сопровождается одним или несколькими тестами.
+* **PBCNT** (процент багов, приводящих к созданию новых тестов). Каждый баг в продакшне - отличный повод для написания нового теста, проверяющего соответствующее исправление. Любой баг должен появиться в продакшне не более одного раза. Если ваш проект страдает от появления повторных багов даже после их первоначального «исправления», то команда действительно выиграет от использования этой метрики.
+* **PTVB** (процент тестов, которые проверяют поведение, а не реализацию). Тесно связанные тесты пожирают массу времени при рефакторинге основного кода.
+* **PTD** (процент детерминированных тестов от общего числа). Тесты должны завершаться ошибкой только в том случае, если что-то не так с бизнес-кодом. Если тесты периодически ломаются без видимой причины - это огромная проблема.\
+  \
+  Если после прочтения о метриках вы по-прежнему настаиваете на установке жесткого показателя для покрытия кода, я дам вам число 20%. Это число должно использоваться как эмпирическое правило, основанное на законе Парето. 20% вашего кода вызывает 80% ваших ошибок
+
+Источники:
+
+* [ГОСТ Р 56920-2016/ISO/IEC/IEEE 29119-1:2013](https://docs.cntd.ru/document/1200134996)
+* [Software Test Metrics - Product Metrics & Process Metrics](https://www.softwaretestingmaterial.com/test-metrics/)
+* [Антипаттерны тестирования ПО](https://habr.com/ru/post/358178/)
+
+Доп. материал:
+
+* [What Metrics Should You Be Using?](https://blog.gurock.com/qa-metrics/)
+* [Different Software Quality Metrics used by Expert Test Managers](https://www.softwaretestinggenius.com/different-software-quality-metrics-used-by-expert-test-managers/)
+* [Code Coverage: How to Measure You've Done Enough Testing](https://hackernoon.com/code-coverage-how-to-measure-youve-done-enough-testing)
+* [Understanding time to quality](https://theqalead.com/topics/time-to-quality-concept-explained/)
+* [Метрики в тестировании](https://www.youtube.com/watch?v=OyCnB2LvAtQ\&t=656s)
+* [Самый полный список метрик тестирования на русском языке](https://habr.com/ru/post/546562/)
+* [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
+* [Лекция 4: Оценка оттестированности проекта: метрики и методика интегральной оценки](https://intuit.ru/studies/courses/48/48/lecture/1430)
+* [Тестовое покрытие по Бейзеру // Бесплатный урок OTUS](https://www.youtube.com/watch?v=jqjJ256CZhk)
+* [Оцениваем риски в тестировании с помощью open source-проекта Drill4j](https://www.youtube.com/watch?v=zN-F71rEXh4)
+* [Метрики в тестировании. Матрица трассировки](https://www.youtube.com/watch?v=OyCnB2LvAtQ)
+* [Оценка тестового покрытия на проекте](https://www.software-testing.ru/library/testing/test-management/2157-measuring-test-coverage)

@@ -1,0 +1,22 @@
+# Тестирование на соответствие (Conformance/Compliance testing)
+
+**Source:** https://vladislaveremeev.gitbook.io/qa_bible/vidy-metody-urovni-testirovaniya/testirovanie-na-sootvetstvie-conformance-compliance-testing
+
+---
+
+# Тестирование на соответствие (Conformance/Compliance testing)
+
+*Соответствие (compliance): Способность программного продукта соответствовать стандартам, соглашениям или правилам законодательства и другим подобным предписаниям. (ISTQB)*
+
+Compliance - официальное соответствие ПО различным стандартам, законам, сертификация и т.п.
+
+Conformance - неофициальные, внутренние стандарты организации, добровольное обязательство делать что-либо признанным образом, либо стремление к Compliance, но которое не закончено / не подтверждено формально.
+
+Источники:
+
+* [Compliance Vs. Conformance](https://visionintegrity.ca/compliance-vs-conformance/)
+
+Доп. материал:
+
+* [Невидимый регулятор. Как подстроить систему под закон?](https://www.youtube.com/watch?v=y7wspIeTD1k)
+* [В чем разница между CCPA, GDPR и LGPD?](https://telegra.ph/CCPA-GDPR-and-LGPD-07-08)

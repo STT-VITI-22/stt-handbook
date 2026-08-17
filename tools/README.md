@@ -1,31 +1,41 @@
-# QA Dataset & Modular Parsers
+# QA Dataset & Documentation Parsers
 
-A QA engineering dataset and a toolkit for data collection, conversion, and formatting.
+A toolkit for converting technical documentation, books, presentations, and web resources into Markdown format.
 
 ## Architecture
 
-This project uses a modular architecture. Instead of a single universal scraper, a dedicated isolated parser is created for each data source to handle its specific structure and requirements. The entry point is `tools/main.py`.
+The project has a modular structure, split between local file parsers (PDF, PPTX) and web resource scrapers.
 
-### Parsers (`tools/parsers/`)
-- **`qalight`**: A parser for the QALight knowledge base. It parses the DOM to reconstruct the original site hierarchy while skipping promotional material and courses.
-- **`dou`**: A forum parser for `dou.ua`. It fetches specific QA forum discussions and strips away comments, ads, and author blocks, extracting the primary text content.
-- **`pdf`**: A local file processor that uses `pymupdf4llm` to batch-convert PDF files into Markdown, preserving tables, lists, and headings.
+### 1. Document Parser (`tools/doc_parser/`)
+Uses a combination of `PyMuPDF` for content extraction and the `Gemini API` for text formatting.
 
-All web parsers inherit from `BaseParser`, which provides HTML-to-Markdown conversion, retaining inline images and escaping literal HTML tags for rendering.
+- **PPTX Mode (`--type pptx`)**: Extracts text and images from slides. Removes duplicated background images (watermarks) by comparing their MD5 hashes and areas. Slides are grouped by titles (`SlideChunker`) to avoid breaking sentences.
+  - *Current flaws*: Title detection relies entirely on font size heuristics. This frequently fails if a slide contains larger incidental text (like a diagram number) or lacks a clear visual hierarchy.
 
-## Usage
+- **PDF Mode (`--type pdf`)**: Designed for technical books. Uses `get_text("dict")` to extract rendered blocks. Features an OCR fallback if raw text is missing (scanned books).
+  - *Current flaws*: The attempt to implement semantic chunking failed. To avoid API token limits, a hard limit of 5 pages per request was introduced, which reintroduces the problem of sentences being cut in half between chunks. The `dict` block analysis frequently scrambles the reading order (especially in multi-column layouts) and misses non-raster diagrams. Development on this parser is paused, and `legacy/gemini_pdf_parser.py` is temporarily used for books instead.
 
-Run the script specifying the target parser:
-
+**Usage:**
 ```bash
-uv run python tools/main.py qalight
-uv run python tools/main.py dou
-uv run python tools/main.py pdf
+# Parse a presentation
+uv run python tools/doc_parser/parse_docs.py "path/to/lecture.pdf" --type pptx_doc
+
+# Parse a book
+uv run python tools/doc_parser/parse_docs.py "path/to/book.pdf" --type pdf
 ```
 
-## Dataset Structure
+### 2. Web Scrapers (`tools/web_scrapers/`)
+Parsers for web sources (executed via `tools/main.py <resource>`):
+- **`gitbook`**: Parser for QA Bible. Instead of HTML scraping, it fetches `llms.txt` to get the sitemap and uses native `.md` endpoints to directly download raw Markdown. Image paths are converted to absolute URLs.
+- **`qalight`**: Parses the QALight knowledge base via BeautifulSoup HTML analysis.
+- **`dou`**: Parses dou.ua forum posts, stripping comments and UI elements.
 
-The output is categorized by source in the `dataset/` directory:
-- `dataset/qalight/`: Categorized by the site's original navigational taxonomy.
-- `dataset/dou/articles/`: Technical forum posts.
-- `dataset/books_pdf/`: Markdown conversions of QA literature.
+### 3. Legacy Scripts (`tools/legacy/`)
+Contains older monolithic parsers (e.g., `gemini_pdf_parser.py`, `gemini_pptx_parser.py`) that rely on strict page-by-page extraction.
+
+## Dataset Output Structure
+
+- `dataset/pptx_doc/` — Formatted technical presentations.
+- `dataset/books_pdf/` — Converted IT literature (currently using the legacy parser).
+- `dataset/QA_Bible/` — QA Bible knowledge base (GitBook).
+- `dataset/qalight/`, `dataset/dou/` — Web-scraped articles.

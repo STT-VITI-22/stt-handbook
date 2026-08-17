@@ -18,15 +18,14 @@ async def main():
     # DOU command
     dou_parser = subparsers.add_parser("dou", help="Parse dou.ua QA articles")
 
-    # PDF command
-    pdf_parser = subparsers.add_parser("pdf", help="Convert local PDFs to Markdown")
+    # GitBook command
+    gitbook_parser = subparsers.add_parser("gitbook", help="Parse QA Bible GitBook")
 
     args = parser.parse_args()
 
     if args.resource == "qalight":
-        from parsers.qalight import QalightParser
+        from web_scrapers.qalight import QalightParser
         
-        # Clear the old dataset structure for idempotency
         target_dir = "dataset/qalight"
         if os.path.exists(target_dir):
             logger.info(f"Clearing old dataset directory: {target_dir}")
@@ -39,7 +38,7 @@ async def main():
             await parser_obj.close()
             
     elif args.resource == "dou":
-        from parsers.dou import DouParser
+        from web_scrapers.dou import DouParser
         
         target_dir = "dataset/dou/articles"
         if os.path.exists(target_dir):
@@ -52,9 +51,13 @@ async def main():
         finally:
             await parser_obj.close()
             
-    elif args.resource == "pdf":
-        from parsers.pdf import PdfParser
-        parser_obj = PdfParser(input_dir="dataset/books_pdf/raw", output_dir="dataset/books_pdf")
+    elif args.resource == "gitbook":
+        from web_scrapers.gitbook import GitBookParser
+        
+        target_dir = "dataset/QA_Bible"
+        # We do not rmtree this directory because it contains user files like README.md
+            
+        parser_obj = GitBookParser(base_url="https://vladislaveremeev.gitbook.io/qa_bible", output_dir=target_dir)
         try:
             await parser_obj.run()
         finally:

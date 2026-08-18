@@ -21,8 +21,8 @@
 > Процес перевірки відповідності заявлених до продукту вимог та реально реалізованої функціональності, що відбувається шляхом спостереження за його роботою в штучно створених ситуаціях та на обмеженому наборі тестів, вибраних визначеним чином.
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
-- `dataset/qalight/parsed/osnovi/shcho-take-testuvannia-programnogo-zabezpechennia.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/shcho-take-testuvannia-programnogo-zabezpechennia.md`
 
 **Приклад у реченні:**
 "Тестування ПЗ є ключовою частиною забезпечення якості продукту."
@@ -44,7 +44,7 @@
 - Проводиться під час розробки
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 **Приклад у реченні:**
 "Верифікація коду виконується через code review, статичний аналіз та перевірку документації."
@@ -66,7 +66,7 @@
 - Проводиться після розробки/на готовому продукті
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 **Приклад у реченні:**
 "Валідація продукту включає функціональне тестування, тестування юзабіліті та приймальне тестування."
@@ -94,7 +94,7 @@
 - Fault (збій) — деякі джерела розрізняють, але в практиці часто взаємозамінні
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Баг – дефект; невідповідність фактичного результату виконання програми очікуваному результату."
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Баг – дефект; невідповідність фактичного результату виконання програми очікуваному результату."
 
 **Приклад у реченні:**
 "Дефект у функції сортування призвів до неправильного впорядкування результатів."
@@ -115,7 +115,7 @@
 - **Failure (Збій)** — видимий результат виконання коду з дефектом (прояв)
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Помилка – дія, після якої виникає неправильний результат."
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Помилка – дія, після якої виникає неправильний результат."
 
 **Приклад у реченні:**
 "Помилка розробника (забув ініціалізувати змінну) привела до дефекту в коді, який виявився відправкою невизначеного значення користувачеві (збій)."
@@ -135,7 +135,7 @@
 - **Збій** — прояв дефекту під час виконання (спостережувана невідповідність)
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Збій – невідповідність фактичного результату роботи системи чи компонента тому результату, який очікували."
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Збій – невідповідність фактичного результату роботи системи чи компонента тому результату, який очікували."
 
 **Приклад у реченні:**
 "Дефект у функції забезпечив збій: користувач очікував число 10, але програма вивела 15."
@@ -174,7 +174,7 @@
 - **Фактичний результат (Actual Result)** — що насправді сталося
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Тест-кейс – це тестовий артефакт, суть якого полягає у виконанні деякої кількості дій та/або умов..."
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — "Тест-кейс – це тестовий артефакт, суть якого полягає у виконанні деякої кількості дій та/або умов..."
 
 **Приклад:**
 ```
@@ -209,7 +209,7 @@
 - **Сценарій** — кілька ситуацій у логічній послідовності
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 **Приклад:**
 ```
@@ -240,7 +240,7 @@ Test Suite: "Функціональність входу"
 ```
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -261,8 +261,8 @@ Test Suite: "Функціональність входу"
 4. **Приймальне тестування (Acceptance Testing)** — тестування з точки зору користувача
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
-- `dataset/qalight/parsed/rivni-testuvannia/`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/rivni-testuvannia/`
 
 ---
 
@@ -282,8 +282,8 @@ Test Suite: "Функціональність входу"
 5. **Санітарне тестування (Sanity Testing)** — визначена функція працює
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
-- `dataset/qalight/parsed/vidi-testuvannia/`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/vidi-testuvannia/`
 
 ---
 
@@ -302,7 +302,7 @@ Test Suite: "Функціональність входу"
 4. **Тестування переходів станів (State-Transition Testing)** — тестування переходів
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -360,7 +360,7 @@ Test Suite: "Функціональність входу"
 - Path Coverage (покриття путей)
 
 **Джерела:**
-- `dataset/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
+- `dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
 - `dataset/books_pdf/parsed/Copeland_2004_SoftwareTestDesign.md` (Chapter 10)
 
 ---
@@ -386,7 +386,7 @@ Test Suite: "Функціональність входу"
 - Тестування переходів станів
 
 **Джерела:**
-- `dataset/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
+- `dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
 - `dataset/books_pdf/parsed/Copeland_2004_SoftwareTestDesign.md` (Розділи 3-9)
 
 ---
@@ -406,7 +406,7 @@ Test Suite: "Функціональність входу"
 - Баланс між технічним розумінням та фокусом на функціональність
 
 **Джерела:**
-- `dataset/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
+- `dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md`
 
 ---
 
@@ -431,8 +431,8 @@ Test Suite: "Функціональність входу"
 - Середовище та конфігурація
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
-- `dataset/qalight/parsed/testovi-artefakti/bug-report-zvit-pro-pomilku.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/testovi-artefakti/bug-report-zvit-pro-pomilku.md`
 
 ---
 
@@ -451,7 +451,7 @@ Test Suite: "Функціональність входу"
 4. **Low** — незначна проблема, косметична
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -471,7 +471,7 @@ Test Suite: "Функціональність входу"
 5. **Trivial** — косметична малопомітна проблема
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -492,7 +492,7 @@ Test Suite: "Функціональність входу"
 - Тестування
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -509,8 +509,8 @@ Test Suite: "Функціональність входу"
 - **QC** — виконання (перевірка та тестування)
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
-- `dataset/qalight/parsed/osnovi/qa-qc-i-testuvannia.md`
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+- `dataset/articles/qalight/parsed/osnovi/qa-qc-i-testuvannia.md`
 
 ---
 
@@ -590,8 +590,8 @@ Test Suite: "Функціональність входу"
 Kanban часто пов'язується з LEAN. Kanban — це система управління потоком робіт за допомогою дошки з трьома колонками: "To Do" (Зробити), "In Progress" (Робиться), "Done" (Зроблено).
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/agile.md` — згадування LEAN як фреймворку Agile
-- `dataset/QA_Bible/sdlc-i-stlc/agile.md` — "Бережливая разработка программного обеспечения использует подходы из концепции бережливого производства"
+- `dataset/articles/qalight/parsed/osnovi/agile.md` — згадування LEAN як фреймворку Agile
+- `dataset/articles/QA_Bible/sdlc-i-stlc/agile.md` — "Бережливая разработка программного обеспечения использует подходы из концепции бережливого производства"
 
 ---
 
@@ -630,7 +630,7 @@ WIP Limit: ∞    | WIP Limit: 5           | WIP Limit: ∞
 | Гнучка пріоритизація | Фіксована мета спринту |
 
 **Джерела:**
-- `dataset/qalight/parsed/osnovi/agile.md` — Kanban як фреймворк Agile
+- `dataset/articles/qalight/parsed/osnovi/agile.md` — Kanban як фреймворк Agile
 
 ---
 
@@ -663,13 +663,13 @@ WIP Limit: ∞    | WIP Limit: 5           | WIP Limit: ∞
 ## Посилання
 
 **Основні джерела в dataset:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — Словник QALight
-- `dataset/qalight/parsed/osnovi/shcho-take-testuvannia-programnogo-zabezpechennia.md` — Визначення тестування
-- `dataset/qalight/parsed/osnovi/qa-qc-i-testuvannia.md` — Різниця QA/QC
-- `dataset/qalight/parsed/osnovi/agile.md` — Agile, Scrum, LEAN, Kanban методології
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — Словник QALight
+- `dataset/articles/qalight/parsed/osnovi/shcho-take-testuvannia-programnogo-zabezpechennia.md` — Визначення тестування
+- `dataset/articles/qalight/parsed/osnovi/qa-qc-i-testuvannia.md` — Різниця QA/QC
+- `dataset/articles/qalight/parsed/osnovi/agile.md` — Agile, Scrum, LEAN, Kanban методології
 - `dataset/books_pdf/parsed/Copeland_2004_SoftwareTestDesign.md` — Техніки тестування
 - `dataset/books_pdf/parsed/Didkovska_2011_SoftwareTestingCriteriaAndMethods.md` — Критерії тестування
-- `dataset/QA_Bible/sdlc-i-stlc/agile.md` — Детальна інформація про Agile та LEAN
+- `dataset/articles/QA_Bible/sdlc-i-stlc/agile.md` — Детальна інформація про Agile та LEAN
 
 **Документи посібника:**
 - `CLAUDE.md` — Правила роботи з проектом

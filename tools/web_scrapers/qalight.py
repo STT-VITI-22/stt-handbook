@@ -6,7 +6,7 @@ from .base import BaseParser
 logger = logging.getLogger(__name__)
 
 class QalightParser(BaseParser):
-    def __init__(self, output_dir: str = "dataset/qalight/parsed"):
+    def __init__(self, output_dir: str = "dataset/articles/qalight/parsed"):
         super().__init__(output_dir=output_dir)
         self.base_url = "https://qalight.ua/baza-znan/"
 

@@ -37,5 +37,5 @@ Contains older monolithic parsers (e.g., `gemini_pdf_parser.py`, `gemini_pptx_pa
 
 - `dataset/pptx_doc/` — Formatted technical presentations.
 - `dataset/books_pdf/` — Converted IT literature (currently using the legacy parser).
-- `dataset/QA_Bible/` — QA Bible knowledge base (GitBook).
-- `dataset/qalight/`, `dataset/dou/` — Web-scraped articles.
+- `dataset/articles/QA_Bible/` — QA Bible knowledge base (GitBook).
+- `dataset/articles/qalight/`, `dataset/articles/dou/` — Web-scraped articles.

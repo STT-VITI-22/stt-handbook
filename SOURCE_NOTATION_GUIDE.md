@@ -53,10 +53,10 @@ RWP - / ... = "Не в офіційній програмі, але важлив�
 | Джерело | Кількість | Назва у посібнику | Приклад в нотації |
 |---------|-----------|-------------------|-------------------|
 | **QALight** | 89 файлів | dataset/QALight | `DATASET(QALight: osnovi/...)` |
-| **QA_Bible** | 240+ файлів | dataset/QA_Bible | `DATASET(QA_Bible: test-dizain)` |
+| **QA_Bible** | 240+ файлів | dataset/articles/QA_Bible | `DATASET(QA_Bible: test-dizain)` |
 | **books_pdf** | 26 книг | dataset/books_pdf | `DATASET(books_pdf: Kaner 1999)` |
 | **pptx_doc** | ~20 файлів | dataset/pptx_doc | `DATASET(pptx_doc: ...)` |
-| **dou** | ~10 статей | dataset/dou | `DATASET(dou: ...)` |
+| **dou** | ~10 статей | dataset/articles/dou | `DATASET(dou: ...)` |
 | **youtube** | ~20 відео | dataset/youtube | `DATASET(youtube: ...)` |
 
 **Формати нотації DATASET:**

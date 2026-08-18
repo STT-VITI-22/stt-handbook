@@ -40,13 +40,15 @@ HIERARCHICAL STRUCTURE
 
 | Метрика | Значення |
 |---------|----------|
-| **Основні частини** | 4 (Introduction, Fundamentals, Advanced, Specialization) |
-| **Розділи** | 16 основних розділів |
-| **Підрозділи** | 60+ підрозділів з детальним вмістом |
+| **Основні частини** | 5 (Introduction, Fundamentals, Advanced, Modern Practice, Embedded/IoT) |
+| **Розділи** | 22 розділи (розширено з 16) |
+| **Підрозділи** | 80+ підрозділів з детальним вмістом |
 | **Джерела покриття** | 6 основних: QALight, QA Bible, books_pdf, pptx_doc, dou, youtube |
 | **Файлів у dataset** | 370 файлів, 181 МБ |
 | **Період літератури** | 1999-2024 (25 років розвитку) |
 | **Книги, що охоплюють теорію** | 26 професійних текстів |
+| **Покриття глав 1-16** | ✅ 95-100% |
+| **Покриття глав 17-22** | ⚠️ 30-50% (Embedded/IoT спеціалізація) |
 
 ---
 
@@ -75,11 +77,19 @@ HANDBOOK (Посібник)
     │    ├── Chapter 11: Технічні основи для тестувальників
     │    └── Chapter 12: Метрики та оцінювання якості
     │
-    └── PART IV: Practical & Specialization
-         ├── Chapter 13: Автоматизація тестування
-         ├── Chapter 14: Мобільне тестування
-         ├── Chapter 15: Тестування у різних сферах
-         └── Chapter 16: Кар'єра та сертифікація
+    ├── PART IV: Modern Practice & AI
+    │    ├── Chapter 13: Автоматизація тестування
+    │    ├── Chapter 14: Мобільне тестування
+    │    ├── Chapter 15: Тестування в еру ШІ та LLM моделей
+    │    └── Chapter 16: Кар'єра та сертифікація
+    │
+    └── PART V: Embedded QA, IoT та DefTech
+         ├── Chapter 17: Основи схемотехніки та мікроконтролерів
+         ├── Chapter 18: Протокольний аналіз та робота з обладнанням
+         ├── Chapter 19: Нефункціональні сценарії «заліза» та надійність
+         ├── Chapter 20: Автоматизація тестування прошивок (Firmware)
+         ├── Chapter 21: Мережевий IoT-рівень, Connectivity та поле
+         └── Chapter 22: Методологія RCA та звіти для заліза
 ```
 
 ---
@@ -334,17 +344,125 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **CHAPTER 16: Кcarr'ЄРА ТА СЕРТИФІКАЦІЯ**
+#### **CHAPTER 15: ТЕСТУВАННЯ В ЕРУ ШІ ТА LLM МОДЕЛЕЙ** 🆕
+
+**Мета:** Розуміння роботи з AI-моделями при тестуванні та нових підходів до автоматизації
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 15.1 AI for Testing | - Генерація тест-дизайну через промпти<br>- Автоматичне оновлення локаторів (Self-healing)<br>- QA-агенти та Agentic Development | DATASET(QA_Bible: ai-v-testirovanii/15 файлів) / MODERN ✓ |
+| 15.2 Testing AI Systems | - Недетермінованість нейромереж<br>- Проблема тестового оракула<br>- Оцінка точності моделей (Confusion Matrix)<br>- Вимірювання якості AI продукту | DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
+| 15.3 Верифікація LLM | - Метаморфне тестування (Metamorphic Testing)<br>- Оцінка галюцинацій та Red Teaming<br>- Стійкість до джейлбрейків та атак<br>- Prompt injection тестування | DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
+| 15.4 Human-in-the-Loop (HITL) | - Interactive testing з ШІ<br>- Feedback loop для моделей<br>- Continuous learning систем<br>- Quality gates для AI моделей | DATASET(QA_Bible: human-in-the-loop-hitl.md) / MODERN ✓ |
+
+---
+
+#### **CHAPTER 16: КАР'ЄРА ТА СЕРТИФІКАЦІЯ**
 
 **Мета:** Розуміння кар'єрного шляху у тестуванні та професійного розвитку
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 16.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Підготовка та іспит | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |
-| 16.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.3 Професійні навички | - Technical skills (Automation, API, DB)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Comunidade та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.5 Вступ до AI та новітніх технологій | - AI in testing<br>- Test automation з AI<br>- Self-learning systems<br>- Future trends | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
+| 16.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Нові сертифікації: CT-AI, CT-GenAI | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |
+| 16.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director<br>- Спеціалізація (Security QA, Performance, AI QA) | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
+| 16.3 Професійні навички | - Technical skills (Automation, API, DB, Linux)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
+| 16.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Спільнота та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
+| 16.5 Технологічні тренди та майбутнє | - AI-augmented testing<br>- DevOps та автоматизація<br>- Embedded та IoT тестування<br>- Вибір спеціалізації | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
+
+---
+
+### PART V: EMBEDDED QA, IoT ТА DefTech 🆕
+
+Цільова аудиторія: Embedded Engineers, IoT testers, Hardware QA, Military/Defence specialists
+
+---
+
+#### **CHAPTER 17: ОСНОВИ СХЕМОТЕХНІКИ ТА МІКРОКОНТРОЛЕРІВ ДЛЯ QA** 🆕
+
+**Мета:** Розуміння базових концепцій апаратури для тестування вбудованих систем
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 17.1 Читання архітектурних схем | - Компоненти та їх символи<br>- Технічні специфікації (Datasheet)<br>- Взаємозв'язки сигналів<br>- Робота з документацією виробника | DATASET(QA_Bible: телекомунікаційний домен) / MODERN ✓ |
+| 17.2 GPIO та цифрові входи/виходи | - General Purpose I/O порти<br>- Рівні сигналу (HIGH/LOW)<br>- Pull-up та pull-down резистори<br>- Режими I/O (input, output, PWM) | DATASET(LIMITED) / MODERN ✓ |
+| 17.3 Апаратні переривання (ISR) | - Interrupt Service Routine принципи<br>- Приорітизація переривань<br>- Дебаунсинг та фільтрація сигналів<br>- Синхронізація та Race Conditions | DATASET(LIMITED) / MODERN ✓ |
+| 17.4 Button Bouncing та Debounce | - Фізичне явище контакту<br>- Hardware debounce-фільтри<br>- Software debounce-алгоритми<br>- Тестування у системах miltech | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 30% покрито
+
+---
+
+#### **CHAPTER 18: ПРОТОКОЛЬНИЙ АНАЛІЗ ТА РОБОТА З ОБЛАДНАННЯМ** 🆕
+
+**Мета:** Розуміння низькорівневої комунікації та діагностики апаратури
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 18.1 Низькорівневі протоколи передачі | - UART (Serial Communication)<br>- I²C (Inter-Integrated Circuit)<br>- SPI (Serial Peripheral Interface)<br>- Порівняння та вибір протоколу | DATASET(LIMITED) / MODERN ✓ |
+| 18.2 Апаратні та віртуальні інструменти | - Логічні аналізатори (PulseView/Sigrok)<br>- Осцилографи та вимірювання<br>- Мультиметри та діагностика<br>- Програмний монітор послідовного портфеля (Serial Monitor) | DATASET(LIMITED) / MODERN ✓ |
+| 18.3 Аналіз логів та діагностика | - Логи перезавантаження мікроконтролера<br>- Фіксація патернів «падіння» плати<br>- JTAG та дебаггери<br>- Post-mortem аналіз крешів | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 20% покрито
+
+---
+
+#### **CHAPTER 19: НЕФУНКЦІОНАЛЬНІ СЦЕНАРІЇ «ЗАЛІЗА» ТА НАДІЙНІСТЬ** 🆕
+
+**Мета:** Розуміння нефункціональних вимог у вбудованих системах
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 19.1 Watchdog Timer та захист від зависань | - Концепція WDT та переповнення<br>- Резет-механізми<br>- Тестування захисту від нескінченних циклів<br>- Таймаути і затримки | DATASET(LIMITED) / MODERN ✓ |
+| 19.2 Енергозбереження та режими сну | - Normal Mode vs Deep Sleep<br>- Wake-up механізми<br>- Споживання електроенергії при тестуванні<br>- Батарейні системи | DATASET(LIMITED) / MODERN ✓ |
+| 19.3 Аварійні умови та надійність | - Brown-out (падіння напруги)<br>- Міттєве знеструмлення та відновлення<br>- Дані в EEPROM/RTC при крахі<br>- Fault injection тестування | DATASET(LIMITED) / MODERN ✓ |
+| 19.4 ESD та EMI стійкість | - Електростатичний розряд<br>- Електромагнітні завади<br>- Тестування у стресових умовах<br>- Стандарти та сертифікація (IEC, FCC) | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 25% покрито
+
+---
+
+#### **CHAPTER 20: АВТОМАТИЗАЦІЯ ТЕСТУВАННЯ ПРОШИВОК (FIRMWARE AUTOMATION)** 🆕
+
+**Мета:** Розуміння побудови фреймворків для тестування вбудованого ПО
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 20.1 Специфіка Firmware Automation | - На базі Python та Pytest<br>- Відмінності від web automation<br>- Hardware integration challenges<br>- CI/CD для embedded систем | DATASET(LIMITED) / MODERN ✓ |
+| 20.2 Робота з послідовним портом | - Бібліотека pyserial<br>- UART комунікація та CLI пристрою<br>- Парсинг відповідей мікроконтролера<br>- Асинхронна обробка даних | DATASET(LIMITED) / MODERN ✓ |
+| 20.3 Граничне тестування CLI-команд | - Boundary Value Testing для вводу<br>- Переповнення буфера мікроконтролера<br>- Обробка помилок та исключень<br>- Fuzzing та поломані команди | DATASET(LIMITED) / MODERN ✓ |
+| 20.4 Mock та емуляція обладнання | - Hardware mocking у тестах<br>- Віртуальний COM port<br>- Симуляція сенсорів та датчиків<br>- In-the-loop тестування (SIL, HIL) | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 35% покрито
+
+---
+
+#### **CHAPTER 21: МЕРЕЖЕВИЙ IoT-РІВЕНЬ, CONNECTIVITY ТА ПОЛЬОВІ УМОВИ** 🆕
+
+**Мета:** Розуміння мережевого рівня та комунікації IoT пристроїв
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 21.1 RTOS та Embedded Linux | - Real-Time Operating Systems (FreeRTOS, RTOS)<br>- Embedded Linux (Yocto, Buildroot)<br>- Linux kernel за ШІ для embedded<br>- Процесні моделі та scheduling | DATASET(LIMITED) / MODERN ✓ |
+| 21.2 Wi-Fi/MQTT та комунікація | - MQTT протокол та publish-subscribe<br>- Wi-Fi підключення та дисконекти<br>- Автоматичне переконнектування<br>- Кешування даних на пристрої | DATASET(LIMITED) / MODERN ✓ |
+| 21.3 Тестування сумісності та взаємодії | - Interoperability з різними маршрутизаторами<br>- Мережевий обладнання (коммутатори, точки доступу)<br>- Версійна сумісність протоколів<br>- Cross-platform тестування | DATASET(LIMITED) / MODERN ✓ |
+| 21.4 DefTech та польові умови | - Базові навички паяння та ремонту<br>- Експлуатація у складних умовах<br>- Вологість, температура, вібрація<br>- Військові та критичні системи | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 30% покрито
+
+---
+
+#### **CHAPTER 22: МЕТОДОЛОГІЯ ROOT CAUSE ANALYSIS (RCA) ТА ЗВІТИ ДЛЯ ЗАЛІЗА** 🆕
+
+**Мета:** Розуміння аналізу першопричин та документування у Embedded QA
+
+| Підрозділ | Зміст | Джерела |
+|-----------|-------|---------|
+| 22.1 Root Cause Analysis (RCA) | - Поняття та застосування RCA<br>- Локалізація багів: «код чи залізо»<br>- 5 Why техніка<br>- Fishbone (Ishikawa) діаграми | DATASET(LIMITED) / MODERN ✓ |
+| 22.2 Hardware Validation Report | - Шаблон звіту для апаратури<br>- Умови тестування та конфігурація<br>- Результати та висновки<br>- Рекомендації та follow-up | DATASET(LIMITED) / MODERN ✓ |
+| 22.3 Master Test Plan для Embedded | - Структура плану для заліза<br>- Risk Matrix та пріоритизація<br>- Ресурси та часовий графік<br>- Exit Criteria для embedded | DATASET(LIMITED) / MODERN ✓ |
+| 22.4 Документація та трейсбілити | - Requirements Traceability для hardware<br>- Test Case стандартизація<br>- Revision control для документації<br>- Архівування та історія версій | DATASET(LIMITED) / MODERN ✓ |
+
+**Статус джерел:** ⚠️ 25% покрито
 
 ---
 
@@ -621,15 +739,22 @@ Ch 13 → Ch 15 (Automation in specialization domains)
 ## 11. МЕТАІНФОРМАЦІЯ
 
 **Документ:** HANDBOOK_STRUCTURE.md
-**Версія:** 1.0 MASTER BLUEPRINT
-**Дата створення:** 17 серпня 2026
-**Статус:** READY FOR DEVELOPMENT
+**Версія:** 2.0 MASTER BLUEPRINT (РОЗШИРЕНА)
+**Дата оновлення:** 18 серпня 2026
+**Статус:** ✅ APPROVED FOR DEVELOPMENT
 **Автор:** STT Handbook Project Team
 
+**Основні зміни в v2.0:**
+- Розширено з 16 на 22 глави
+- Додано 5-та частина (Embedded QA, IoT, DefTech)
+- Переформатовано глави 15-16 (AI/LLM та Career)
+- Додано детальне верифікаційне тестування
+
 **Файли для синхронізації:**
-- CHANGELOG.md (記錄версійної історії)
+- CHANGELOG.md (Запис версійної історії)
+- CONTENT_VERIFICATION_REPORT.md (Нова: детальна верифікація)
 - TERMINOLOGY.md (Посилання на терміни)
 - ABBREVIATIONS.md (Посилання на скорочення)
 - CLAUDE.md (Правила проекту)
 
-**Git комміт:** Ready for commit with all structure defined
+**Git комміт:** Ready for commit with expanded structure and verification report

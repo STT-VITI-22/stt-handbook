@@ -6,8 +6,8 @@
 /tools/test_output/
 *.pyc
 .DS_Store
-/dataset/qalight/zagalne/
-/dataset/qalight/android/
+/dataset/articles/qalight/zagalne/
+/dataset/articles/qalight/android/
 /dataset/books_pdf/raw/
 /dataset/books_pdf/gemini/missing_pages/
 *.zip
@@ -16,3 +16,8 @@
 api_usage.json
 .agents/
 local-dev/
+/dataset/books_pdf/parsed/missing_pages/
+/dataset/books_pdf/parsed/legacy/
+/dataset/books_pdf/parsed/ok_7_tekhnologii_testuvannia_programnogo_zabezpechennia_informatsiinikh_sistem_viiskovogo_priznachennia_v1_1_docx.md
+/dataset/pptx_doc/lectures_pz_hz_rpnd/raw/
+/dataset/pptx_doc/lectures_pz_hz_rpnd/parsed/ok_7_tekhnologii_testuvannia_programnogo_zabezpechennia_informatsiinikh.md

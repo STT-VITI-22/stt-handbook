@@ -57,3 +57,12 @@ python3 tools/web_scrapers/parse_medium_html.py "/Downloads/Medium_Article.html"
 ```bash
 uv pip install beautifulsoup4 markdownify requests
 ```
+
+## `fetch_and_parse_article.py`
+Універсальний веб-скрейпер, створений для завантаження статей з інженерних блогів (наприклад, Memfault, Hackaday тощо) безпосередньо за URL-адресою та конвертації їх у чистий Markdown. 
+Він обходить базові блокування за допомогою стандартного User-Agent, автоматично знаходить основний контент (`<article>`, `<main>` або `#post-page`) та агресивно вирізає усе веб-сміття (`<script>`, `<style>`, `<nav>`, `<header>`, `<footer>`).
+
+**Використання:**
+```bash
+python tools/web_scrapers/fetch_and_parse_article.py "https://interrupt.memfault.com/blog/unit-testing-basics" "dataset/articles/memfault/unit_testing_basics.md"
+```

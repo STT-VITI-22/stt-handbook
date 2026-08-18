@@ -142,6 +142,7 @@ HANDBOOK (Посібник)
 | 3.3 Коли починати та закінчувати тестування | - Критерії входження (Entry Criteria)<br>- Критерії виходження (Exit Criteria)<br>- Кількість тестів та покриття<br>- Практичні приклади | RWP ✓ / DATASET(QALight: osnovi/koli-pochinati-ta-zakinchuvati-testuvannia) / MODERN(ISTQB 4.0) |
 | 3.4 Матриці в тестуванні | - Requirements Traceability Matrix (RTM)<br>- Coverage Matrix<br>- Test Execution Matrix<br>- Як складати та використовувати | RWP ✓ / DATASET(QALight: osnovi/matritsia-vidpovidnosti-vimog, osnovi/matritsia-pokrittia) / MODERN ✓ |
 | 3.5 Ролі та відповідальність у тестуванні | - Тестувальник<br>- Test Lead / Manager<br>- Automation Engineer<br>- Організаційні структури | RWP ✓ / DATASET(QALight: osnovi) / MODERN(ISTQB 4.0) |
+| **3.6 Практичне завдання: Manual Testing та Test Case Design** 🆕 | - **Проект stt-manual-testing**<br>- Створення тестових сценаріїв для реальних додатків<br>- Структура Test Case (ID, Title, Prerequisites, Steps, Expected Results)<br>- Позитивне та негативне тестування<br>- Тест-дизайн техніки у практиці<br>- Test Execution та результати<br>- Документування результатів<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-manual-testing | RWP ✓ / DATASET(stt-manual-testing, practical_tasks/stt-manual-testing, QALight: osnovi) / MODERN ✓ |
 
 ---
 
@@ -209,8 +210,11 @@ HANDBOOK (Посібник)
 | 7.5 Таблиці рішень (Decision Tables) | - Decision table structure<br>- Logical combinations<br>- Умови та дії<br>- Спрощення та мінімізація тестів | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |
 | 7.6 Тестування переходів стану (State Transition Testing) | - State diagrams<br>- Transitions та events<br>- Valid та invalid transitions<br>- Практичні приклади (UI workflows) | RWP ✓ / DATASET(QA_Bible: test-dizain) / MODERN ✓ |
 | 7.7 Використання кейсів для тестування | - User Story vs. Use Case<br>- Test cases from use cases<br>- Happy path vs. exception paths | RWP ✓ / DATASET(QALight: osnovi, ISTQB 4.0) / MODERN ✓ |
+| **7.8 Практичне завдання: Unit тестування з Mocha/Chai** 🆕 | - **Проект stt-pz-1 (GitHub)**<br>- Налаштування браузерного тестового середовища<br>- BDD/TDD підходи в Mocha<br>- Assertion бібліотека Chai<br>- Test case для реальних функцій<br>- Browser-based test execution<br>- **Recursos:** https://github.com/STT-VITI-22/stt-pz-1 | RWP ✓ / DATASET(stt-pz-1, practical_tasks/stt-pz-1-mocha-chai, QALight: osnovi) / MODERN ✓ |
 
 **Порівняльна таблиця:** Коли використовувати кожну техніку
+
+**Практичні завдання:** Розділ 7 має практичне завдання для закріплення знань про техніки дизайну тестів
 
 ---
 
@@ -226,6 +230,7 @@ HANDBOOK (Посібник)
 | 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ |
 | 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ |
 | 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla<br>- Azure DevOps<br>- YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами)<br>- Інтеграція з процесом розробки | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
+| **8.7 Практичне завдання: Bug Report та Defect Management** 🆕 | - **Проект stt-bug-reporting**<br>- Структура Bug Report (ID, Title, Description, Steps to Reproduce)<br>- Класифікація дефектів (Severity, Priority)<br>- Bug Report у JIRA / інших системах<br>- Життєвий цикл дефекта (New → Fixed → Verified → Closed)<br>- Root Cause Analysis (RCA)<br>- Практичні приклади дефектів<br>- Документування та комунікація<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-bug-reporting | RWP ✓ / DATASET(stt-bug-reporting, practical_tasks/stt-bug-reporting, QALight: defekt, testovi-artefakti) / MODERN ✓ |
 
 ---
 
@@ -247,6 +252,7 @@ HANDBOOK (Посібник)
 | 9.4 Continuous Integration & Continuous Deployment | - CI/CD Pipeline<br>- Automated testing у CI<br>- Test automation strategy для CD<br>- Quality gates та release cycles | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: sdlc-i-stlc) / MODERN ✓ |
 | 9.5 DevOps та тестування | - DevOps culture та collaboration<br>- Операційне тестування<br>- Production monitoring та defect detection<br>- Shift-left та shift-right testing | RWP ✓ / DATASET(books_pdf: SoftwareTestingHouse 2023, ITVDN 2024) / MODERN ✓ |
 | 9.6 BDD та TDD підходи | - Test-Driven Development (TDD)<br>- Behavior-Driven Development (BDD)<br>- Gherkin syntax (Given-When-Then)<br>- Tools: Cucumber, SpecFlow | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc) / MODERN ✓ |
+| **9.7 Практичні завдання: TDD та BDD у Agile** 🆕 | - **Проект stt-pz-2: TDD з Jest** (>90% покриття)<br>- **Проект stt-pz-4: BDD з Jest та spyOn mocking**<br>- Red-Green-Refactor цикл<br>- BDD Given-When-Then структура<br>- Mocking та спеціалізовані техніки<br>- Integration з CI/CD pipeline<br>- **Ресурси:** https://github.com/STT-VITI-22/stt-pz-2, https://github.com/STT-VITI-22/stt-pz-4 | RWP ✓ / DATASET(stt-pz-2, stt-pz-4, practical_tasks/stt-pz-2-jest-tdd, practical_tasks/stt-pz-4-jest-bdd) / MODERN ✓ |
 
 ---
 
@@ -277,6 +283,7 @@ HANDBOOK (Посібник)
 | 11.4 Бази даних для тестувальників | - SQL базиці<br>- SELECT, WHERE, JOIN statements<br>- Database verification in tests<br>- Tools: DBeaver, MySQL Workbench | RWP ✓ / DATASET(QALight: bazi-danikh-v-testuvanni/) / MODERN ✓ |
 | 11.5 Git та версійне контролю | - Git basics (clone, pull, push)<br>- Branches та commits<br>- Pull requests<br>- Collaboration in development | RWP ✓ / DATASET(QALight: zagalne/shcho-take-git) / MODERN ✓ |
 | 11.6 Архітектура ПЗ для тестування | - Monolithic vs. Microservices<br>- Client-Server architecture<br>- APIs, interfaces<br>- Deployment models | RWP ✓ / DATASET(QALight: zagalne/monolitna-arkhitektura, zagalne/mikroservisna-arkhitektura) / MODERN ✓ |
+| **11.7 Практичне завдання: API тестування та Mock дані** 🆕 | - **Проект stt-pz-3: Jest API тестування**<br>- Mock функції та Jest.mock()<br>- Ice and Fire API приклади<br>- JSON валідація та структури<br>- Handling асинхронних операцій<br>- Mock data management та fixtures<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-3 | RWP ✓ / DATASET(stt-pz-3, practical_tasks/stt-pz-3-jest-api, QALight: zagalne/shcho-take-api) / MODERN ✓ |
 
 ---
 
@@ -312,6 +319,7 @@ HANDBOOK (Посібник)
 | 13.4 Page Object Model | - Design pattern для тестів<br>- Організація коду<br>- Повторне використання та обслуговування<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.5 CI/CD інтеграція | - Jenkins pipeline<br>- GitHub Actions<br>- GitLab CI<br>- Test execution в pipeline | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.6 API automation | - REST API testing<br>- Request-Response cycle<br>- JSON schema validation<br>- Mock servers | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
+| **13.7 Практичне завдання: Modern Test Automation з Cypress** 🆕 | - **Проект stt-pz-5: End-to-End тестування**<br>- Cypress порівняно з Selenium/Playwright<br>- Real user interactions та workflows<br>- Element selection та assertions<br>- E2E test organization і patterns<br>- Real-world calculator testing<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-5 | RWP ✓ / DATASET(stt-pz-5, practical_tasks/stt-pz-5-cypress-e2e) / MODERN ✓ |
 
 ---
 

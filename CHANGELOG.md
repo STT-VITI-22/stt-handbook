@@ -46,6 +46,32 @@
     * Інші метрики складності: метрика Холстеда, метрика Чепіна, метрика Джилба
   - Рекомендація: уточнити термін з користувачем або замінити на "Цикломатична складність"
   - Метрики складності детально документовані у books_pdf (Hrytsiuk 2018)
+
+- **Практичні завдання з тестування (7 проектів)** — інтеграція у структуру посібника 🎓
+  - **PRACTICAL_TASKS_INTEGRATION.md** — нова детальна документація
+  - Додано 2 нові практичні завдання для manual testing:
+    * **stt-manual-testing** (Ch 3.6): Manual Testing & Test Case Design
+      - Створення 20+ test cases
+      - Позитивне та негативне тестування
+      - Test Execution та документування
+      - Requirements Traceability Matrix (RTM)
+    * **stt-bug-reporting** (Ch 8.7): Bug Reporting & Defect Management
+      - 15+ bug reports з класифікацією
+      - Root Cause Analysis (RCA)
+      - Життєвий цикл дефекта у JIRA
+      - Дефект-метрики та аналіз
+
+  - Оновлено HANDBOOK_STRUCTURE.md з 7 практичними завданнями:
+    * Ch 3.6: stt-manual-testing
+    * Ch 7.8: stt-pz-1 (Mocha/Chai Unit Testing)
+    * Ch 8.7: stt-bug-reporting
+    * Ch 9.7: stt-pz-2 (TDD) + stt-pz-4 (BDD)
+    * Ch 11.7: stt-pz-3 (API Testing with Jest)
+    * Ch 13.7: stt-pz-5 (E2E Testing with Cypress)
+    * Ch 5.6: stt-pz-5 (E2E Testing)
+
+  - Структура розширена з "exam" екзаменом як capstone проектом
+
 - Методологія LEAN та Kanban до словника термінів
 - Розширений Словник термінів (TERMINOLOGY.md) з 30+ критичними термінами
 - Перелік скорочень (ABBREVIATIONS.md) з 80+ скорочень

@@ -60,7 +60,7 @@ HIERARCHICAL STRUCTURE
 ```
 HANDBOOK (Посібник)
     │
-    ├── PART I: Introduction & Fundamentals
+    ├── PART I: Introduction & Fundamentals (Вступ та фундаментальні основи)
     │    ├── Chapter 1: Вступ до тестування
     │    ├── Chapter 2: Основи контролю якості
     │    ├── Chapter 3: Процеси та цикли тестування

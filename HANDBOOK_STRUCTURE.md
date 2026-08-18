@@ -151,7 +151,7 @@ HANDBOOK (Посібник)
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 4.1 7 принципів тестування | - 1) Тестування показує наявність дефектів<br>- 2) Исчерпывающее тестирование невозможно<br>- 3) Ранее тестирование экономит деньги<br>- 4) Кластеризация дефектов (80/20)<br>- 5) Парадокс пестицида<br>- 6) Тестирование зависит от контекста<br>- 7) Отсутствие ошибок — это иллюзия | RWP ✓ / DATASET(QALight: osnovi/printsipi-testuvannia) / MODERN(ISTQB 4.0) |
+| 4.1 7 принципів тестування | - 1) Тестування показує наявність дефектів<br>- 2) Вичерпне тестування неможливе<br>- 3) Раннє тестування економить гроші<br>- 4) Кластеризація дефектів (80/20)<br>- 5) Парадокс пестициду<br>- 6) Тестування залежить від контексту<br>- 7) Відсутність помилок — це ілюзія | RWP ✓ / DATASET(QALight: osnovi/printsipi-testuvannia) / MODERN(ISTQB 4.0) |
 | 4.2 Цілі тестування | - Знаходження дефектів<br>- Отримання інформації про якість<br>- Запобігання дефектам<br>- Побудова довіри до ПЗ | RWP ✓ / DATASET(QALight: osnovi/tsili-testuvannia) / MODERN ✓ |
 | 4.3 Психологія тестувальника | - Критичне мислення vs. позитивне сприйняття розробника<br>- Пошук дефектів vs. демонстрація функціональності<br>- Комунікація результатів без конфліктів<br>- Управління стресом | RWP ✓ / DATASET(QALight: osnovi/psikhologiia-testuvannia) / MODERN ✓ |
 | 4.4 Комунікація та конфліктність | - Як звітувати про дефекти конструктивно<br>- Інтерпретація результатів<br>- Робота з розробниками та менеджерами | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |
@@ -171,13 +171,13 @@ HANDBOOK (Посібник)
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Белый ящик<br>- Ранньої перехоплення дефектів | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |
+| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Білий ящик<br>- Раннє перехоплення дефектів | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |
 | 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |
 | 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |
-| 5.4 Приймальне тестування (User Acceptance Testing) | - Visione di impresa e utenti<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha и Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |
+| 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |
 | 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |
 
-**Практичні приклади:** Для кожного рівня — реальний приклад из розробки web-застосунку
+**Практичні приклади:** Для кожного рівня — реальний приклад з розробки web-застосунку
 **Матриця покриття:** Таблиця, яка показує кого тестує кожен рівень
 
 ---
@@ -202,7 +202,7 @@ HANDBOOK (Посібник)
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 7.1 Білий ящик тестування | - Static Analysis<br>- Code Coverage (C0, C1, C2, ..., C∞)<br>- Statement Coverage<br>- Branch Coverage<br>- Path Coverage | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, books_pdf: Copeland 2004, Didkovska 2011) / MODERN ✓ |
+| 7.1 Білий ящик тестування | - Static Analysis<br>- **Керуючий граф програми (Control Flow Graph - CFG)**<br>  - Графічне представлення потоку управління<br>  - Вузли та ребра, базові блоки коду<br>  - Характеристики CFG та застосування<br>- Code Coverage (C0, C1, C2, ..., C∞)<br>  - C0: Statement Coverage (всі оператори)<br>  - C1: Branch Coverage (всі розгалуження)<br>  - C2: Path Coverage (всі шляхи)<br>  - Більш високі рівні покриття<br>- **Цикломатична складність (McCabe Complexity)**<br>  - Вимір складності коду на основі CFG<br>  - Формула: M = E − N + 2P<br>  - Застосування при розробці та тестуванні<br>  - Рекомендовані межі складності (≤10)<br>- Statement Coverage<br>- Branch Coverage<br>- Path Coverage | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, QA_Bible: test-dizain/static-static-analysis, books_pdf: Copeland 2004, Avramenko 2017, Didkovska 2011) / MODERN ✓ |
 | 7.2 Чорний ящик тестування | - Functional specification focus<br>- No code knowledge<br>- Techniques (BVA, ECP, DTT)<br>- Test case design from requirements | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, books_pdf: Beizer 2004) / MODERN ✓ |
 | 7.3 Еквівалентне розподілення (Equivalence Partitioning) | - Теорія та принципи<br>- Практичні приклади<br>- Дійсні та невірні партиції<br>- Таблиця еквівалентного розподілення | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |
 | 7.4 Аналіз граничних значень (Boundary Value Analysis) | - BVA Теорія<br>- Edge cases та corner cases<br>- Off-by-one errors<br>- Практичні приклади | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004, Kulikov 2020) / MODERN ✓ |
@@ -222,10 +222,10 @@ HANDBOOK (Посібник)
 |-----------|-------|---------|
 | 8.1 Терміни: Error, Defect, Failure, Bug | - Точні визначення ISTQB<br>- Причина → Дефект → Вплив<br>- Практичні приклади з ланцюжком<br>- Синоніми та вживання | RWP ✓ / DATASET(QALight: osnovi, defekt, books_pdf) / MODERN(ISTQB 4.0) |
 | 8.2 Класифікація дефектів | - За серйозністю: Critical, Major, Minor, Trivial<br>- За пріоритетом: High, Medium, Low<br>- За типом (Functional, Logic, UI, API)<br>- За впливом на користувача | RWP ✓ / DATASET(QALight: defekt/klasifikatsiia-defektiv) / MODERN ✓ |
-| 8.3 Жизненный цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ |
+| 8.3 Життєвий цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ |
 | 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ |
 | 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ |
-| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla<br>- Azure DevOps<br>- YouTrack<br>- Інтеграція з процесом розробки | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
+| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla<br>- Azure DevOps<br>- YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами)<br>- Інтеграція з процесом розробки | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
 
 ---
 
@@ -287,7 +287,7 @@ HANDBOOK (Посібник)
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
 | 12.1 ISO/IEC 25010:2011 стандарт якості | - 8 характеристик якості<br>- Функціональна відповідність<br>- Надійність<br>- Продуктивність<br>- Вживаність та ін. | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia-za-iso-iec-25010-2011) / MODERN(ISO 25010) |
-| 12.2 Метрики покриття тестування | - Code coverage %<br>- Requirement coverage %<br>- Test case execution rate<br>- Defeect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Hrytsiuk 2018) / MODERN ✓ |
+| 12.2 Метрики покриття тестування | - Code Coverage Levels (C0 до C∞):<br>  - **C0: Statement Coverage** — покриття всіх операторів коду<br>  - **C1: Branch Coverage** — покриття всіх розгалужень (if/else)<br>  - **C2: Path Coverage** — покриття всіх можливих шляхів<br>  - Вищі рівні (C∞) — покриття всіх циклічних комбінацій<br>- **Керуючий граф програми (CFG)** та метрики на його основі:<br>  - Графічне представлення потоку контролю<br>  - Незалежні шляхи в графі<br>  - Застосування для розрахунку кількості необхідних тестів<br>- **Цикломатична складність (Cyclomatic Complexity)**<br>  - Метрика складності на основі CFG<br>  - Визначає мінімальну кількість тестів для покриття шляхів<br>  - Формула: M = E − N + 2P (Е = ребра, N = вузли, P = компоненти)<br>- Requirement coverage %<br>- Test case execution rate<br>- Defect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, test-dizain/static-static-analysis, books_pdf: Hrytsiuk 2018, Copeland 2004, Avramenko 2017) / MODERN ✓ |
 | 12.3 Метрики дефектів | - Defect density (dpu)<br>- Defect distribution<br>- Defect escape rate<br>- Mean time between failures (MTBF) | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |
 | 12.4 Метрики процесу тестування | - Test execution time<br>- Effort spent on testing<br>- Cost per test case<br>- Schedule performance | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
 | 12.5 Звітування про якість | - Quality reports for management<br>- Trend analysis<br>- Risk assessment report<br>- Recommendations | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |
@@ -309,7 +309,7 @@ HANDBOOK (Посібник)
 | 13.1 Основи автоматизації | - Коли автоматизувати<br>- Переваги та недоліки<br>- Інвестиції та ROI<br>- Стратегія автоматизації | RWP ✓ / DATASET(QALight: avtomatizatsiia/avtomatizovane-testuvannia) / MODERN ✓ |
 | 13.2 Вибір інструментів автоматизації | - Web automation: Selenium, Cypress, Playwright<br>- API automation: REST Assured, Postman<br>- Mobile automation: Appium<br>- Вибір за критеріями | RWP ✓ / DATASET(QALight: avtomatizatsiia/iak-obrati-instrument-avtomatizatsii) / MODERN ✓ |
 | 13.3 Локатори та селектори | - XPath (абсолютний та відносний)<br>- CSS Selectors<br>- ID, Name, Class, Tag селектори<br>- Best practices | RWP ✓ / DATASET(QALight: avtomatizatsiia/x-path-lokatori-teoriia, avtomatizatsiia/iak-napisati-x-path-lokator, avtomatizatsiia/vikoristannia-tagname) / MODERN ✓ |
-| 13.4 Page Object Model | - Design pattern для тестів<br>- Організація кодо<br>- Переиспользование та维護<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
+| 13.4 Page Object Model | - Design pattern для тестів<br>- Організація коду<br>- Повторне використання та обслуговування<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.5 CI/CD інтеграція | - Jenkins pipeline<br>- GitHub Actions<br>- GitLab CI<br>- Test execution в pipeline | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.6 API automation | - REST API testing<br>- Request-Response cycle<br>- JSON schema validation<br>- Mock servers | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 

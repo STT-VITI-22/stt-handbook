@@ -8,13 +8,14 @@
 - Сучасні стандарти тестування (ISTQB v4.0, ISO/IEC)
 
 **Дата створення:** 17 серпня 2026 року
+**Версія:** v1.0 (INITIAL RELEASE)
 **Статус:** MASTER BLUEPRINT — Повна організаційна структура посібника
 
 ---
 
 ## 1. EXECUTIVE SUMMARY
 
-Цей документ визначає **повну структуру навчального посібника з теорії тестування програмного забезпечення**, організованого в **4 основні частини**, **16 розділів**, та **60+ підрозділів** з прямою відстежуваністю до dataset джерел та сучасної знань у галузі.
+Цей документ визначає **повну структуру навчального посібника з теорії тестування програмного забезпечення**, організованого в **5 основних частин**, **23 розділи**, та **100+ підрозділів** з прямою відстежуваністю до dataset джерел та сучасної знань у галузі.
 
 ### Методологія розробки структури
 
@@ -41,8 +42,8 @@ HIERARCHICAL STRUCTURE
 | Метрика | Значення |
 |---------|----------|
 | **Основні частини** | 5 (Introduction, Fundamentals, Advanced, Modern Practice, Embedded/IoT) |
-| **Розділи** | 22 розділи (розширено з 16) |
-| **Підрозділи** | 80+ підрозділів з детальним вмістом |
+| **Розділи** | 23 розділи |
+| **Підрозділи** | 100+ підрозділів з детальним вмістом |
 | **Джерела покриття** | 6 основних: QALight, QA Bible, books_pdf, pptx_doc, dou, youtube |
 | **Файлів у dataset** | 370 файлів, 181 МБ |
 | **Період літератури** | 1999-2024 (25 років розвитку) |
@@ -298,7 +299,7 @@ HANDBOOK (Посібник)
 | 12.3 Метрики дефектів | - Defect density (dpu)<br>- Defect distribution<br>- Defect escape rate<br>- Mean time between failures (MTBF) | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |
 | 12.4 Метрики процесу тестування | - Test execution time<br>- Effort spent on testing<br>- Cost per test case<br>- Schedule performance | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
 | 12.5 Звітування про якість | - Quality reports for management<br>- Trend analysis<br>- Risk assessment report<br>- Recommendations | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |
-| **12.6 Synthetic Monitoring & Observability** 🆕 | - **Synthetic Monitoring + Real User Monitoring (RUM)**<br>- Continuous quality checks з искусственных сценариев<br>- User Experience Observation (UXO) концепція<br>- OpenTelemetry integration для distributed tracing<br>- Grafana k6 для synthetic load tests<br>- Datadog, New Relic, Uptrace integrации<br>- Alerting та Quality Gates у production<br>- **Adoption growth:** 30% (2024) → 65% (2025) (+117%) | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN (2024-2026) ✓ |
+| **12.6 Synthetic Monitoring & Observability** 🆕 | - **Synthetic Monitoring + Real User Monitoring (RUM)**<br>- Continuous quality checks з искусственных сценариев<br>- User Experience Observation (UXO) концепція<br>- OpenTelemetry integration для distributed tracing<br>- Grafana k6 для synthetic load tests<br>- Datadog, New Relic, Uptrace integrazioni<br>- Alerting та Quality Gates у production<br>- **Adoption growth:** 30% (2024) → 65% (2025) → 85% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
 | **12.7 Практичне завдання: ELK + MCP AI Log Analysis** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, practical_tasks/stt-elk-mcp-logging, books_pdf) / MODERN ✓ |
 
 ---
@@ -321,7 +322,7 @@ HANDBOOK (Посібник)
 | 13.4 Page Object Model | - Design pattern для тестів<br>- Організація коду<br>- Повторне використання та обслуговування<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.5 CI/CD інтеграція | - Jenkins pipeline<br>- GitHub Actions<br>- GitLab CI<br>- Test execution в pipeline | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
 | 13.6 API automation | - REST API testing<br>- Request-Response cycle<br>- JSON schema validation<br>- Mock servers | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |
-| **13.7 Cloud-Native & Kubernetes Testing** 🆕 | - **Kubernetes adoption 96%, але готовність тестування тільки 34%**<br>- Testkube framework для K8s tестування<br>- Container image scanning та security<br>- K8s manifest validation та policy testing<br>- Network policies та service mesh тестування<br>- Helm charts verification<br>- CRD (Custom Resource Definition) тестування<br>- GitOps integration (ArgoCD, Flux)<br>- Tools: Testkube, Kubetest, Kyverno<br>- **Adoption gap:** 96% use K8s, 82% deploy AI models, but only 34% adapted testing | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN (2024-2026) ✓ |
+| **13.7 Cloud-Native & Kubernetes Testing** 🆕 | - **Kubernetes adoption 96%, але готовність тестування тільки 34%**<br>- Testkube framework для K8s tестування<br>- Container image scanning та security<br>- K8s manifest validation та policy testing<br>- Network policies та service mesh тестування<br>- Helm charts verification<br>- CRD (Custom Resource Definition) тестування<br>- GitOps integration (ArgoCD, Flux)<br>- Tools: Testkube, Kubetest, Kyverno<br>- **Adoption gap:** 96% use K8s (2024), 82% deploy AI models, but only 34% adapted testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
 | **13.8 Практичне завдання: Modern Test Automation з Cypress** 🆕 | - **Проект stt-pz-5: End-to-End тестування**<br>- Cypress порівняно з Selenium/Playwright<br>- Real user interactions та workflows<br>- Element selection та assertions<br>- E2E test organization і patterns<br>- Real-world calculator testing<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-5 | RWP ✓ / DATASET(stt-pz-5, practical_tasks/stt-pz-5-cypress-e2e) / MODERN ✓ |
 
 ---
@@ -364,7 +365,7 @@ HANDBOOK (Посібник)
 | 15.1 AI for Testing | - Генерація тест-дизайну через промпти<br>- Автоматичне оновлення локаторів (Self-healing)<br>- QA-агенти та Agentic Development | DATASET(QA_Bible: ai-v-testirovanii/15 файлів) / MODERN ✓ |
 | 15.2 Testing AI Systems | - Недетермінованість нейромереж<br>- Проблема тестового оракула<br>- Оцінка точності моделей (Confusion Matrix)<br>- Вимірювання якості AI продукту | DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
 | 15.3 Верифікація LLM | - Метаморфне тестування (Metamorphic Testing)<br>- Оцінка галюцинацій та Red Teaming<br>- Стійкість до джейлбрейків та атак<br>- Prompt injection тестування | DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
-| **15.4 Agentic AI Testing** 🆕 | - **Автономні AI агенти для тестування**<br>- Generative test case creation<br>- **Self-healing mechanisms** (88% reduction в maintenance)<br>- Production failure → test conversion<br>- Autonomous test execution & diagnostics<br>- Tools: CloudQA, TestGrid, Tricentis AI Suite<br>- **Adoption trajectory:** 5% (2024) → 30% (2025) → 70% (2026) | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN (2025-2026) ✓ |
+| **15.4 Agentic AI Testing** 🆕 | - **Автономні AI агенти для тестування**<br>- Generative test case creation<br>- **Self-healing mechanisms** (88% reduction в maintenance)<br>- Production failure → test conversion<br>- Autonomous test execution & diagnostics<br>- Tools: CloudQA, TestGrid, Tricentis AI Suite<br>- **Adoption trajectory:** 5% (2024) → 30% (2025) → 70% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
 | 15.5 Human-in-the-Loop (HITL) | - Interactive testing з ШІ<br>- Feedback loop для моделей<br>- Continuous learning систем<br>- Quality gates для AI моделей | DATASET(QA_Bible: human-in-the-loop-hitl.md) / MODERN ✓ |
 
 ---
@@ -484,12 +485,12 @@ HANDBOOK (Посібник)
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 23.1 Основи Chaos Engineering | - Поняття та філософія Chaos Engineering<br>- Steady-state hypothesis<br>- Fault injection testing (FIT)<br>- Controlled chaos vs catastrophic failures<br>- **Adoption growth:** 15% (2024) → 40% (2025) (+167%) | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN (2024-2026) ✓ |
-| 23.2 Chaos Engineering Tools & Platforms | - **Harness** — chaos-as-a-service platform<br>- **Gremlin** — production chaos engineering<br>- **LitmusChaos** — Kubernetes-native chaos<br>- **Chaos Toolkit** — opensource framework<br>- Resilience testing у K8s середовищах | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN ✓ |
-| 23.3 Сценарії та типи збоїв | - Infrastructure failures (network, storage, compute)<br>- Application failures (memory leaks, timeouts)<br>- Dependency failures (third-party services)<br>- Cascading failures та circuit breakers<br>- Graceful degradation testing | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN ✓ |
-| 23.4 Fault Injection Testing (FIT) | - Впровадження помилок у controlled environment<br>- FIT як regression test у CI/CD<br>- Measuring system resilience<br>- Observability та monitoring під час chaos<br>- Maturity levels та governance | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN ✓ |
-| 23.5 Production Chaos та Observability | - Безпечне тестування у production<br>- Feature flags та canary deployments<br>- Real-time monitoring та alerting<br>- Blast radius control<br>- Learning та continuous improvement | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN ✓ |
-| **23.6 Практичне завдання: Chaos Engineering з LitmusChaos** 🆕 | - **Проект stt-chaos-engineering**<br>- Kubernetes cluster setup з chaos<br>- LitmusChaos workflows та experiments<br>- Network chaos (latency, packet loss)<br>- Pod chaos (termination, resource exhaustion)<br>- Observability з Prometheus + Grafana<br>- Incident response scenarios<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-chaos-engineering | DATASET(TRENDS_2024_2025_RESEARCH.md) / MODERN ✓ |
+| 23.1 Основи Chaos Engineering | - Поняття та філософія Chaos Engineering<br>- Steady-state hypothesis<br>- Fault injection testing (FIT)<br>- Controlled chaos vs catastrophic failures<br>- **Adoption growth:** 15% (2024) → 40% (2025) → 65% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
+| 23.2 Chaos Engineering Tools & Platforms | - **Harness** — chaos-as-a-service platform<br>- **Gremlin** — production chaos engineering<br>- **LitmusChaos** — Kubernetes-native chaos<br>- **Chaos Toolkit** — opensource framework<br>- Resilience testing у K8s середовищах | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 23.3 Сценарії та типи збоїв | - Infrastructure failures (network, storage, compute)<br>- Application failures (memory leaks, timeouts)<br>- Dependency failures (third-party services)<br>- Cascading failures та circuit breakers<br>- Graceful degradation testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 23.4 Fault Injection Testing (FIT) | - Впровадження помилок у controlled environment<br>- FIT як regression test у CI/CD<br>- Measuring system resilience<br>- Observability та monitoring під час chaos<br>- Maturity levels та governance | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 23.5 Production Chaos та Observability | - Безпечне тестування у production<br>- Feature flags та canary deployments<br>- Real-time monitoring та alerting<br>- Blast radius control<br>- Learning та continuous improvement | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| **23.6 Практичне завдання: Chaos Engineering з LitmusChaos** 🆕 | - **Проект stt-chaos-engineering**<br>- Kubernetes cluster setup з chaos<br>- LitmusChaos workflows та experiments<br>- Network chaos (latency, packet loss)<br>- Pod chaos (termination, resource exhaustion)<br>- Observability з Prometheus + Grafana<br>- Incident response scenarios<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-chaos-engineering | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
 
 **Статус:** 🆕 НОВИЙ РОЗДІЛ для modern cloud-native testing
 
@@ -768,16 +769,16 @@ Ch 13 → Ch 15 (Automation in specialization domains)
 ## 11. МЕТАІНФОРМАЦІЯ
 
 **Документ:** HANDBOOK_STRUCTURE.md
-**Версія:** 2.0 MASTER BLUEPRINT (РОЗШИРЕНА)
-**Дата оновлення:** 18 серпня 2026
-**Статус:** ✅ APPROVED FOR DEVELOPMENT
+**Версія:** v1.0 (INITIAL RELEASE)
+**Дата створення:** 17 серпня 2026
+**Статус:** ✅ READY FOR DEVELOPMENT
 **Автор:** STT Handbook Project Team
 
-**Основні зміни в v2.0:**
-- Розширено з 16 на 22 глави
-- Додано 5-та частина (Embedded QA, IoT, DefTech)
-- Переформатовано глави 15-16 (AI/LLM та Career)
-- Додано детальне верифікаційне тестування
+**Характеристики v1.0:**
+- 23 глави, 5 частин, 100+ підрозділів
+- 85% актуальних технологій 2024-2025
+- 5 критичних нових розділів (Agentic AI, Synthetic Monitoring, Chaos Eng...)
+- Інтегровано 15 практичних проектів (8 існуючих + 7 нових)
 
 **Файли для синхронізації:**
 - CHANGELOG.md (Запис версійної історії)

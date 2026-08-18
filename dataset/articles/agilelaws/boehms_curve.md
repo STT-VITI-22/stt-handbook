@@ -8,10 +8,7 @@ Barry Boehm
 
 
 
----
-
-
-![Boehm's Curve](/images/laws/boehms-curve.png)
+![Boehm's Curve](https://agilelaws.com/images/laws/boehms-curve.png)
 
 Defects caught during the requirements or design phase cost significantly less to fix than those found during coding, testing, or post-release. This principle is central to modern software development practices, particularly Agile, where early feedback and defect prevention are key.
 

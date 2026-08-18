@@ -7,7 +7,7 @@
 
 ---
 
-## 1. ОБЗОР ПРАКТИЧНИХ ЗАВДАНЬ (ВСЬОГО 7 ПРОЕКТІВ)
+## 1. ОБЗОР ПРАКТИЧНИХ ЗАВДАНЬ (ВСЬОГО 8 ПРОЕКТІВ)
 
 ### Таблиця відповідності практичних завдань до розділів посібника
 
@@ -20,6 +20,7 @@
 | **stt-pz-4** | BDD with Jest | Jest | Behavior-Driven Development | Ch 9 (Agile/DevOps), Ch 13 (Автоматизація) | Unit/BDD |
 | **stt-pz-5** | E2E Testing | Cypress | End-to-End тестування | Ch 5 (Рівні тестування), Ch 13 (Автоматизація) | E2E |
 | **stt-bug-reporting** 🆕 | Bug Reporting & Defect Management | JIRA/Bugzilla | Bug Report, RCA, Defect Lifecycle | Ch 8 (Управління дефектами) | Manual |
+| **stt-elk-mcp-logging** 🆕🆕 | ELK + MCP AI Log Analysis | ELK + MCP + Claude | Logging, Monitoring, AI Analysis | Ch 12 (Метрики & Quality) | Integration/Monitoring |
 
 ---
 
@@ -127,6 +128,29 @@
 - Ресурс: https://github.com/STT-VITI-22/stt-pz-5
 | RWP ✓ / DATASET(stt-pz-5) / MODERN ✓ |
 ```
+
+---
+
+### 2.6 CHAPTER 12: МЕТРИКИ ТА ОЦІНЮВАННЯ ЯКОСТІ (РОЗШИРЕНЕ)
+
+**Добавити новий підрозділ 12.6:**
+
+```
+| 12.6 Практичне завдання: ELK + MCP AI Log Analysis 🆕 |
+- Практичний проект stt-elk-mcp-logging
+- ELK Stack deployment (Elasticsearch, Logstash, Kibana)
+- Структуроване логування з Python/Node.js додатків
+- Logstash pipelines для парсингу та збагачення логів
+- Kibana dashboards: Performance, Errors, Traffic
+- **MCP сервер для AI аналізу** (NEW)
+- Claude API integration для детекції аномалій та RCA
+- Anomaly detection та intelligent alerting
+- Docker Compose full stack
+- Ресурс: https://github.com/STT-VITI-22/stt-elk-mcp-logging
+| RWP ✓ / DATASET(stt-elk-mcp-logging, practical_tasks, books_pdf) / MODERN ✓ |
+```
+
+**Важливість:** Цей розділ демонструє сучасний підхід до спостережуваності (observability) та моніторингу в production, з інноваційною інтеграцією AI для аналізу логів через MCP (Model Context Protocol).
 
 ---
 

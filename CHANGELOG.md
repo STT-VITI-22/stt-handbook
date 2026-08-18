@@ -47,8 +47,8 @@
   - Рекомендація: уточнити термін з користувачем або замінити на "Цикломатична складність"
   - Метрики складності детально документовані у books_pdf (Hrytsiuk 2018)
 
-- **Практичні завдання з тестування (7 проектів)** — інтеграція у структуру посібника 🎓
-  - **PRACTICAL_TASKS_INTEGRATION.md** — нова детальна документація
+- **Практичні завдання з тестування (8 проектів)** — інтеграція у структуру посібника 🎓
+  - **PRACTICAL_TASKS_INTEGRATION.md** — розширена документація (v2.1)
   - Додано 2 нові практичні завдання для manual testing:
     * **stt-manual-testing** (Ch 3.6): Manual Testing & Test Case Design
       - Створення 20+ test cases
@@ -61,7 +61,18 @@
       - Життєвий цикл дефекта у JIRA
       - Дефект-метрики та аналіз
 
-  - Оновлено HANDBOOK_STRUCTURE.md з 7 практичними завданнями:
+  - Додано 1 новий продвинутий проект для моніторингу та AI аналізу:
+    * **stt-elk-mcp-logging** 🆕 (Ch 12.6): ELK + MCP AI Log Analysis
+      - ELK Stack deployment (Elasticsearch, Logstash, Kibana)
+      - Структуроване логування з Python/Node.js додатків
+      - Logstash pipelines для парсингу та збагачення логів
+      - Kibana dashboards (Performance, Errors, Traffic)
+      - **MCP сервер для AI-powered аналізу** (NEW INNOVATION)
+      - Claude API integration для детекції аномалій та RCA
+      - Anomaly detection та intelligent alerting
+      - Docker Compose full stack з 7 лабораторними вправами
+
+  - Оновлено HANDBOOK_STRUCTURE.md з 8 практичними завданнями:
     * Ch 3.6: stt-manual-testing
     * Ch 7.8: stt-pz-1 (Mocha/Chai Unit Testing)
     * Ch 8.7: stt-bug-reporting
@@ -69,8 +80,13 @@
     * Ch 11.7: stt-pz-3 (API Testing with Jest)
     * Ch 13.7: stt-pz-5 (E2E Testing with Cypress)
     * Ch 5.6: stt-pz-5 (E2E Testing)
+    * Ch 12.6: stt-elk-mcp-logging (ELK + MCP AI) 🆕
 
   - Структура розширена з "exam" екзаменом як capstone проектом
+
+  - **Нові файли за stt-elk-mcp-logging:**
+    * stt-elk-mcp-logging-SPECIFICATION.md (400+ рядків) — детальна специфікація проекту
+    * Dataset матеріали (рекомендації): docker-compose examples, Logstash pipelines, MCP tools templates, Claude prompts
 
 - Методологія LEAN та Kanban до словника термінів
 - Розширений Словник термінів (TERMINOLOGY.md) з 30+ критичними термінами

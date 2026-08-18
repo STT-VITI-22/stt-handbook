@@ -298,6 +298,7 @@ HANDBOOK (Посібник)
 | 12.3 Метрики дефектів | - Defect density (dpu)<br>- Defect distribution<br>- Defect escape rate<br>- Mean time between failures (MTBF) | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |
 | 12.4 Метрики процесу тестування | - Test execution time<br>- Effort spent on testing<br>- Cost per test case<br>- Schedule performance | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
 | 12.5 Звітування про якість | - Quality reports for management<br>- Trend analysis<br>- Risk assessment report<br>- Recommendations | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |
+| **12.6 Практичне завдання: ELK + MCP AI Log Analysis** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, practical_tasks/stt-elk-mcp-logging, books_pdf) / MODERN ✓ |
 
 ---
 

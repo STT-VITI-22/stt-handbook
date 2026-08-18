@@ -37,5 +37,5 @@ uv run python tools/doc_parser/parse_docs.py "path/to/book.pdf" --type pdf
 
 - `dataset/pptx_doc/` — Форматовані технічні презентації.
 - `dataset/books_pdf/` — Конвертована ІТ-література (використовує legacy-парсер).
-- `dataset/QA_Bible/` — База знань QA Bible (GitBook).
-- `dataset/qalight/`, `dataset/dou/` — Веб-статті.
+- `dataset/articles/QA_Bible/` — База знань QA Bible (GitBook).
+- `dataset/articles/qalight/`, `dataset/articles/dou/` — Веб-статті.

@@ -39,7 +39,7 @@
 - "QA-команда" — команда забезпечення якості
 - "QA-процеси" — процеси забезпечення якості
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -54,7 +54,7 @@
 - "QC-процес" — процес контролю якості
 - "QC-фахівець" — тестувальник/контролер якості
 
-**Джерело:** `dataset/qalight/parsed/osnovi/qa-qc-i-testuvannia.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/qa-qc-i-testuvannia.md`
 
 ---
 
@@ -67,7 +67,7 @@
 
 **Синонім:** Build Testing
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -82,7 +82,7 @@
 - "UAT-цикл" — фаза приймального тестування
 - "UAT-команда" — користувачі, які беруть участь в тестуванні
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -109,7 +109,7 @@
 - "REST API" — тип АПІ архітектури
 - "SOAP API" — тип АПІ архітектури
 
-**Джерело:** `dataset/qalight/parsed/osnovi/` (кілька файлів)
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/` (кілька файлів)
 
 ---
 
@@ -126,7 +126,7 @@
 - "UI-тестування" — тестування інтерфейсу
 - "UI-елемент" — кнопка, поле, список та ін.
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -141,7 +141,7 @@
 - "UX-дизайн" — дизайн, орієнтований на користувача
 - "UX-тестування" — тестування користувальницького досвіду
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -156,7 +156,7 @@
 - HTTPS — HTTP Secure (захищена версія)
 - REST — Representational State Transfer (архітектура на основі HTTP)
 
-**Джерело:** `dataset/qalight/parsed/protokoli/`
+**Джерело:** `dataset/articles/qalight/parsed/protokoli/`
 
 ---
 
@@ -167,7 +167,7 @@
 
 **Визначення:** Основні протоколи мережі Інтернет. TCP відповідає за надійність, IP — за маршрутизацію пакетів.
 
-**Джерело:** `dataset/qalight/parsed/protokoli/`
+**Джерело:** `dataset/articles/qalight/parsed/protokoli/`
 
 ---
 
@@ -178,7 +178,7 @@
 
 **Визначення:** Система, що перетворює імена доменів (напр., qalight.ua) на IP-адреси.
 
-**Джерело:** `dataset/qalight/parsed/protokoli/`
+**Джерело:** `dataset/articles/qalight/parsed/protokoli/`
 
 ---
 
@@ -189,7 +189,7 @@
 
 **Визначення:** Мова розмітки для створення веб-сторінок. Складається з тегів та елементів.
 
-**Джерело:** `dataset/qalight/parsed/osnovi/html-ta-css-dlia-testuvalnikiv.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/html-ta-css-dlia-testuvalnikiv.md`
 
 ---
 
@@ -200,7 +200,7 @@
 
 **Визначення:** Мова стилізації для оформлення веб-сторінок; опис того, як повинні відображатися HTML-елементи.
 
-**Джерело:** `dataset/qalight/parsed/osnovi/html-ta-css-dlia-testuvalnikiv.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/html-ta-css-dlia-testuvalnikiv.md`
 
 ---
 
@@ -215,7 +215,7 @@
 - "XPath-локатор" — вираз для пошуку елемента
 - "XPath-синтаксис" — правила написання XPath-виразів
 
-**Джерело:** `dataset/qalight/parsed/avtomatizatsiia/`
+**Джерело:** `dataset/articles/qalight/parsed/avtomatizatsiia/`
 
 ---
 
@@ -234,7 +234,7 @@
 }
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/shcho-take-json.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/shcho-take-json.md`
 
 ---
 
@@ -245,7 +245,7 @@
 
 **Визначення:** Універсальна мова розмітки для опису структурованих даних; часто використовується в SOAP API та конфігураційних файлах.
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -260,7 +260,7 @@
 - "SQL-запит" — команда для роботи з БД
 - "SQL-ін'єкція" — вид вразливості безпеки
 
-**Джерело:** `dataset/qalight/parsed/bazi-danikh-v-testuvanni/`
+**Джерело:** `dataset/articles/qalight/parsed/bazi-danikh-v-testuvanni/`
 
 ---
 
@@ -282,7 +282,7 @@
 6. Deployment (Розгортання)
 7. Maintenance (Підтримка)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/` + `dataset/books_pdf/parsed/`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/` + `dataset/books_pdf/parsed/`
 
 ---
 
@@ -315,7 +315,7 @@
 - Беклог (Backlog) — список задач
 - Скрам (Scrum) — фреймворк Agile
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -331,7 +331,7 @@
 - Product Owner — власник продукту
 - Development Team — команда розробників
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -348,7 +348,7 @@
 - "CI/CD-конвеєр" — автоматичний процес від коду до продакшену
 - "CI/CD-сервер" — сервер, що керує процесом (Jenkins, GitLab CI тощо)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/shcho-take-ci-continuous-integration.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/shcho-take-ci-continuous-integration.md`
 
 ---
 
@@ -364,7 +364,7 @@
 2. Write Code (Написати мінімум коду для проходження тесту)
 3. Refactor (Поліпшити код)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/`
 
 ---
 
@@ -382,7 +382,7 @@ When (Коли) він вводить правильний пароль
 Then (Тоді) він входить в систему
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/`
 
 ---
 
@@ -414,8 +414,8 @@ Then (Тоді) він входить в систему
 - "LEAN в тестуванні" — тестування лише критичних функцій
 
 **Джерело:**
-- `dataset/qalight/parsed/osnovi/agile.md` — LEAN як фреймворк Agile
-- `dataset/QA_Bible/sdlc-i-stlc/agile.md` — детальна інформація про LEAN
+- `dataset/articles/qalight/parsed/osnovi/agile.md` — LEAN як фреймворк Agile
+- `dataset/articles/QA_Bible/sdlc-i-stlc/agile.md` — детальна інформація про LEAN
 
 ---
 
@@ -453,7 +453,7 @@ Then (Тоді) він входить в систему
 - "Kanban-команда" — команда, що використовує Kanban
 - "Kanban-ліміт" — обмеження на WIP
 
-**Джерело:** `dataset/qalight/parsed/osnovi/agile.md` — Kanban як фреймворк Agile
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/agile.md` — Kanban як фреймворк Agile
 
 ---
 
@@ -528,7 +528,7 @@ In Progress: WIP Limit = 5
 - Перевірка, що кожна вимога тестується
 - Забезпечення повноти тестування
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -545,7 +545,7 @@ In Progress: WIP Limit = 5
 - Відслідковування дефектів
 - Планування спринтів
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -561,7 +561,7 @@ In Progress: WIP Limit = 5
 - Розподіл дефектів на розробників
 - Звітування про дефекти
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -580,7 +580,7 @@ In Progress: WIP Limit = 5
 Граничні значення для тестування: 0, 1, 100, 101
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -599,7 +599,7 @@ In Progress: WIP Limit = 5
 - Клас 3: Нормальні значення (25, 50, 100)
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -642,7 +642,7 @@ In Progress: WIP Limit = 5
 Тести: Перевірити переходи та неправильні переходи
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -709,7 +709,7 @@ In Progress: WIP Limit = 5
 - Advanced Level (Продвинутий)
 - Expert Level (Експертний)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -785,7 +785,7 @@ In Progress: WIP Limit = 5
         Acceptance Test
 ```
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -803,7 +803,7 @@ In Progress: WIP Limit = 5
 4. Testing (Тестування)
 5. Deployment (Розгортання)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -818,7 +818,7 @@ In Progress: WIP Limit = 5
 - Скорочує ризики
 - Дозволяє отримувати зворотне вказівок у процесі розробки
 
-**Джерело:** `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md`
 
 ---
 
@@ -838,7 +838,7 @@ In Progress: WIP Limit = 5
 - Encapsulation (Інкапсуляція)
 - Polymorphism (Поліморфізм)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/paradigmi-programuvannia-oop.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/paradigmi-programuvannia-oop.md`
 
 ---
 
@@ -851,7 +851,7 @@ In Progress: WIP Limit = 5
 
 **Контекст:** "REST API" — API, побудований за принципами REST
 
-**Джерело:** `dataset/qalight/parsed/osnovi/shcho-take-api.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/shcho-take-api.md`
 
 ---
 
@@ -879,7 +879,7 @@ In Progress: WIP Limit = 5
 - Commit (Комміт)
 - Pull Request (Запит на зведення)
 
-**Джерело:** `dataset/qalight/parsed/osnovi/shcho-take-git.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/shcho-take-git.md`
 
 ---
 
@@ -905,7 +905,7 @@ In Progress: WIP Limit = 5
 
 **Контекст:** "MCP-сервер" — сервер, що забезпечує MCP-інтерфейс
 
-**Джерело:** `dataset/QA_Bible/ai-v-testirovanii/` (згадується в контексті Claude Code)
+**Джерело:** `dataset/articles/QA_Bible/ai-v-testirovanii/` (згадується в контексті Claude Code)
 
 ---
 
@@ -933,7 +933,7 @@ In Progress: WIP Limit = 5
 - Важко масштабувати
 - Залежність компонентів
 
-**Джерело:** `dataset/qalight/parsed/osnovi/monolitna-arkhitektura-pz.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/monolitna-arkhitektura-pz.md`
 
 ---
 
@@ -949,7 +949,7 @@ In Progress: WIP Limit = 5
 - Можна розробляти незалежно
 - Легше тестувати
 
-**Джерело:** `dataset/qalight/parsed/osnovi/mikroservisna-arkhitektura-pz.md`
+**Джерело:** `dataset/articles/qalight/parsed/osnovi/mikroservisna-arkhitektura-pz.md`
 
 ---
 
@@ -998,7 +998,7 @@ In Progress: WIP Limit = 5
 
 **Контекст:** "APK-тестування" — встановлення та тестування APK-файлу
 
-**Джерело:** `dataset/qalight/parsed/android/`
+**Джерело:** `dataset/articles/qalight/parsed/android/`
 
 ---
 
@@ -1163,10 +1163,10 @@ In Progress: WIP Limit = 5
 ## Посилання на джерела
 
 **Основні джерела в dataset:**
-- `dataset/qalight/parsed/osnovi/slovnik-testuvalnika.md` — Словник QALight
-- `dataset/qalight/parsed/osnovi/` — Основні поняття
+- `dataset/articles/qalight/parsed/osnovi/slovnik-testuvalnika.md` — Словник QALight
+- `dataset/articles/qalight/parsed/osnovi/` — Основні поняття
 - `dataset/books_pdf/parsed/Copeland_2004_SoftwareTestDesign.md` — Техніки тестування
-- `dataset/QA_Bible/` — Деталізовані поняття з тестування та автоматизації
+- `dataset/articles/QA_Bible/` — Деталізовані поняття з тестування та автоматизації
 
 **Зовнішні стандарти:**
 - ISTQB Foundation Syllabus

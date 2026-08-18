@@ -229,8 +229,8 @@
   - Практичні приклади та діаграми
 
 - Методологія LEAN та Kanban з:
-  - `dataset/qalight/parsed/osnovi/agile.md`
-  - `dataset/QA_Bible/sdlc-i-stlc/agile.md`
+  - `dataset/articles/qalight/parsed/osnovi/agile.md`
+  - `dataset/articles/QA_Bible/sdlc-i-stlc/agile.md`
   - 5 принципів LEAN
   - 4 ключові концепції (Muda, Mura, Muri, JIT)
   - Система управління потоком (Kanban)
@@ -263,11 +263,11 @@
 
 | Джерело | Файлів | Розмір |
 |---------|--------|--------|
-| dataset/QA_Bible | 241 | 3.7 МБ |
-| dataset/qalight/parsed | 89 | 692 КБ |
+| dataset/articles/QA_Bible | 241 | 3.7 МБ |
+| dataset/articles/qalight/parsed | 89 | 692 КБ |
 | dataset/books_pdf/parsed | 26 | 170 МБ |
 | dataset/pptx_doc | 8 | 5.6 МБ |
-| dataset/dou | 4 | 144 КБ |
+| dataset/articles/dou | 4 | 144 КБ |
 | **Всього** | **369** | **181 МБ** |
 
 ### Терміни та скорочення

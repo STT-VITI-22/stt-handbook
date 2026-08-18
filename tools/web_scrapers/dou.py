@@ -6,7 +6,7 @@ from .base import BaseParser
 logger = logging.getLogger(__name__)
 
 class DouParser(BaseParser):
-    def __init__(self, output_dir: str = "dataset/dou/parsed"):
+    def __init__(self, output_dir: str = "dataset/articles/dou/parsed"):
         # We will save all provided DOU articles directly into one category folder for now
         super().__init__(output_dir=output_dir)
         

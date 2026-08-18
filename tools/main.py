@@ -26,7 +26,7 @@ async def main():
     if args.resource == "qalight":
         from web_scrapers.qalight import QalightParser
         
-        target_dir = "dataset/qalight"
+        target_dir = "dataset/articles/qalight"
         if os.path.exists(target_dir):
             logger.info(f"Clearing old dataset directory: {target_dir}")
             shutil.rmtree(target_dir)
@@ -40,7 +40,7 @@ async def main():
     elif args.resource == "dou":
         from web_scrapers.dou import DouParser
         
-        target_dir = "dataset/dou/articles"
+        target_dir = "dataset/articles/dou/articles"
         if os.path.exists(target_dir):
             logger.info(f"Clearing old dataset directory: {target_dir}")
             shutil.rmtree(target_dir)
@@ -54,7 +54,7 @@ async def main():
     elif args.resource == "gitbook":
         from web_scrapers.gitbook import GitBookParser
         
-        target_dir = "dataset/QA_Bible"
+        target_dir = "dataset/articles/QA_Bible"
         # We do not rmtree this directory because it contains user files like README.md
             
         parser_obj = GitBookParser(base_url="https://vladislaveremeev.gitbook.io/qa_bible", output_dir=target_dir)

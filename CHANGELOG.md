@@ -11,13 +11,43 @@
 ## [Невипущено] / Unreleased
 
 ### Added / Додано
-- **HANDBOOK_STRUCTURE.md v2.0** (95 КБ) — MASTER BLUEPRINT розширеної структури посібника 🆕
-  - Розширено з 16 на 22 глави + 5 частин
-  - Структура: 5 основних частин + 22 розділи + 80+ підрозділів
-  - Нова PART V: Embedded QA, IoT, DefTech (Chapters 17-22)
-  - Оновлено глави 15-16: AI/LLM Testing та Career/Certifications
-  - Матриця відстежуваності RWP → Dataset → ISTQB 4.0 → Modern Knowledge
-  - Верифікація: Chapters 1-16 (95-100% покриття), Chapters 17-22 (30-50% покриття)
+- **HANDBOOK_STRUCTURE.md v3.0** (97 КБ) — MASTER BLUEPRINT з актуальними 2024-2025 трендами 🆕
+  - Розширено з 22 на 23 глави (додано Ch 23: Chaos Engineering)
+  - **Нові критичні розділи:**
+    * **15.4 Agentic AI Testing** — 500% growth (5% → 30% adoption)
+    * **12.6 Synthetic Monitoring & Observability** — 117% growth (RUM + Synthetic)
+    * **6.4 Supply Chain Security** — OWASP 2025 нова категорія (#3)
+    * **13.7 Cloud-Native & Kubernetes Testing** — 96% adoption, 34% readiness gap
+    * **23.x Chaos Engineering & Resilience Testing** — 167% growth (FIT, LitmusChaos)
+  - Матриця актуальності: 65% сучасних трендів включено
+
+- **TRENDS_2024_2025_EXECUTIVE_SUMMARY.md** (9 КБ) — Виконавчий звіт дослідження трендів
+- **TRENDS_2024_2025_SUMMARY.md** (9 КБ) — Зведені таблиці та рекомендації
+- **TRENDS_2024_2025_RESEARCH.md** (26 КБ) — Детальне дослідження 10 тем (25+ джерел)
+
+### Changed / Змінено
+- Оновлено Chapter 6.4 (Security Testing):
+  - Додано Supply Chain Security Testing (OWASP 2025 новинка)
+  - SCA tools, SBOM generation, signed artifacts, build security
+  - Real-world threat example: Shai-Hulud (2025) npm worm
+
+- Розширено Chapter 13 (Automation):
+  - Додано 13.7: Cloud-Native & Kubernetes Testing (critical adoption gap)
+  - Testkube, container scanning, K8s manifest validation, GitOps
+  - Перейменовано Ch 13.7 → Ch 13.8 (Cypress E2E завдання)
+
+- Розширено Chapter 12 (Metrics & Quality):
+  - Додано 12.6: Synthetic Monitoring & Observability (117% growth)
+  - RUM + Synthetic Monitoring, UXO, OpenTelemetry, Grafana k6
+  - Перейменовано Ch 12.6 → Ch 12.7 (ELK + MCP завдання)
+
+- Розширено Chapter 15 (AI/LLM Testing):
+  - Додано 15.4: Agentic AI Testing (РЕВОЛЮЦІЙНА, 500% growth)
+  - Self-healing, production failure → tests, autonomous agents
+  - Adoption: 5% (2024) → 30% (2025) → 70% (2026)
+
+### Fixed / Виправлено
+- Номерація розділів HANDBOOK_STRUCTURE.md синхронізована з новими добавленнями
 
 - **CONTENT_VERIFICATION_REPORT.md** (55 КБ) — Детальна верифікація структури 🆕
   - Аналіз покриття для всіх 22 глав

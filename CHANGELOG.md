@@ -11,7 +11,21 @@
 ## [Невипущено] / Unreleased
 
 ### Added / Додано
-- **TERMINOLOGY.md** — 11 нових критичних термінів з Глави 2 ✨
+
+- **Глава 3: Процеси та цикли тестування** (1207 рядків) 🆕 ⭐
+  - (docs) Повна глава з 7 розділів за ISTQB v4.0 стандартом:
+    * 3.1 Фундаментальний процес тестування (6 фаз: Planning → Closure)
+    * 3.2 STLC та взаємозв'язок із SDLC
+    * 3.3 Entry Criteria та Exit Criteria (практичні приклади)
+    * 3.4 Матриці: RTM, Coverage, Execution (з шаблонами)
+    * 3.5 Ролі та RACI матриця (Manual QA, Test Lead, Automation)
+    * 3.6 Практичне завдання: Manual Testing, Test Case Design
+    * 3.7 Положення та ключові висновки
+  - Включено: Mermaid діаграми (6), таблиці (12+), приклади зі світу (Google Cloud, Banking App, To-Do List)
+  - Посилання на практичний GitHub проект stt-manual-testing
+  - Production-ready для інтеграції
+
+- **TERMINOLOGY.md** — 11 нових критичних термінів з Глави 2-3 ✨
   - (docs) Розділ "Терміни щодо SDLC та моделей розробки":
     * SDLC / Життєвий цикл розробки ПЗ
     * Waterfall Model / Каскадна модель

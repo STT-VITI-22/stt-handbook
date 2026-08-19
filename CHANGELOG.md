@@ -12,18 +12,34 @@
 
 ### Added / Додано
 
-- **Глава 3: Процеси та цикли тестування** (1207 рядків) 🆕 ⭐
+- **Глава 3: Процеси та цикли тестування** (розширено до ~2500 рядків) 🆕 ⭐
   - (docs) Повна глава з 7 розділів за ISTQB v4.0 стандартом:
     * 3.1 Фундаментальний процес тестування (6 фаз: Planning → Closure)
+      - НОВИЙ розділ 3.1.2: Test Management (Planning + Execution phases)
+      - НОВИЙ розділ: Типи тестових середовищ (5 типів: DEV, TEST, INT, PREP, PROD)
     * 3.2 STLC та взаємозв'язок із SDLC
     * 3.3 Entry Criteria та Exit Criteria (практичні приклади)
     * 3.4 Матриці: RTM, Coverage, Execution (з шаблонами)
-    * 3.5 Ролі та RACI матриця (Manual QA, Test Lead, Automation)
+    * 3.5 Ролі та RACI матриця
+      - РОЗШИРЕНО: Додано SDET та Test Architect ролі
     * 3.6 Практичне завдання: Manual Testing, Test Case Design
+      - НОВИЙ розділ 3.6.3а: Defect Severity & Priority матриця (16 комбінацій)
+      - НОВИЙ розділ 3.6.6: Impact Analysis та Root Cause Analysis (RCA)
     * 3.7 Положення та ключові висновки
-  - Включено: Mermaid діаграми (6), таблиці (12+), приклади зі світу (Google Cloud, Banking App, To-Do List)
+  - Включено: Mermaid діаграми (8+), таблиці (20+), ASCII діаграми (5+), приклади
+  - НОВИЙ БЛОК ДЖЕРЕЛ: "Управління тестуванням (QA_Bible)" з 6 посиланнями на QA_Bible/obshee
   - Посилання на практичний GitHub проект stt-manual-testing
   - Production-ready для інтеграції
+
+- **Розширення Глави 3 матеріалами з QA_Bible/obshee** ⭐
+  - (docs) Інтегровано 6 ключових матеріалів з QA_Bible/obshee:
+    * protsess-testirovaniia-test-process-draft.md → Test Management (Planning vs Execution)
+    * roli-dolzhnosti-v-komande.md → SDET та Test Architect ролі з опис
+    * testovaia-sreda-i-testovyi-stend-test-environment-test-bed.md → 5 типів окружень
+    * sereznost-i-prioritet-defekta-severity-priority.md → Severity/Priority матриця
+    * impakt-analiz-analiz-vliianiia-impact-analysis.md → Impact Analysis методолога
+    * analiz-pervoprichin-rca-root-cause-analysis.md → RCA з 5 WHY та Fishbone
+  - Усе матеріали адаптовані на українську мову, узгоджені з ISTQB v4.0
 
 - **TERMINOLOGY.md** — 11 нових критичних термінів з Глави 2-3 ✨
   - (docs) Розділ "Терміни щодо SDLC та моделей розробки":

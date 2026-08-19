@@ -10,6 +10,18 @@
 
 ## [Невипущено] / Unreleased
 
+### Changed / Змінено
+- **Глава 2: Основи контролю якості** (v2.0) — Повна переробка з дотриманням строгих нових стандартів 🔄
+  - (refactor) Переписана з нуля у відповідь до strict specifications (Message 44 brief)
+  - Нові Mermaid діаграми для ISO/IEC 25010 модель, QA/QC/Testing ієрархія, Shift-Left testing, SDLC Verification/Validation, Career path
+  - Markdown-only formatting (видалено HTML теги)
+  - GitHub absolute URLs для всіх dataset посилань
+  - Zero Russian loanwords (всі перевірено)
+  - Практичний case study: Mobile Banking App з економічним аналізом (Boehm's Curve)
+  - Мініатюрний тест з 4 питаннями та детальними обґрунтуваннями
+  - ISO/IEC 25010:2011 та ISTQB v4.0 compliance
+  - Статус: Production-ready для інтеграції до посібника
+
 ### Added / Додано
 - **HANDBOOK_STRUCTURE.md v1.0** (71 КБ) — MASTER BLUEPRINT INITIAL RELEASE 🆕
   - 23 глави, 5 частин, 100+ підрозділів

@@ -22,3 +22,18 @@
 * **Файл:** `martin_fowler_reliable_agentic_ai.md`
 * **Джерело:** Martin Fowler (Sarang Kulkarni, Bayer AG)
 * **Суть:** Ця стаття розкриває найважливіший аспект тестування ШІ-систем (Agentic Workflows). На відміну від класичного тестування, де ми перевіряємо точний "вивід", тут ми тестуємо **судження** (judgment) агента, здатність до самокорекції та обробки помилок. Описується архітектура тестування та "Harness Engineering" (створення тестового корсету) для ШІ, що є абсолютно новим підходом у сучасній індустрії.
+
+### 4. Cloud Native Security (CNCF Whitepaper)
+* **Файл:** `cncf_cloud_native_security_whitepaper.md`
+* **Джерело:** Cloud Native Computing Foundation (CNCF)
+* **Суть:** Фундаментальний документ про безпеку хмарних застосунків, життєвий цикл розробки, інфраструктуру та тестування в екосистемі Kubernetes.
+
+### 5. OpenTelemetry: Observability Concepts
+* **Файл:** `opentelemetry_observability_concepts.md`
+* **Джерело:** OpenTelemetry Official Documentation
+* **Суть:** Оригінальна документація стандарту OpenTelemetry. Пояснює базові концепції Observability (метрики, трейси, логи), які є основою для розуміння синтетичного моніторингу та тестування мікросервісів у продакшені.
+
+### 6. Supply Chain Security (SLSA)
+* **Файл:** `slsa_supply_chain_security.md`
+* **Джерело:** SLSA.dev
+* **Суть:** Офіційна специфікація фреймворку SLSA (Supply-chain Levels for Software Artifacts), яка визначає стандарти цілісності білдів та захисту ланцюжка постачання ПЗ.

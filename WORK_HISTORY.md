@@ -208,3 +208,6 @@
   19. Фільтрація K8s: Статті з Habr та K8s.io (про тестування Go-операторів і CSI-драйверів) відхилено як занадто низькорівневі для QA-посібника.
   20. Очищення K8s: Статті від Testkube, Medium та kubernetes.qa очищено від навігаційних панелей, банерів підписок та авторських блоків за допомогою `sed`. 
   21. Розміщення K8s: Файли збережено у доменні директорії: `dataset/articles/testkube/`, `dataset/articles/medium/`, `dataset/articles/kubernetes_qa/`.
+  22. Розширення Ch 6.3: Конвертовано наданий користувачем HTML-файл Grafana Labs у Markdown для покриття тренду k6 (Performance as Code).
+  23. Очищення K6: Видалено хлібні крихти та рекламні блоки Grafana Learning Paths за допомогою `sed`. Файл збережено як `dataset/articles/grafana/automated_performance_testing.md`.
+  24. Очищення репозиторію: Видалено невикористаний файл `dataset/articles/habr/article_591993.md`, який засмічував PR.

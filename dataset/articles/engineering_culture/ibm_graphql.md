@@ -4,7 +4,6 @@ Published 05 November 2024
 
 ![3D rendering of abstract pattern sphere against blue background](https://assets.ibm.com/is/image/ibm/adobestock_1163885541?ts=1782338819700&dpr=off "Abstract 3D Pixelated Sphere on Gradient Background")
 
-
 ## GraphQL defined
 
 GraphQL is an open-source query language and server-side runtime that specifies how clients should interact with [application programming interfaces](https://www.ibm.com/think/topics/api) (APIs).
@@ -57,12 +56,6 @@ When a query comes in, GraphQL validates it against the schema definitions and�
 Mutations are GraphQL operations that create, update or delete data on the server. They are analogous to the POST, PUT, PATCH and DELETE operations in RESTful APIs. While users can access some queries without [authentication](https://www.ibm.com/think/topics/authentication), mutations always require authentication (for instance, by using an API token.)
 
 Similar to how a queries work, GraphQL mutations are validated against the schema and its definitions. Once the mutation is validated and started, the server returns a JSON response.
-
-## The latest tech news, backed by expert insights
-
-Stay up to date on the most important—and intriguing—industry trends on AI, automation, data and beyond with the Think newsletter. See the [IBM Privacy Statement](https://www.ibm.com/us-en/privacy).
-
-## Thank you! You are subscribed.
 
 ## GraphQL vs. REST APIs
 

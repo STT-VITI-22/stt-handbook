@@ -24,11 +24,7 @@ If automated tests fail, development teams are notified at that individual stage
   
 If automated tests pass inspection, projects are automatically passed on to the next stage of the SDLC, giving organizations the ability to create a sustainable delivery model that maximizes productivity and improves interdepartmental coordination.
 
-## The latest tech news, backed by expert insights
-
-Stay up to date on the most important—and intriguing—industry trends on AI, automation, data and beyond with the Think newsletter. See the [IBM Privacy Statement](https://www.ibm.com/us-en/privacy).
-
-## Thank you! You are subscribed.
+.
 
 ## Benefits of continuous testing
 
@@ -47,12 +43,6 @@ By integrating continuous feedback loops into user and unit testing modules, dev
 Cloud providers, for example, routinely report breakdowns at one end that paralyze an entire region and cause outages lasting several hours. This can be devastating to organizations that are dependent on high service availability. Continuous testing at a granular level identifies errors that might otherwise be invisible in large software systems and helps to avoid the costs of business disruption.
 
 IBM DevOps
-
-### 6 observability myths in AIOps uncovered
-
-In this video, IBM Vice President Chris Farrell challenges six common myths about observability, unpacking them one by one to clarify what organizations really need to achieve deeper operational insight and smarter decision-making.
-
-[Explore DevOps](https://www.ibm.com/solutions/devops)
 
 ## Continuous testing methodologies
 

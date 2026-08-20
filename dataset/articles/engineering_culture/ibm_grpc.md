@@ -26,10 +26,6 @@ It would make sense if gRPC stood for “Google Remote Procedure Call.” But th
 
 ### The latest AI News + Insights
 
-Discover expertly curated insights and news on AI, cloud and more in the weekly Think Newsletter.
-
-[Subscribe today](https://www.ibm.com/us-en/forms/news-mkt-52954)
-
 ## gRPC features
 
 gRPC presents a modern, updated version of RPC, with support for modern languages and additional features and optimizations. Features include:
@@ -99,8 +95,6 @@ What is Apache Kafka?
 ### What is Apache Kafka?
 
 In this video, you will learn what Apache Kafka is, how it works and the core concepts behind building real-time event streaming applications.
-
-[Explore Confluent](https://www.confluent.io/?utm_campaign=tm.ibm_cd.data-leaders-tofu-page-video&utm_source=ibm&utm_medium=ibmweb)
 
 ## gRPC vs. REST
 

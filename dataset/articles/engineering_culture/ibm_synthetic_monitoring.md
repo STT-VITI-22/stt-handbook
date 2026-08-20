@@ -16,11 +16,6 @@ After you’ve collected and analyzed this data, you can use your observability 
 
 ![3D design of balls rolling on a track](https://assets.ibm.com/is/image/ibm/trailv2_1200x1200?ts=1746554193743&dpr=off)
 
-
-Discover expertly curated insights and news on AI, cloud and more in the weekly Think Newsletter.
-
-[Subscribe today](https://www.ibm.com/us-en/forms/news-mkt-52954)
-
 ## Overview
 
 If you’re wondering if synthetic monitoring tools align with your business goals, you’ve come to the right place. At its most basic level, synthetic monitoring is a method developers use to simulate user actions through an application to test its functions.
@@ -88,5 +83,4 @@ RUM is a form of passive monitoring that tracks specific tasks of actual users i
 This implementation allows them to track real customers in the backend as they interact with the page. It is an excellent resource for companies to understand the long-term impact of different errors within their system. One of the main issues with RUM is that if customers aren’t using your network, your system cannot monitor activity.
 
 Synthetic is a type of active monitoring that uses scripts to create artificial users to detect problems within your system. This type of monitoring is a great option for the early stages of a project when an application is still under development. Early detection of problems in your code helps you solve problems faster so they don’t become more significant problems within your infrastructure later.
-
 

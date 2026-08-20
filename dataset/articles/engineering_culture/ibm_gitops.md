@@ -37,11 +37,7 @@ GitOps has been around for a few years now, but it has gained traction recently 
 
 What is the problem that GitOps is attempting to solve? Well, it automates software operations so that enterprises can get better at software engineering. It enables application teams to release more frequently and operate [cloud-native applications](https://www.ibm.com/think/topics/cloud-native) more effectively.
 
-## The latest tech news, backed by expert insights
-
-Stay up to date on the most important—and intriguing—industry trends on AI, automation, data and beyond with the Think newsletter. See the [IBM Privacy Statement](https://www.ibm.com/us-en/privacy).
-
-## Thank you! You are subscribed.
+.
 
 ![Figure 2. CI/CD/CO](https://assets.ibm.com/is/image/ibm/screen-shot-2021-11-01-at-1-50-04-pm?ts=1782133602822&dpr=off)
 
@@ -52,12 +48,6 @@ Figure 2. CI/CD/CO
 Red Hat OpenShift operators simplify the installation and automated orchestration of complex workloads. They help encode human operational logic to manage services running as Kubernetes-native applications, making day-2 operations easier. The operator is a piece of software running in a pod on the cluster, interacting with the Kubernetes API server. An OpenShift operator is essentially a custom controller and can be, in effect, an application-specific controller.
 
 IBM DevOps
-
-### 6 observability myths in AIOps uncovered
-
-In this video, IBM Vice President Chris Farrell challenges six common myths about observability, unpacking them one by one to clarify what organizations really need to achieve deeper operational insight and smarter decision-making.
-
-[Explore DevOps](https://www.ibm.com/solutions/devops)
 
 ## GitOps operator
 

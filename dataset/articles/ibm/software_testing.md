@@ -114,39 +114,39 @@ The following lists outline common testing types within each category.
 
 ### Functional testing types
 
-* **White-box testing:**White-box testing involves testing based on knowledge of the internal structure, logic and functions of the software being tested.
+* **White-box testing:** White-box testing involves testing based on knowledge of the internal structure, logic and functions of the software being tested.
 
-* **Black-box testing:**In black-box testing, a tester does not have any information about the internal workings of the software system.
+* **Black-box testing:** In black-box testing, a tester does not have any information about the internal workings of the software system.
 
-* **Ad hoc testing:**In ad hoc testing, testers try to break or find bugs in an application without following predefined tests or documentation.
+* **Ad hoc testing:** In ad hoc testing, testers try to break or find bugs in an application without following predefined tests or documentation.
 
-* **API testing:**[API (application programming interface)](https://www.ibm.com/think/topics/api) testing verifies that the interfaces between software components function correctly and reliably. [API testing](https://www.ibm.com/think/topics/api-testing) is an essential part of [API management](https://www.ibm.com/think/topics/application-performance-management), the software and processes that support an API’s lifecycle.
+* **API testing:** [API (application programming interface)](https://www.ibm.com/think/topics/api) testing verifies that the interfaces between software components function correctly and reliably. [API testing](https://www.ibm.com/think/topics/api-testing) is an essential part of [API management](https://www.ibm.com/think/topics/application-performance-management), the software and processes that support an API’s lifecycle.
 
-* **Exploratory testing:**Exploratory testing helps software testers uncover hard-to-predict scenarios and situations that can lead to software errors.
+* **Exploratory testing:** Exploratory testing helps software testers uncover hard-to-predict scenarios and situations that can lead to software errors.
 
-* **Regression testing:**[Regression testing](https://www.ibm.com/think/topics/regression-testing) checks whether new features break or degrade existing functionality. It ensures that recent changes haven’t introduced new defects.
+* **Regression testing:** [Regression testing](https://www.ibm.com/think/topics/regression-testing) checks whether new features break or degrade existing functionality. It ensures that recent changes haven’t introduced new defects.
 
-* **Sanity testing:**Sanity testing evaluates whether specific functionalities work as expected. Testers can use it to verify menus, functions and commands at the surface level when there is no time for a full regression test.
+* **Sanity testing:** Sanity testing evaluates whether specific functionalities work as expected. Testers can use it to verify menus, functions and commands at the surface level when there is no time for a full regression test.
 
-* **Smoke testing:**Smoke testing is a preliminary software testing process that checks whether the basic functions of an application work correctly. It helps ensure that the build is stable enough for further testing.
+* **Smoke testing:** Smoke testing is a preliminary software testing process that checks whether the basic functions of an application work correctly. It helps ensure that the build is stable enough for further testing.
 
-* **User acceptance testing (UAT):**User acceptance testing (UAT) is a specific type of acceptance testing performed by the end users to confirm the system meets their needs and works in real-world scenarios.
+* **User acceptance testing (UAT):** User acceptance testing (UAT) is a specific type of acceptance testing performed by the end users to confirm the system meets their needs and works in real-world scenarios.
 
 ### Nonfunctional testing types
 
-* **Recovery testing:**Recovery testing verifies how the software responds and recovers from failures, ensuring that data and processes are restored correctly.
+* **Recovery testing:** Recovery testing verifies how the software responds and recovers from failures, ensuring that data and processes are restored correctly.
 
-* **Performance testing:**Performance testing refers to how the software runs under different [workloads](https://www.ibm.com/think/topics/workload).
+* **Performance testing:** Performance testing refers to how the software runs under different [workloads](https://www.ibm.com/think/topics/workload).
 
-* **Load testing:**Load testing—a type of performance testing— evaluates performance under real-life [load balancing](https://www.ibm.com/think/topics/load-balancing) conditions.
+* **Load testing:** Load testing—a type of performance testing— evaluates performance under real-life [load balancing](https://www.ibm.com/think/topics/load-balancing) conditions.
 
-* **Stress testing:**Stress testing examines the amount of strain the system can withstand before it fails.
+* **Stress testing:** Stress testing examines the amount of strain the system can withstand before it fails.
 
-* **Security testing:**Security testing validates whether software is open to hackers or other malicious types of vulnerabilities.
+* **Security testing:** Security testing validates whether software is open to hackers or other malicious types of vulnerabilities.
 
-* **Usability testing:**Usability testing validates how well a customer can use a system’s user interface to complete a task efficiently and intuitively.
+* **Usability testing:** Usability testing validates how well a customer can use a system’s user interface to complete a task efficiently and intuitively.
 
-* **Compatibility testing:**Compatibility testing checks whether a software application functions as expected across various devices, [operating systems](https://www.ibm.com/think/topics/operating-systems), browsers and [network](https://www.ibm.com/think/topics/networking) environments.
+* **Compatibility testing:** Compatibility testing checks whether a software application functions as expected across various devices, [operating systems](https://www.ibm.com/think/topics/operating-systems), browsers and [network](https://www.ibm.com/think/topics/networking) environments.
 
 ## Software testing best practices
 

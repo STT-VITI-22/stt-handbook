@@ -16,7 +16,6 @@ After you’ve collected and analyzed this data, you can use your observability 
 
 ![3D design of balls rolling on a track](https://assets.ibm.com/is/image/ibm/trailv2_1200x1200?ts=1746554193743&dpr=off)
 
-### The latest AI News + Insights
 
 Discover expertly curated insights and news on AI, cloud and more in the weekly Think Newsletter.
 
@@ -90,97 +89,4 @@ This implementation allows them to track real customers in the backend as they i
 
 Synthetic is a type of active monitoring that uses scripts to create artificial users to detect problems within your system. This type of monitoring is a great option for the early stages of a project when an application is still under development. Early detection of problems in your code helps you solve problems faster so they don’t become more significant problems within your infrastructure later.
 
-Link copied
 
-[Guide
-
-Full-stack observability for DevOps teams
-
-Learn how full-stack observability, powered by AI and automation, enables teams to proactively detect, diagnose and resolve issues before they impact users or SLAs.
-
-Read the guide](https://www.ibm.com/forms/mkt-54215)
-
-## Resources
-
-[White paper
-
-Gaining observability in cloud native applications
-
-Learn how cloud-native observability delivers deeper visibility into modern, multi-cloud applications, tracking metrics, traces and logs where traditional APM falls short.
-
-Read the white paper](https://www.ibm.com/forms/mkt-53385)
-
-[Report
-
-Unlock the power of IBM Instana Observability
-
-IBM Instana Observability can help you achieve a ROI of 219% and reduce developer time spent troubleshooting by 90%.
-
-Read the report](https://www.ibm.com/forms/mkt-52599)
-
-[Report
-
-Driving business value with AI-powered IT automation
-
-Learn how combining APM and hybrid cloud cost optimization tools helps organizations reduce costs and increase productivity.
-
-Read the report](https://www.ibm.com/account/reg/signup?formid=urx-52696)
-
-[Report
-
-AI observability: The key to smarter IT operations
-
-Learn how AI-driven observability helps organizations cut through complexity, detect issues in real time and transform monitoring. Discover why IBM leads in AI-powered observability.
-
-Read the report](https://www.ibm.com/account/reg/signup?formid=urx-53469)
-
-[Report
-
-Unlock unprecedented visibility into your gen AI services on AWS
-
-Learn how IBM Instana’s gen AI observability on AWS delivers deep visibility, proactive issue detection and efficient management across your entire AI/ML ecosystem.
-
-Read the report](https://www.ibm.com/account/reg/signup?formid=urx-53360)
-
-[Report
-
-EMA report: AI-boosted observability
-
-Learn how generative AI transforms cloud-native observability, predicting issues, automating troubleshooting, reducing SRE workload and optimizing application management with IBM Concert.
-
-Read the report](https://www.ibm.com/account/reg/signup?formid=urx-53040)
-
-[Ebook
-
-Debunking the myths of observability
-
-Learn how observability delivers critical insights into complex systems, debunking common myths and revealing its essential role in today’s dynamic digital landscape.
-
-Read the ebook](https://www.ibm.com/account/reg/signup?formid=urx-52417)
-
-Related solutions
-
-Digital experience monitoring
-
-Monitor and optimize user experience across endpoints with digital experience monitoring tools built for cloud-native.
-
-[Explore digital experience monitoring](https://www.ibm.com/products/instana/digital-experience-monitoring)
-
-AI for customer service solutions
-
-Deliver great service through efficient support, personalized interactions, and strong data protection.
-
-[Explore AI for customer service solutions](https://www.ibm.com/solutions/ai-customer-service)
-
-Customer experience consulting
-
-Create smarter customer experiences across the journey to unlock value and drive growth.
-
-[Explore customer experience consulting](https://www.ibm.com/consulting/customer-experience)
-
-Take the next step
-
-IBM® Instana® Observability is a digital monitoring tool that helps DevOps and SRE teams detect and resolve performance issues in real time, speeding root-cause analysis and improving user experiences.
-
-1. [[Discover Digital experience monitoring](https://www.ibm.com/products/instana/digital-experience-monitoring)](https://www.ibm.com/products/instana/digital-experience-monitoring)
-2. [[Explore AI for customer service solutions](https://www.ibm.com/solutions/ai-customer-service)](https://www.ibm.com/solutions/ai-customer-service)

@@ -182,7 +182,7 @@ comprise an effective cloud native stack will continue to shift over time. Repre
 included in the all encompassing [CNCF landscape](https://landscape.cncf.io/).
 
 ## Cloud Native Layers
-![Figure 1](cnswp-images/cnswp-v2-figure1.png)
+![Figure 1](https://raw.githubusercontent.com/cncf/tag-security/main/community/resources/security-whitepaper/v2/cnswp-images/cnswp-v2-figure1.png)
 _Figure 1_
 
 The cloud native stack is composed of the foundational layer, application lifecycle, and a runtime environment. The
@@ -220,7 +220,7 @@ integrate security throughout the application lifecycle.
 
 ### Develop
 
-![Figure 2](cnswp-images/cnswp-v2-security-structural-model-develop.png)
+![Figure 2](https://raw.githubusercontent.com/cncf/tag-security/main/community/resources/security-whitepaper/v2/cnswp-images/cnswp-v2-security-structural-model-develop.png)
 
 _Figure 2_
 
@@ -272,7 +272,7 @@ workflow).
 
 ### Distribute
 
-![Figure 3](cnswp-images/cnswp-v2-security-structural-model-distribute.png)
+![Figure 3](https://raw.githubusercontent.com/cncf/tag-security/main/community/resources/security-whitepaper/v2/cnswp-images/cnswp-v2-security-structural-model-distribute.png)
 
 _Figure 3_
 
@@ -447,7 +447,7 @@ for compliance use cases such as geo-fencing or export control and digital right
 
 ### Deploy
 
-![Figure 4](cnswp-images/cnswp-v2-security-structural-model-deploy.png)
+![Figure 4](https://raw.githubusercontent.com/cncf/tag-security/main/community/resources/security-whitepaper/v2/cnswp-images/cnswp-v2-security-structural-model-deploy.png)
 
 _Figure 4_
 
@@ -489,7 +489,7 @@ evidence, decrease the time to determine root cause, and minimize exposure to a 
 
 ### Runtime Environment
 
-![Figure 3](cnswp-images/cnswp-v2-security-structural-model-runtime.png)
+![Figure 3](https://raw.githubusercontent.com/cncf/tag-security/main/community/resources/security-whitepaper/v2/cnswp-images/cnswp-v2-security-structural-model-runtime.png)
 
 _Figure 5_
 

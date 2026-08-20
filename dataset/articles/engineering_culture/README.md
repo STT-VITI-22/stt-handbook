@@ -1,59 +1,37 @@
-# 🏗️ Інженерна культура та Архітектура якості (Advanced Essentials)
+# Engineering Culture & Advanced Essentials
 
-Цей розділ створено для переходу від базового розуміння тестування (як перевірки кнопок) до розуміння **якості як інженерного процесу**. 
-Згідно з сучасними вимогами розробки (GitOps, мікросервіси, Cloud-Native), тестувальник є інженером, який формує правила співпраці команд та забезпечує стійкість архітектури.
+This directory contains raw, authoritative source materials covering modern engineering culture, testing strategies, and cloud-native architecture. These materials serve as the factual dataset for generating the corresponding sections of the handbook.
 
-## Матеріали в розділі
+## Dataset Index
 
-### 1. Consumer-Driven Contracts (Contract Testing)
-* **Файл:** `martin_fowler_consumer_driven_contracts.md`
-* **Джерело:** Martin Fowler
-* **Суть:** У мікросервісній архітектурі E2E (End-to-End) тести стають надзвичайно повільними та нестабільними. Ця стаття описує "Contract Testing" — підхід, де сервіси погоджують між собою "контракти" взаємодії. Це дозволяє тестувати їх ізольовано, але з гарантією інтеграції. Це фундамент "Shift-Left" в реальному житті.
+### 1. Consumer-Driven Contracts
+* `martin_fowler_consumer_driven_contracts.md` (Source: Martin Fowler)
 
-### 2. Principles of Chaos Engineering
-* **Файл:** `principles_of_chaos_engineering.md`
-* **Джерело:** PrinciplesOfChaos.org (Netflix)
-* **Суть:** В сучасному світі (Kubernetes, Cloud) інфраструктура буде падати. Замість того, щоб намагатися покрити все E2E тестами в стерильному середовищі, Chaos Engineering вчить проводити експерименти на Production. Концепція "Minimize Blast Radius" (мінімізація радіусу ураження) повністю міняє світогляд сучасного QA-інженера з "я шукаю баги" на "я створюю стійку систему".
+### 2. Chaos Engineering
+* `principles_of_chaos_engineering.md` (Source: PrinciplesOfChaos.org)
+* `principles_of_chaos_engineering_ua.md` (Official Ukrainian Translation)
 
-## Чому це тут? (Vision)
-Ці теми не є "сеньйорними фішками для обраних". У 2026 році це **Essentials** для будь-якої команди, що використовує сучасний стек. Розуміння цих концепцій необхідне для правильної комунікації з розробниками під час Code Review та планування інфраструктури.
+### 3. Agentic AI Systems
+* `martin_fowler_reliable_agentic_ai.md` (Source: Martin Fowler)
 
-### 3. Building Reliable Agentic AI Systems
-* **Файл:** `martin_fowler_reliable_agentic_ai.md`
-* **Джерело:** Martin Fowler (Sarang Kulkarni, Bayer AG)
-* **Суть:** Ця стаття розкриває найважливіший аспект тестування ШІ-систем (Agentic Workflows). На відміну від класичного тестування, де ми перевіряємо точний "вивід", тут ми тестуємо **судження** (judgment) агента, здатність до самокорекції та обробки помилок. Описується архітектура тестування та "Harness Engineering" (створення тестового корсету) для ШІ, що є абсолютно новим підходом у сучасній індустрії.
+### 4. Cloud Native Security
+* `cncf_cloud_native_security_whitepaper.md` (Source: CNCF)
 
-### 4. Cloud Native Security (CNCF Whitepaper)
-* **Файл:** `cncf_cloud_native_security_whitepaper.md`
-* **Джерело:** Cloud Native Computing Foundation (CNCF)
-* **Суть:** Фундаментальний документ про безпеку хмарних застосунків, життєвий цикл розробки, інфраструктуру та тестування в екосистемі Kubernetes.
+### 5. Observability
+* `opentelemetry_observability_concepts.md` (Source: OpenTelemetry)
 
-### 5. OpenTelemetry: Observability Concepts
-* **Файл:** `opentelemetry_observability_concepts.md`
-* **Джерело:** OpenTelemetry Official Documentation
-* **Суть:** Оригінальна документація стандарту OpenTelemetry. Пояснює базові концепції Observability (метрики, трейси, логи), які є основою для розуміння синтетичного моніторингу та тестування мікросервісів у продакшені.
+### 6. Supply Chain Security
+* `slsa_supply_chain_security.md` (Source: SLSA)
 
-### 6. Supply Chain Security (SLSA)
-* **Файл:** `slsa_supply_chain_security.md`
-* **Джерело:** SLSA.dev
-* **Суть:** Офіційна специфікація фреймворку SLSA (Supply-chain Levels for Software Artifacts), яка визначає стандарти цілісності білдів та захисту ланцюжка постачання ПЗ.
-
-### 7. Continuous Testing & DevOps
-* **Файл:** `ibm_continuous_testing.md`
-* **Джерело:** IBM Topics (Офіційна база знань)
-* **Суть:** Фундаментальна стаття про інтеграцію безперервного тестування (Continuous Testing) в CI/CD пайплайни. Детально розглядає Shift-Left підхід, зменшення вузьких місць та використання автоматизації.
+### 7. Continuous Testing
+* `ibm_continuous_testing.md` (Source: IBM Topics)
 
 ### 8. Synthetic Monitoring
-* **Файл:** `ibm_synthetic_monitoring.md`
-* **Джерело:** IBM Topics (Офіційна база знань)
-* **Суть:** Чітке, академічне пояснення того, що таке синтетичний моніторинг, як він відрізняється від моніторингу реальних користувачів (RUM), і чому він критичний для проактивного виявлення збоїв.
+* `ibm_synthetic_monitoring.md` (Source: IBM Topics)
 
-### 9. GitOps Methodology
-* **Файл:** `ibm_gitops.md`
-* **Джерело:** IBM Topics (Офіційна база знань)
-* **Суть:** Глибоке пояснення GitOps (Pull vs Push models, ArgoCD/Flux culture), як Git стає єдиним джерелом істини для інфраструктури та як це інтегрується з Kubernetes.
+### 9. GitOps
+* `ibm_gitops.md` (Source: IBM Topics)
 
-### 10. Modern API Architectures: GraphQL & gRPC
-* **Файли:** `ibm_graphql.md`, `ibm_grpc.md`
-* **Джерело:** IBM Topics (Офіційна база знань)
-* **Суть:** Фундаментальні статті про дві найпопулярніші сучасні API архітектури, які зміщують REST. Пояснюють базові концепти, проблеми, які вони вирішують, та специфіку тестування таких архітектур (наприклад, HTTP/2, protobufs, typed schema).
+### 10. Modern API Architectures
+* `ibm_graphql.md` (Source: IBM Topics)
+* `ibm_grpc.md` (Source: IBM Topics)

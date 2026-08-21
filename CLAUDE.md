@@ -529,7 +529,7 @@ dist/
 
 **✅ Правильно:**
 ```markdown
-[Міфи про тестування](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/qalight/parsed/osnovi/mifi-pro-testuvannia.md)
+[Міфи про тестування](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/mifi-pro-testuvannia.md)
 ```
 
 **❌ Неправильно (локальні шляхи):**
@@ -561,7 +561,7 @@ grep -r "dataset/" dist/
 | Ресурс | Посилання | Тип |
 |--------|-----------|-----|
 | DOU QA Roadmap | [Дорожна карта](https://dou.ua/qa-roadmap) | Карта навичок |
-| QALight Основи | [Посібник](https://github.com/.../dataset/qalight/parsed/osnovi/) | Курс |
+| QALight Основи | [Посібник](https://github.com/.../dataset/articles/qalight/parsed/osnovi/) | Курс |
 ```
 
 **Структура таблиці:**

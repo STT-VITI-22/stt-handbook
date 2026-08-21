@@ -242,13 +242,13 @@ HANDBOOK (Посібник)
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 8.1 Терміни: Error, Defect, Failure, Bug | - Точні визначення ISTQB<br>- Причина → Дефект → Вплив<br>- Практичні приклади з ланцюжком<br>- Синоніми та вживання | RWP ✓ / DATASET(QALight: osnovi, defekt, books_pdf) / MODERN(ISTQB 4.0) | ![QR: Error vs Defect](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org&margin=10) |
-| 8.2 Класифікація дефектів | - За серйозністю: Critical, Major, Minor, Trivial<br>- За пріоритетом: High, Medium, Low<br>- За типом (Functional, Logic, UI, API)<br>- За впливом на користувача | RWP ✓ / DATASET(QALight: defekt/klasifikatsiia-defektiv) / MODERN ✓ | ![QR: Defect Classification](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
-| 8.3 Життєвий цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ | ![QR: Defect Lifecycle](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
-| 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ | ![QR: Bug Report Template](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/testovi-artefakti&margin=10) |
-| 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ | ![QR: Defect Cost](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Software_defect&margin=10) |
-| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla, Azure DevOps, YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами) | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ | ![QR: Defect Tools](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.atlassian.com/software/jira&margin=10) |
-| **8.7 Практичне завдання: Bug Report та Defect Management** 🆕 | - **Проект stt-bug-reporting**<br>- Структура Bug Report та класифікація<br>- Bug Report у JIRA<br>- Життєвий цикл дефекта<br>- Root Cause Analysis (RCA) | RWP ✓ / DATASET(stt-bug-reporting, practical_tasks/stt-bug-reporting, QALight: defekt) / MODERN ✓ | ![QR: stt-bug-reporting](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-bug-reporting&margin=10) |
+| 8.1 Терміни: Error, Defect, Failure, Bug | - Точні визначення ISTQB<br>- Причина → Дефект → Вплив<br>- Практичні приклади з ланцюжком<br>- Синоніми та вживання | RWP ✓ / DATASET(QALight: osnovi, defekt, books_pdf) / MODERN(ISTQB 4.0) |  |
+| 8.2 Класифікація дефектів | - За серйозністю: Critical, Major, Minor, Trivial<br>- За пріоритетом: High, Medium, Low<br>- За типом (Functional, Logic, UI, API)<br>- За впливом на користувача | RWP ✓ / DATASET(QALight: defekt/klasifikatsiia-defektiv) / MODERN ✓ |  |
+| 8.3 Життєвий цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ |  |
+| 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ |  |
+| 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ |  |
+| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla, Azure DevOps, YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами) | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| **8.7 Практичне завдання: Bug Report та Defect Management** 🆕 | - **Проект stt-bug-reporting**<br>- Структура Bug Report та класифікація<br>- Bug Report у JIRA<br>- Життєвий цикл дефекта<br>- Root Cause Analysis (RCA) | RWP ✓ / DATASET(stt-bug-reporting, practical_tasks/stt-bug-reporting, QALight: defekt) / MODERN ✓ |  |
 
 ---
 
@@ -262,9 +262,9 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння тестування в сучасних гнучких методологіях розробки
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 9.1 Основи Agile та Scrum | - Agile Manifesto та Principles<br>- Scrum Framework (Roles, Artifacts, Ceremonies)<br>- Sprint Planning та Execution<br>- Definition of Done | RWP ✓ / DATASET(QALight: osnovi/agile.md, QA_Bible: sdlc-i-stlc/agile, books_pdf: Gregory 2014, Schwaber 2020) / MODERN(ISTQB 4.0) |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 9.1 Основи Agile та Scrum | - Agile Manifesto та Principles<br>- Scrum Framework (Roles, Artifacts, Ceremonies)<br>- Sprint Planning та Execution<br>- Definition of Done | RWP ✓ / DATASET(QALight: osnovi/agile.md, QA_Bible: sdlc-i-stlc/agile, books_pdf: Gregory 2014, Schwaber 2020) / MODERN(ISTQB 4.0) |  |
 | 9.2 LEAN методологія | - 5 принципів LEAN<br>- Мuda, Mura, Muri концепції<br>- Kanban система та WIP Limit<br>- Continuous improvement (Kaizen) | RWP ✓ / DATASET(TERMINOLOGY.md, QALight: osnovi/agile.md, QA_Bible: sdlc-i-stlc) / MODERN ✓ |
 | 9.3 Тестування в Agile спринтах | - Тестування в спринті<br>- Acceptance testing та user stories<br>- Test automation для Agile<br>- Collaboration between QA and Developers | RWP ✓ / DATASET(QALight: osnovi/agile, QA_Bible: sdlc-i-stlc, books_pdf: Gregory 2014) / MODERN(ISTQB 4.0) |
 | 9.4 Continuous Integration & Continuous Deployment | - CI/CD Pipeline<br>- Automated testing у CI<br>- Test automation strategy для CD<br>- Quality gates та release cycles | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: sdlc-i-stlc) / MODERN ✓ |
@@ -278,14 +278,14 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння управління тестовим процесом на організаційному рівні
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 10.1 Тестова стратегія | - Визначення тестової стратегії<br>- Рівні тестування за стратегією<br>- Типи тестування та розподіл ресурсів<br>- Вибір інструментів | RWP ✓ / DATASET(QALight: testovi-artefakti/testova-strategiia) / MODERN(ISTQB 4.0) |
-| 10.2 Тестовий план | - Структура тестового плану<br>- Обсяг та цілі<br>- Ресурси та розклад<br>- Ризики та рекомендації | RWP ✓ / DATASET(QALight: testovi-artefakti/test-plan) / MODERN ✓ |
-| 10.3 Оцінка та планування тестування | - Estimation techniques<br>- Effort estimation<br>- Risk-based testing<br>- Resource allocation | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
-| 10.4 Тестова документація | - Test case specifications<br>- Test procedures<br>- Test summary reports<br>- Dokumentation standards | RWP ✓ / DATASET(QALight: testovi-artefakti/) / MODERN ✓ |
-| 10.5 Метрики тестування | - Test coverage metrics<br>- Defect metrics<br>- Test execution metrics<br>- Quality metrics | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Hrytsiuk 2018) / MODERN ✓ |
-| 10.6 Управління ризиками в тестуванні | - Risk identification та analysis<br>- Risk-based testing approach<br>- Пріоритизація тестів<br>- Mitigation strategies | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Gregory 2014) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 10.1 Тестова стратегія | - Визначення тестової стратегії<br>- Рівні тестування за стратегією<br>- Типи тестування та розподіл ресурсів<br>- Вибір інструментів | RWP ✓ / DATASET(QALight: testovi-artefakti/testova-strategiia) / MODERN(ISTQB 4.0) |  |
+| 10.2 Тестовий план | - Структура тестового плану<br>- Обсяг та цілі<br>- Ресурси та розклад<br>- Ризики та рекомендації | RWP ✓ / DATASET(QALight: testovi-artefakti/test-plan) / MODERN ✓ |  |
+| 10.3 Оцінка та планування тестування | - Estimation techniques<br>- Effort estimation<br>- Risk-based testing<br>- Resource allocation | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| 10.4 Тестова документація | - Test case specifications<br>- Test procedures<br>- Test summary reports<br>- Dokumentation standards | RWP ✓ / DATASET(QALight: testovi-artefakti/) / MODERN ✓ |  |
+| 10.5 Метрики тестування | - Test coverage metrics<br>- Defect metrics<br>- Test execution metrics<br>- Quality metrics | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Hrytsiuk 2018) / MODERN ✓ |  |
+| 10.6 Управління ризиками в тестуванні | - Risk identification та analysis<br>- Risk-based testing approach<br>- Пріоритизація тестів<br>- Mitigation strategies | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Gregory 2014) / MODERN ✓ |  |
 
 ---
 
@@ -293,15 +293,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння технічних концепцій, необхідних для сучасного тестування
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 11.1 Основи веб-технологій | - HTML, CSS базиці<br>- JavaScript основи<br>- HTTP/HTTPS protocol<br>- Web browsers та rendering | RWP ✓ / DATASET(QALight: osnovi/html-ta-css-dlia-testuvalnikiv, zagalne/) / MODERN ✓ |
-| 11.2 API та веб-сервіси | - REST API basics<br>- HTTP методи (GET, POST, PUT, DELETE)<br>- JSON та XML формати<br>- API testing tools (Postman, Insomnia) | RWP ✓ / DATASET(QALight: zagalne/shcho-take-api, zagalne/shcho-take-json, zagalne/protses-komunikatsii-pri-vikoristanni-api) / MODERN ✓ |
-| 11.3 Мережі та протоколи | - IP адреси та DNS<br>- TCP/IP, UDP<br>- HTTP, HTTPS, FTP<br>- Cookies та Sessions | RWP ✓ / DATASET(QALight: protokoli/) / MODERN ✓ |
-| 11.4 Бази даних для тестувальників | - SQL базиці<br>- SELECT, WHERE, JOIN statements<br>- Database verification in tests<br>- Tools: DBeaver, MySQL Workbench | RWP ✓ / DATASET(QALight: bazi-danikh-v-testuvanni/) / MODERN ✓ |
-| 11.5 Git та версійне контролю | - Git basics (clone, pull, push)<br>- Branches та commits<br>- Pull requests<br>- Collaboration in development | RWP ✓ / DATASET(QALight: zagalne/shcho-take-git) / MODERN ✓ |
-| 11.6 Архітектура ПЗ для тестування | - Monolithic vs. Microservices<br>- Client-Server architecture<br>- APIs, interfaces<br>- Deployment models | RWP ✓ / DATASET(QALight: zagalne/monolitna-arkhitektura, zagalne/mikroservisna-arkhitektura) / MODERN ✓ |
-| **11.7 Практичне завдання: API тестування та Mock дані** 🆕 | - **Проект stt-pz-3: Jest API тестування**<br>- Mock функції та Jest.mock()<br>- Ice and Fire API приклади<br>- JSON валідація та структури<br>- Handling асинхронних операцій<br>- Mock data management та fixtures<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-3 | RWP ✓ / DATASET(stt-pz-3, practical_tasks/stt-pz-3-jest-api, QALight: zagalne/shcho-take-api) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 11.1 Основи веб-технологій | - HTML, CSS базиці<br>- JavaScript основи<br>- HTTP/HTTPS protocol<br>- Web browsers та rendering | RWP ✓ / DATASET(QALight: osnovi/html-ta-css-dlia-testuvalnikiv, zagalne/) / MODERN ✓ |  |
+| 11.2 API та веб-сервіси | - REST API basics<br>- HTTP методи (GET, POST, PUT, DELETE)<br>- JSON та XML формати<br>- API testing tools (Postman, Insomnia) | RWP ✓ / DATASET(QALight: zagalne/shcho-take-api, zagalne/shcho-take-json, zagalne/protses-komunikatsii-pri-vikoristanni-api) / MODERN ✓ |  |
+| 11.3 Мережі та протоколи | - IP адреси та DNS<br>- TCP/IP, UDP<br>- HTTP, HTTPS, FTP<br>- Cookies та Sessions | RWP ✓ / DATASET(QALight: protokoli/) / MODERN ✓ |  |
+| 11.4 Бази даних для тестувальників | - SQL базиці<br>- SELECT, WHERE, JOIN statements<br>- Database verification in tests<br>- Tools: DBeaver, MySQL Workbench | RWP ✓ / DATASET(QALight: bazi-danikh-v-testuvanni/) / MODERN ✓ |  |
+| 11.5 Git та версійне контролю | - Git basics (clone, pull, push)<br>- Branches та commits<br>- Pull requests<br>- Collaboration in development | RWP ✓ / DATASET(QALight: zagalne/shcho-take-git) / MODERN ✓ |  |
+| 11.6 Архітектура ПЗ для тестування | - Monolithic vs. Microservices<br>- Client-Server architecture<br>- APIs, interfaces<br>- Deployment models | RWP ✓ / DATASET(QALight: zagalne/monolitna-arkhitektura, zagalne/mikroservisna-arkhitektura) / MODERN ✓ |  |
+| **11.7 Практичне завдання: API тестування та Mock дані** 🆕 | - **Проект stt-pz-3: Jest API тестування**<br>- Mock функції та Jest.mock()<br>- Ice and Fire API приклади<br>- JSON валідація та структури<br>- Handling асинхронних операцій<br>- Mock data management та fixtures<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-3 | RWP ✓ / DATASET(stt-pz-3, practical_tasks/stt-pz-3-jest-api, QALight: zagalne/shcho-take-api) / MODERN ✓ |  |
 
 ---
 
@@ -391,13 +391,14 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння кар'єрного шляху у тестуванні та професійного розвитку
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 16.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Нові сертифікації: CT-AI, CT-GenAI | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |
-| 16.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director<br>- Спеціалізація (Security QA, Performance, AI QA) | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.3 Професійні навички | - Technical skills (Automation, API, DB, Linux)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Спільнота та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
-| 16.5 Технологічні тренди та майбутнє | - AI-augmented testing<br>- DevOps та автоматизація<br>- Embedded та IoT тестування<br>- Вибір спеціалізації | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 16.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Нові сертифікації: CT-AI, CT-GenAI | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |  |
+| 16.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director<br>- Спеціалізація (Security QA, Performance, AI QA) | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 16.3 Професійні навички | - Technical skills (Automation, API, DB, Linux)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 16.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Спільнота та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 16.5 Технологічні тренди та майбутнє | - AI-augmented testing<br>- DevOps та автоматизація<br>- Embedded та IoT тестування<br>- Вибір спеціалізації | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |  |
+| 16.6 Спільнота та відкриті ресурси | - Професійні спільноти<br>- Open-source проекти для практики<br>- Конференції та зустрічі<br>- Online платформи навчання | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |  |
 
 ---
 
@@ -411,12 +412,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння базових концепцій апаратури для тестування вбудованих систем
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 17.1 Читання архітектурних схем | - Компоненти та їх символи<br>- Технічні специфікації (Datasheet)<br>- Взаємозв'язки сигналів<br>- Робота з документацією виробника | DATASET(QA_Bible: телекомунікаційний домен) / MODERN ✓ |
-| 17.2 GPIO та цифрові входи/виходи | - General Purpose I/O порти<br>- Рівні сигналу (HIGH/LOW)<br>- Pull-up та pull-down резистори<br>- Режими I/O (input, output, PWM) | DATASET(LIMITED) / MODERN ✓ |
-| 17.3 Апаратні переривання (ISR) | - Interrupt Service Routine принципи<br>- Приорітизація переривань<br>- Дебаунсинг та фільтрація сигналів<br>- Синхронізація та Race Conditions | DATASET(LIMITED) / MODERN ✓ |
-| 17.4 Button Bouncing та Debounce | - Фізичне явище контакту<br>- Hardware debounce-фільтри<br>- Software debounce-алгоритми<br>- Тестування у системах miltech | DATASET(LIMITED) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 17.1 Читання архітектурних схем | - Компоненти та їх символи<br>- Технічні специфікації (Datasheet)<br>- Взаємозв'язки сигналів<br>- Робота з документацією виробника | DATASET(QA_Bible: телекомунікаційний домен) / MODERN ✓ |  |
+| 17.2 GPIO та цифрові входи/виходи | - General Purpose I/O порти<br>- Рівні сигналу (HIGH/LOW)<br>- Pull-up та pull-down резистори<br>- Режими I/O (input, output, PWM) | DATASET(LIMITED) / MODERN ✓ |  |
+| 17.3 Апаратні переривання (ISR) | - Interrupt Service Routine принципи<br>- Приорітизація переривань<br>- Дебаунсинг та фільтрація сигналів<br>- Синхронізація та Race Conditions | DATASET(LIMITED) / MODERN ✓ |  |
+| 17.4 Button Bouncing та Debounce | - Фізичне явище контакту<br>- Hardware debounce-фільтри<br>- Software debounce-алгоритми<br>- Тестування у системах miltech | DATASET(LIMITED) / MODERN ✓ |  |
+| 17.5 Аналогові входи та ADC | - Analog-to-Digital Converter (ADC)<br>- Роздільна здатність та точність<br>- Voltage reference та калібрування<br>- Читання сенсорів | DATASET(LIMITED) / MODERN ✓ |  |
+| 17.6 Тактова частота та таймери | - Clock speed та періоди виконання<br>- Hardware timers<br>- Watchdog timer basics<br>- Timing constraints | DATASET(LIMITED) / MODERN ✓ |  |
+| 17.7 Живлення та споживання | - Voltage levels (3.3V, 5V)<br>- Current draw та energy budgets<br>- Power modes (active, sleep)<br>- Battery-powered considerations | DATASET(LIMITED) / MODERN ✓ |  |
 
 **Статус джерел:** ⚠️ 30% покрито
 
@@ -426,11 +430,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння низькорівневої комунікації та діагностики апаратури
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 18.1 Низькорівневі протоколи передачі | - UART (Serial Communication)<br>- I²C (Inter-Integrated Circuit)<br>- SPI (Serial Peripheral Interface)<br>- Порівняння та вибір протоколу | DATASET(LIMITED) / MODERN ✓ |
-| 18.2 Апаратні та віртуальні інструменти | - Логічні аналізатори (PulseView/Sigrok)<br>- Осцилографи та вимірювання<br>- Мультиметри та діагностика<br>- Програмний монітор послідовного портфеля (Serial Monitor) | DATASET(LIMITED) / MODERN ✓ |
-| 18.3 Аналіз логів та діагностика | - Логи перезавантаження мікроконтролера<br>- Фіксація патернів «падіння» плати<br>- JTAG та дебаггери<br>- Post-mortem аналіз крешів | DATASET(LIMITED) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 18.1 Низькорівневі протоколи передачі | - UART (Serial Communication)<br>- I²C (Inter-Integrated Circuit)<br>- SPI (Serial Peripheral Interface)<br>- Порівняння та вибір протоколу | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.2 Апаратні та віртуальні інструменти | - Логічні аналізатори (PulseView/Sigrok)<br>- Осцилографи та вимірювання<br>- Мультиметри та діагностика<br>- Програмний монітор послідовного портфеля (Serial Monitor) | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.3 Аналіз логів та діагностика | - Логи перезавантаження мікроконтролера<br>- Фіксація патернів «падіння» плати<br>- JTAG та дебаггери<br>- Post-mortem аналіз крешів | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.4 Моніторинг та профілювання | - Real-time performance monitoring<br>- Memory profiling<br>- Stack overflow detection<br>- CPU utilization tracking | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.5 Wireless протоколи | - Bluetooth Low Energy (BLE)<br>- Zigbee та Thread<br>- LoRaWAN для IoT<br>- WiFi embedded systems | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.6 CAN та automotive протоколи | - Controller Area Network (CAN)<br>- CAN bus тестування<br>- OBD-II діагностика<br>- Automotive standards | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.7 Захист та безпека embedded | - Secure boot mechanisms<br>- Firmware encryption<br>- Key management<br>- Hardware security modules | DATASET(LIMITED) / MODERN ✓ |  |
 
 **Статус джерел:** ⚠️ 20% покрито
 
@@ -440,12 +448,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння нефункціональних вимог у вбудованих системах
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 19.1 Watchdog Timer та захист від зависань | - Концепція WDT та переповнення<br>- Резет-механізми<br>- Тестування захисту від нескінченних циклів<br>- Таймаути і затримки | DATASET(LIMITED) / MODERN ✓ |
-| 19.2 Енергозбереження та режими сну | - Normal Mode vs Deep Sleep<br>- Wake-up механізми<br>- Споживання електроенергії при тестуванні<br>- Батарейні системи | DATASET(LIMITED) / MODERN ✓ |
-| 19.3 Аварійні умови та надійність | - Brown-out (падіння напруги)<br>- Міттєве знеструмлення та відновлення<br>- Дані в EEPROM/RTC при крахі<br>- Fault injection тестування | DATASET(LIMITED) / MODERN ✓ |
-| 19.4 ESD та EMI стійкість | - Електростатичний розряд<br>- Електромагнітні завади<br>- Тестування у стресових умовах<br>- Стандарти та сертифікація (IEC, FCC) | DATASET(LIMITED) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 19.1 Watchdog Timer та захист від зависань | - Концепція WDT та переповнення<br>- Резет-механізми<br>- Тестування захисту від нескінченних циклів<br>- Таймаути і затримки | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.2 Енергозбереження та режими сну | - Normal Mode vs Deep Sleep<br>- Wake-up механізми<br>- Споживання електроенергії при тестуванні<br>- Батарейні системи | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.3 Аварійні умови та надійність | - Brown-out (падіння напруги)<br>- Міттєве знеструмлення та відновлення<br>- Дані в EEPROM/RTC при крахі<br>- Fault injection тестування | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.4 ESD та EMI стійкість | - Електростатичний розряд<br>- Електромагнітні завади<br>- Тестування у стресових умовах<br>- Стандарти та сертифікація (IEC, FCC) | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.5 Температурні випробування | - Extended temperature ranges<br>- Thermal stress testing<br>- Heat dissipation analysis<br>- Cold start scenarios | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.6 Механічні впливи | - Vibration testing<br>- Shock resistance<br>- Mounting and enclosure<br>- Military standards (MIL-STD) | DATASET(LIMITED) / MODERN ✓ |  |
+| 19.7 Довговічність та деградація | - Component aging effects<br>- MTBF calculations<br>- Wear-out mechanisms<br>- Long-term reliability testing | DATASET(LIMITED) / MODERN ✓ |  |
 
 **Статус джерел:** ⚠️ 25% покрито
 

@@ -123,13 +123,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Дати чітке визначення та розуміння, що таке тестування ПЗ в сучасному контексті
 
-| Підрозділ | Зміст | Джерела (RWP/DATASET/MODERN) |
-|-----------|-------|-----|
-| 1.1 Визначення тестування ПЗ | - Офіційні визначення ISTQB v4.0<br>- Процес дослідження та перевірки<br>- Різноманіття підходів до визначення | RWP ✓ / DATASET(QALight: osnovi/shcho-take-testuvannia) / MODERN(ISTQB 4.0) |
-| 1.2 Чому тестування необхідне | - Економіка дефектів та вартість помилок<br>- Ризики неправильної роботи ПЗ<br>- Скорочення часу вихідного продукту | RWP ✓ / DATASET(QALight: osnovi/chomu-testuvannia-neobkhidne, QA_Bible: obshee) / MODERN ✓ |
-| 1.3 Розповсюджені міфи про тестування | - Тестування гарантує якість? (Ні)<br>- Тестування знаходить ВСІ дефекти? (Ні)<br>- Тестування затримує розробку? (Залежить) | RWP ✓ / DATASET(QALight: osnovi/mifi-pro-testuvannia) / MODERN ✓ |
-| 1.4 Еволюція тестування ПЗ | - Історія від 1999 року (Kaner)<br>- Розвиток техник та методів<br>- Сучасні тренди (AI, DevOps, Agile) | RWP ✓ / DATASET(books_pdf: Kaner 1999, Kulikov 2020-2022) / MODERN ✓ |
-| 1.5 Тестування як професія | - Роль тестувальника в команді<br>- Відповідальність та компетенції<br>- Кар'єрні траєкторії | RWP ✓ / DATASET(QALight: osnovi/khto-zaimaietsia-testuvanniam, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела (RWP/DATASET/MODERN) | Ресурси |
+|-----------|-------|-----|----------|
+| 1.1 Визначення тестування ПЗ | - Офіційні визначення ISTQB v4.0<br>- Процес дослідження та перевірки<br>- Різноманіття підходів до визначення | RWP ✓ / DATASET(QALight: osnovi/shcho-take-testuvannia) / MODERN(ISTQB 4.0) | ![QR: ISTQB Definition](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org/downloads&margin=10) |
+| 1.2 Чому тестування необхідне | - Економіка дефектів та вартість помилок<br>- Ризики неправильної роботи ПЗ<br>- Скорочення часу вихідного продукту | RWP ✓ / DATASET(QALight: osnovi/chomu-testuvannia-neobkhidne, QA_Bible: obshee) / MODERN ✓ | ![QR: Boehm's Curve](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Software_testing&margin=10) |
+| 1.3 Розповсюджені міфи про тестування | - Тестування гарантує якість? (Ні)<br>- Тестування знаходить ВСІ дефекти? (Ні)<br>- Тестування затримує розробку? (Залежить) | RWP ✓ / DATASET(QALight: osnovi/mifi-pro-testuvannia) / MODERN ✓ | ![QR: Testing Myths](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi/mifi-pro-testuvannia&margin=10) |
+| 1.4 Еволюція тестування ПЗ | - Історія від 1999 року (Kaner)<br>- Розвиток техник та методів<br>- Сучасні тренди (AI, DevOps, Agile) | RWP ✓ / DATASET(books_pdf: Kaner 1999, Kulikov 2020-2022) / MODERN ✓ | ![QR: Testing History](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-handbook&margin=10) |
+| 1.5 Тестування як професія | - Роль тестувальника в команді<br>- Відповідальність та компетенції<br>- Кар'єрні траєкторії | RWP ✓ / DATASET(QALight: osnovi/khto-zaimaietsia-testuvanniam, QA_Bible: faq-dlya-novichkov) / MODERN ✓ | ![QR: QA Career Path](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dou.ua/qa-roadmap&margin=10) |
 
 **Практичні приклади:** 3-5 реальних сценаріїв помилок ПЗ з побутових застосунків
 **Інтерактивні елементи:** Квіз на розуміння різниці між тестуванням та debugging
@@ -140,13 +140,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння концепцій QA, QC, Verification, Validation та їх взаємозв'язку
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 2.1 Якість програмного забезпечення | - ISO/IEC 25010:2011 стандарт якості<br>- 8 характеристик якості ПЗ<br>- Вимірювання якості | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia, ISO 2015) / MODERN(ISO 25010) |
-| 2.2 QA vs QC vs Testing | - Якість (Quality Management)<br>- Контроль якості (Operational)<br>- Тестування (One QC technique)<br>- Таблиця розрізнення | RWP ✓ / DATASET(QALight: osnovi/qa-qc-i-testuvannia, books_pdf: Didkovska 2010) / MODERN ✓ |
-| 2.3 Verification vs Validation | - Verification: Are we building it right?<br>- Validation: Are we building the right thing?<br>- Практичні приклади розрізнення | RWP ✓ / DATASET(QALight: osnovi/verifikatsiia-ta-validatsiia) / MODERN ✓ |
-| 2.4 Концепція тестування в SDLC | - Тестування як частина розвитку<br>- Вплив моделей розробки (Waterfall, Agile)<br>- Ієрархія документів (QA Plan → Strategy → Plan → Cases) | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc) / MODERN ✓ |
-| 2.5 Ролі у тестуванні | - QA Engineer, Test Analyst, Test Automation Engineer<br>- ISTQB Career Path<br>- Вимоги та компетенції | RWP ✓ / DATASET(QALight: osnovi) / MODERN(ISTQB 4.0) |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 2.1 Якість програмного забезпечення | - ISO/IEC 25010:2011 стандарт якості<br>- 8 характеристик якості ПЗ<br>- Вимірювання якості | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia, ISO 2015) / MODERN(ISO 25010) | ![QR: ISO 25010](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/ISO/IEC_25010&margin=10) |
+| 2.2 QA vs QC vs Testing | - Якість (Quality Management)<br>- Контроль якості (Operational)<br>- Тестування (One QC technique)<br>- Таблиця розрізнення | RWP ✓ / DATASET(QALight: osnovi/qa-qc-i-testuvannia, books_pdf: Didkovska 2010) / MODERN ✓ | ![QR: QA/QC/Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi/qa-qc-i-testuvannia&margin=10) |
+| 2.3 Verification vs Validation | - Verification: Are we building it right?<br>- Validation: Are we building the right thing?<br>- Практичні приклади розрізнення | RWP ✓ / DATASET(QALight: osnovi/verifikatsiia-ta-validatsiia) / MODERN ✓ | ![QR: V&V Concept](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Verification_and_validation&margin=10) |
+| 2.4 Концепція тестування в SDLC | - Тестування як частина розвитку<br>- Вплив моделей розробки (Waterfall, Agile)<br>- Ієрархія документів (QA Plan → Strategy → Plan → Cases) | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc) / MODERN ✓ | ![QR: SDLC Models](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dist/&margin=10) |
+| 2.5 Ролі у тестуванні | - QA Engineer, Test Analyst, Test Automation Engineer<br>- ISTQB Career Path<br>- Вимоги та компетенції | RWP ✓ / DATASET(QALight: osnovi) / MODERN(ISTQB 4.0) | ![QR: ISTQB Roles](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org/certification&margin=10) |
 
 ---
 
@@ -154,13 +154,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння основного процесу тестування та його фаз
 
-| Підрозділ | Зміст                                                                                                                                                                                                                                                                                                                                                                                | Джерела |
-|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| 3.1 Фундаментальний процес тестування | - 6 фаз основного процесу (ISTQB)<br>- 1) Planning & Estimation<br>- 2) Analysis & Design<br>- 3) Implementation<br>- 4) Execution<br>- 5) Evaluation & Reporting<br>- 6) Closure                                                                                                                                                                                                    | RWP ✓ / DATASET(QALight: osnovi/fundamentalnii-protses-testuvannia) / MODERN(ISTQB 4.0) |
-| 3.2 STLC: Цикл розвитку тестування | - 7 этапов: Requirements → Design → Development → Testing → Deployment<br>- Взаємозв'язок з SDLC<br>- Артефакти на кожному етапі                                                                                                                                                                                                                                                     | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc, books_pdf: ITVDN 2024) / MODERN ✓ |
-| 3.3 Коли починати та закінчувати тестування | - Критерії входження (Entry Criteria)<br>- Критерії виходження (Exit Criteria)<br>- Кількість тестів та покриття<br>- Практичні приклади                                                                                                                                                                                                                                             | RWP ✓ / DATASET(QALight: osnovi/koli-pochinati-ta-zakinchuvati-testuvannia) / MODERN(ISTQB 4.0) |
-| 3.4 Матриці в тестуванні | - Requirements Traceability Matrix (RTM)<br>- Coverage Matrix<br>- Test Execution Matrix<br>- Як складати та використовувати                                                                                                                                                                                                                                                         | RWP ✓ / DATASET(QALight: osnovi/matritsia-vidpovidnosti-vimog, osnovi/matritsia-pokrittia) / MODERN ✓ |
-| **3.5 Практичне завдання: Manual Testing та Test Case Design** 🆕 | - **Репозиторій stt-manual-testing**<br>- Створення тестових сценаріїв для реальних додатків<br>- Створити та виконати тест-кейси<br>- Позитивне та негативне тестування<br>- Документація тестових артефактів<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-manual-testing | RWP ✓ / DATASET(stt-manual-testing, practical_tasks/stt-manual-testing, QALight: osnovi) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 3.1 Фундаментальний процес тестування | - 6 фаз основного процесу (ISTQB)<br>- 1) Planning & Estimation<br>- 2) Analysis & Design<br>- 3) Implementation<br>- 4) Execution<br>- 5) Evaluation & Reporting<br>- 6) Closure | RWP ✓ / DATASET(QALight: osnovi/fundamentalnii-protses-testuvannia) / MODERN(ISTQB 4.0) | ![QR: Test Process](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org/downloads&margin=10) |
+| 3.2 STLC: Цикл розвитку тестування | - 7 этапов: Requirements → Design → Development → Testing → Deployment<br>- Взаємозв'язок з SDLC<br>- Артефакти на кожному етапі | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc, books_pdf: ITVDN 2024) / MODERN ✓ | ![QR: STLC Phases](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Software_testing&margin=10) |
+| 3.3 Коли починати та закінчувати тестування | - Критерії входження (Entry Criteria)<br>- Критерії виходження (Exit Criteria)<br>- Кількість тестів та покриття<br>- Практичні приклади | RWP ✓ / DATASET(QALight: osnovi/koli-pochinati-ta-zakinchuvati-testuvannia) / MODERN(ISTQB 4.0) | ![QR: Entry/Exit Criteria](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
+| 3.4 Матриці в тестуванні | - Requirements Traceability Matrix (RTM)<br>- Coverage Matrix<br>- Test Execution Matrix<br>- Як складати та використовувати | RWP ✓ / DATASET(QALight: osnovi/matritsia-vidpovidnosti-vimog, osnovi/matritsia-pokrittia) / MODERN ✓ | ![QR: Test Matrices](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi/matritsia-vidpovidnosti-vimog&margin=10) |
+| **3.5 Практичне завдання: Manual Testing та Test Case Design** 🆕 | - **Репозиторій stt-manual-testing**<br>- Створення тестових сценаріїв для реальних додатків<br>- Створити та виконати тест-кейси<br>- Позитивне та негативне тестування<br>- Документація тестових артефактів | RWP ✓ / DATASET(stt-manual-testing, practical_tasks/stt-manual-testing, QALight: osnovi) / MODERN ✓ | ![QR: stt-manual-testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-manual-testing&margin=10) |
 
 ---
 
@@ -168,13 +168,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння людського фактору та основних принципів у тестуванні
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 4.1 7 принципів тестування | - 1) Тестування показує наявність дефектів<br>- 2) Вичерпне тестування неможливе<br>- 3) Раннє тестування економить гроші<br>- 4) Кластеризація дефектів (80/20)<br>- 5) Парадокс пестициду<br>- 6) Тестування залежить від контексту<br>- 7) Відсутність помилок — це ілюзія | RWP ✓ / DATASET(QALight: osnovi/printsipi-testuvannia) / MODERN(ISTQB 4.0) |
-| 4.2 Цілі тестування | - Знаходження дефектів<br>- Отримання інформації про якість<br>- Запобігання дефектам<br>- Побудова довіри до ПЗ | RWP ✓ / DATASET(QALight: osnovi/tsili-testuvannia) / MODERN ✓ |
-| 4.3 Психологія тестувальника | - Критичне мислення vs. позитивне сприйняття розробника<br>- Пошук дефектів vs. демонстрація функціональності<br>- Комунікація результатів без конфліктів<br>- Управління стресом | RWP ✓ / DATASET(QALight: osnovi/psikhologiia-testuvannia) / MODERN ✓ |
-| 4.4 Комунікація та конфліктність | - Як звітувати про дефекти конструктивно<br>- Інтерпретація результатів<br>- Робота з розробниками та менеджерами | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |
-| 4.5 Практичні психологічні техніки | - Mind-mapping для тестування<br>- Creative testing techniques<br>- Exploratory mindset | RWP ✓ / DATASET(books_pdf: Kaner 1999, Gregory 2014) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 4.1 7 принципів тестування | - 1) Тестування показує наявність дефектів<br>- 2) Вичерпне тестування неможливе<br>- 3) Раннє тестування економить гроші<br>- 4) Кластеризація дефектів (80/20)<br>- 5) Парадокс пестициду<br>- 6) Тестування залежить від контексту<br>- 7) Відсутність помилок — це ілюзія | RWP ✓ / DATASET(QALight: osnovi/printsipi-testuvannia) / MODERN(ISTQB 4.0) | ![QR: 7 Principles](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org/downloads&margin=10) |
+| 4.2 Цілі тестування | - Знаходження дефектів<br>- Отримання інформації про якість<br>- Запобігання дефектам<br>- Побудова довіри до ПЗ | RWP ✓ / DATASET(QALight: osnovi/tsili-testuvannia) / MODERN ✓ | ![QR: Testing Goals](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi/tsili-testuvannia&margin=10) |
+| 4.3 Психологія тестувальника | - Критичне мислення vs. позитивне сприйняття розробника<br>- Пошук дефектів vs. демонстрація функціональності<br>- Комунікація результатів без конфліктів<br>- Управління стресом | RWP ✓ / DATASET(QALight: osnovi/psikhologiia-testuvannia) / MODERN ✓ | ![QR: Tester Psychology](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
+| 4.4 Комунікація та конфліктність | - Як звітувати про дефекти конструктивно<br>- Інтерпретація результатів<br>- Робота з розробниками та менеджерами | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ | ![QR: Communication](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Effective_communication&margin=10) |
+| 4.5 Практичні психологічні техніки | - Mind-mapping для тестування<br>- Creative testing techniques<br>- Exploratory mindset | RWP ✓ / DATASET(books_pdf: Kaner 1999, Gregory 2014) / MODERN ✓ | ![QR: Creative Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Mind_map&margin=10) |
 
 ---
 
@@ -188,13 +188,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння 4 основних рівнів тестування та їх характеристик
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Білий ящик<br>- Раннє перехоплення дефектів | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |
-| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |
-| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |
-| 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |
-| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Білий ящик<br>- Раннє перехоплення дефектів | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ | ![QR: Unit Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Unit_testing&margin=10) |
+| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ | ![QR: Integration Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Integration_testing&margin=10) |
+| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ | ![QR: System Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/System_testing&margin=10) |
+| 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ | ![QR: UAT Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Acceptance_testing&margin=10) |
+| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ | ![QR: Testing Levels](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
 
 **Практичні приклади:** Для кожного рівня — реальний приклад з розробки web-застосунку
 **Матриця покриття:** Таблиця, яка показує кого тестує кожен рівень
@@ -205,13 +205,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння різних видів тестування за принципом «чорний ящик»
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 6.1 Функціональне тестування | - Базовий тип тестування<br>- Перевірка функцій аплікації<br>- Приклади: калькулятор, вхід користувача<br>- Різниця від нефункціонального | RWP ✓ / DATASET(QALight: vidi-testuvannia/funktsionalne-testuvannia) / MODERN ✓ |
-| 6.2 Нефункціональне тестування | - Performance Testing<br>- Security Testing<br>- Usability Testing<br>- Compliance Testing | RWP ✓ / DATASET(QALight: vidi-testuvannia/nefunktsionalne-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |
-| 6.3 Тестування продуктивності | - Performance characterization<br>- Load Testing<br>- Stress Testing<br>- Volume Testing<br>- Tools: JMeter, LoadRunner | RWP ✓ / DATASET(QALight: vidi-testuvannia/testuvannia-produktivnosti) / MODERN ✓ |
-| 6.4 Тестування безпеки | - Security vulnerabilities<br>- Injection attacks<br>- OWASP Top 10 (Classic)<br>- Penetration testing<br>- **OWASP 2025 Updates:** Software Supply Chain Failures (#3 NEW)<br>- **Supply Chain Security Testing** 🆕<br>  - SCA (Software Composition Analysis) tools: Snyk, Aqua, Checkmarx<br>  - SBOM generation (Syft, CycloneDX)<br>  - Signed artifacts та verification<br>  - Build system security (supply chain attacks)<br>  - Dependency vulnerability scanning<br>  - License compliance checking<br>  - **Real-world threat:** Shai-Hulud (2025) — first self-propagating npm worm | RWP ✓ / DATASET(QALight: vidi-testuvannia/testuvannia-bezpeki, TRENDS_2024_2025_RESEARCH.md) / MODERN (OWASP 2025) ✓ |
-| 6.5 Тестування юзабіліті та інші типи | - Usability Testing<br>- Compatibility Testing<br>- Configuration Testing<br>- Localization & Internationalization Testing<br>- Disaster Recovery & Business Continuity Testing | RWP ✓ / DATASET(QALight: vidi-testuvannia/) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 6.1 Функціональне тестування | - Базовий тип тестування<br>- Перевірка функцій аплікації<br>- Приклади: калькулятор, вхід користувача<br>- Різниця від нефункціонального | RWP ✓ / DATASET(QALight: vidi-testuvannia/funktsionalne-testuvannia) / MODERN ✓ | ![QR: Functional Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Functional_testing&margin=10) |
+| 6.2 Нефункціональне тестування | - Performance Testing<br>- Security Testing<br>- Usability Testing<br>- Compliance Testing | RWP ✓ / DATASET(QALight: vidi-testuvannia/nefunktsionalne-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ | ![QR: Non-Functional Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
+| 6.3 Тестування продуктивності | - Performance characterization<br>- Load Testing<br>- Stress Testing<br>- Volume Testing<br>- Tools: JMeter, LoadRunner | RWP ✓ / DATASET(QALight: vidi-testuvannia/testuvannia-produktivnosti) / MODERN ✓ | ![QR: Performance Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Load_testing&margin=10) |
+| 6.4 Тестування безпеки | - Security vulnerabilities<br>- Injection attacks<br>- OWASP Top 10 (Classic)<br>- Penetration testing<br>- **OWASP 2025 Updates:** Software Supply Chain Failures (#3 NEW)<br>- **Supply Chain Security Testing** 🆕<br>  - SCA tools, SBOM generation, Signed artifacts<br>  - **Real-world threat:** Shai-Hulud (2025) — npm worm | RWP ✓ / DATASET(QALight: vidi-testuvannia/testuvannia-bezpeki, TRENDS_2024_2025_RESEARCH.md) / MODERN (OWASP 2025) ✓ | ![QR: Security Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://owasp.org/Top10&margin=10) |
+| 6.5 Тестування юзабіліті та інші типи | - Usability Testing<br>- Compatibility Testing<br>- Configuration Testing<br>- Localization & Internationalization Testing<br>- Disaster Recovery & Business Continuity Testing | RWP ✓ / DATASET(QALight: vidi-testuvannia/) / MODERN ✓ | ![QR: Usability Testing](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Usability_testing&margin=10) |
 
 ---
 
@@ -240,15 +240,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння жизненного цикла дефектів та управління якістю
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 8.1 Терміни: Error, Defect, Failure, Bug | - Точні визначення ISTQB<br>- Причина → Дефект → Вплив<br>- Практичні приклади з ланцюжком<br>- Синоніми та вживання | RWP ✓ / DATASET(QALight: osnovi, defekt, books_pdf) / MODERN(ISTQB 4.0) |
-| 8.2 Класифікація дефектів | - За серйозністю: Critical, Major, Minor, Trivial<br>- За пріоритетом: High, Medium, Low<br>- За типом (Functional, Logic, UI, API)<br>- За впливом на користувача | RWP ✓ / DATASET(QALight: defekt/klasifikatsiia-defektiv) / MODERN ✓ |
-| 8.3 Життєвий цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ |
-| 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ |
-| 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ |
-| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla<br>- Azure DevOps<br>- YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами)<br>- Інтеграція з процесом розробки | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |
-| **8.7 Практичне завдання: Bug Report та Defect Management** 🆕 | - **Проект stt-bug-reporting**<br>- Структура Bug Report (ID, Title, Description, Steps to Reproduce)<br>- Класифікація дефектів (Severity, Priority)<br>- Bug Report у JIRA / інших системах<br>- Життєвий цикл дефекта (New → Fixed → Verified → Closed)<br>- Root Cause Analysis (RCA)<br>- Практичні приклади дефектів<br>- Документування та комунікація<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-bug-reporting | RWP ✓ / DATASET(stt-bug-reporting, practical_tasks/stt-bug-reporting, QALight: defekt, testovi-artefakti) / MODERN ✓ |
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 8.1 Терміни: Error, Defect, Failure, Bug | - Точні визначення ISTQB<br>- Причина → Дефект → Вплив<br>- Практичні приклади з ланцюжком<br>- Синоніми та вживання | RWP ✓ / DATASET(QALight: osnovi, defekt, books_pdf) / MODERN(ISTQB 4.0) | ![QR: Error vs Defect](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.istqb.org&margin=10) |
+| 8.2 Класифікація дефектів | - За серйозністю: Critical, Major, Minor, Trivial<br>- За пріоритетом: High, Medium, Low<br>- За типом (Functional, Logic, UI, API)<br>- За впливом на користувача | RWP ✓ / DATASET(QALight: defekt/klasifikatsiia-defektiv) / MODERN ✓ | ![QR: Defect Classification](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
+| 8.3 Життєвий цикл дефекта | - Статуси: New → Open → Assigned → In Progress → Fixed → Verified → Closed<br>- Повторне відкриття дефектів<br>- Деференція та відкладення | RWP ✓ / DATASET(QALight: defekt/zhittievii-tsikl-defektiv, QA_Bible: obshee) / MODERN ✓ | ![QR: Defect Lifecycle](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/osnovi&margin=10) |
+| 8.4 Bug Report (Звіт про дефект) | - Структура звіту<br>- Обов'язкові поля (ID, Title, Description, Steps)<br>- Скріншоти та логи<br>- Приклади хороших та поганих звітів | RWP ✓ / DATASET(QALight: testovi-artefakti/bug-report-zvit-pro-pomilku) / MODERN ✓ | ![QR: Bug Report Template](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://qalight.ua/testovi-artefakti&margin=10) |
+| 8.5 Вартість дефектів | - Економіка знаходження дефектів рано<br>- Витрати на виправлення на різних етапах<br>- ROI тестування | RWP ✓ / DATASET(QALight: osnovi/skilki-koshtuiut-defekti, books_pdf: Gregory 2014) / MODERN ✓ | ![QR: Defect Cost](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://en.wikipedia.org/wiki/Software_defect&margin=10) |
+| 8.6 Інструменти управління дефектами | - JIRA (основний)<br>- Bugzilla, Azure DevOps, YouTrack<br>- Trello (канбан-стиль)<br>- Worksection (управління проєктами) | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ | ![QR: Defect Tools](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.atlassian.com/software/jira&margin=10) |
+| **8.7 Практичне завдання: Bug Report та Defect Management** 🆕 | - **Проект stt-bug-reporting**<br>- Структура Bug Report та класифікація<br>- Bug Report у JIRA<br>- Життєвий цикл дефекта<br>- Root Cause Analysis (RCA) | RWP ✓ / DATASET(stt-bug-reporting, practical_tasks/stt-bug-reporting, QALight: defekt) / MODERN ✓ | ![QR: stt-bug-reporting](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-bug-reporting&margin=10) |
 
 ---
 

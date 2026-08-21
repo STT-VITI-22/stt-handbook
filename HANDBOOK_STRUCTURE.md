@@ -95,6 +95,25 @@ HANDBOOK (Посібник)
 
 ---
 
+## 2.2. QR-коди на практичні ресурси
+
+Для швидкого доступу до GitHub репозиторіїв та ключових ресурсів dataset:
+
+| Ресурс | QR-код | Опис |
+|--------|--------|------|
+| **stt-manual-testing** | ![QR: stt-manual-testing](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-manual-testing&margin=10) | Практичні тестові сценарії та test case design (Глава 3.5) |
+| **stt-pz-1 (Jest/Chai)** | ![QR: stt-pz-1](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-pz-1&margin=10) | Unit тестування з Mocha/Chai (Глава 7.8) |
+| **stt-pz-2 (TDD/Jest)** | ![QR: stt-pz-2](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-pz-2&margin=10) | Test-Driven Development з Jest (Глава 9.7) |
+| **stt-pz-3 (API/Jest)** | ![QR: stt-pz-3](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-pz-3&margin=10) | API тестування та Mock дані (Глава 11.7) |
+| **stt-pz-4 (BDD/Jest)** | ![QR: stt-pz-4](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-pz-4&margin=10) | BDD з Jest та mocking (Глава 9.7) |
+| **stt-pz-5 (Cypress E2E)** | ![QR: stt-pz-5](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-pz-5&margin=10) | End-to-End тестування з Cypress (Глава 13.8) |
+| **stt-bug-reporting** | ![QR: stt-bug-reporting](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-bug-reporting&margin=10) | Bug Report та Defect Management (Глава 8.7) |
+| **QA_Bible (Test Management)** | ![QR: Test Management](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/obshee/protsess-testirovaniia-test-process-draft.md&margin=10) | Процес тестування та управління (Глава 3.2) |
+| **QA_Bible (RCA)** | ![QR: Root Cause Analysis](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/obshee/analiz-pervoprichin-rca-root-cause-analysis.md&margin=10) | Root Cause Analysis методологія (Глава 3.7) |
+| **QALight (Основи)** | ![QR: QALight Основи](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-handbook/tree/main/dataset/articles/qalight/parsed/osnovi&margin=10) | Базові концепції тестування (Глави 1-4) |
+
+---
+
 ## 3. ДЕТАЛЬНА СТРУКТУРА РОЗДІЛІВ
 
 ### ЧАСТИНА 1: ВСТУП ТА ФУНДАМЕНТАЛЬНІ ОСНОВИ
@@ -136,13 +155,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння основного процесу тестування та його фаз
 
-| Підрозділ | Зміст | Джерела |
-|-----------|-------|---------|
-| 3.1 Фундаментальний процес тестування | - 6 фаз основного процесу (ISTQB)<br>- 1) Planning & Estimation<br>- 2) Analysis & Design<br>- 3) Implementation<br>- 4) Execution<br>- 5) Evaluation & Reporting<br>- 6) Closure | RWP ✓ / DATASET(QALight: osnovi/fundamentalnii-protses-testuvannia) / MODERN(ISTQB 4.0) |
-| 3.2 STLC: Цикл розвитку тестування | - 7 этапов: Requirements → Design → Development → Testing → Deployment<br>- Взаємозв'язок з SDLC<br>- Артефакти на кожному етапі | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc, books_pdf: ITVDN 2024) / MODERN ✓ |
-| 3.3 Коли починати та закінчувати тестування | - Критерії входження (Entry Criteria)<br>- Критерії виходження (Exit Criteria)<br>- Кількість тестів та покриття<br>- Практичні приклади | RWP ✓ / DATASET(QALight: osnovi/koli-pochinati-ta-zakinchuvati-testuvannia) / MODERN(ISTQB 4.0) |
-| 3.4 Матриці в тестуванні | - Requirements Traceability Matrix (RTM)<br>- Coverage Matrix<br>- Test Execution Matrix<br>- Як складати та використовувати | RWP ✓ / DATASET(QALight: osnovi/matritsia-vidpovidnosti-vimog, osnovi/matritsia-pokrittia) / MODERN ✓ |
-| **3.5 Практичне завдання: Manual Testing та Test Case Design** 🆕 | - **Проект stt-manual-testing**<br>- Створення тестових сценаріїв для реальних додатків<br>- Структура Test Case (ID, Title, Prerequisites, Steps, Expected Results)<br>- Позитивне та негативне тестування<br>- Серйозність та пріоритет дефектів<br>- Тест-дизайн техніки у практиці<br>- Test Execution та документування<br>- Регресійне тестування та RCA<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-manual-testing | RWP ✓ / DATASET(stt-manual-testing, practical_tasks/stt-manual-testing, QALight: osnovi) / MODERN ✓ |
+| Підрозділ | Зміст                                                                                                                                                                                                                                                                                                                                                                                | Джерела |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| 3.1 Фундаментальний процес тестування | - 6 фаз основного процесу (ISTQB)<br>- 1) Planning & Estimation<br>- 2) Analysis & Design<br>- 3) Implementation<br>- 4) Execution<br>- 5) Evaluation & Reporting<br>- 6) Closure                                                                                                                                                                                                    | RWP ✓ / DATASET(QALight: osnovi/fundamentalnii-protses-testuvannia) / MODERN(ISTQB 4.0) |
+| 3.2 STLC: Цикл розвитку тестування | - 7 этапов: Requirements → Design → Development → Testing → Deployment<br>- Взаємозв'язок з SDLC<br>- Артефакти на кожному етапі                                                                                                                                                                                                                                                     | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc, books_pdf: ITVDN 2024) / MODERN ✓ |
+| 3.3 Коли починати та закінчувати тестування | - Критерії входження (Entry Criteria)<br>- Критерії виходження (Exit Criteria)<br>- Кількість тестів та покриття<br>- Практичні приклади                                                                                                                                                                                                                                             | RWP ✓ / DATASET(QALight: osnovi/koli-pochinati-ta-zakinchuvati-testuvannia) / MODERN(ISTQB 4.0) |
+| 3.4 Матриці в тестуванні | - Requirements Traceability Matrix (RTM)<br>- Coverage Matrix<br>- Test Execution Matrix<br>- Як складати та використовувати                                                                                                                                                                                                                                                         | RWP ✓ / DATASET(QALight: osnovi/matritsia-vidpovidnosti-vimog, osnovi/matritsia-pokrittia) / MODERN ✓ |
+| **3.5 Практичне завдання: Manual Testing та Test Case Design** 🆕 | - **Репозиторій stt-manual-testing**<br>- Вступ до практичного проекту<br>- Структура тестового кейсу<br>- Позитивне та негативне тестування<br>- 3.5.4: Матриця Severity & Priority дефектів<br>- Техніки дизайну тестів (BVA, ECP, DTT)<br>- Виконання та документація тестів<br>- Регресійне тестування та RCA<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-manual-testing | RWP ✓ / DATASET(stt-manual-testing, practical_tasks/stt-manual-testing, QALight: osnovi) / MODERN ✓ |
 
 ---
 

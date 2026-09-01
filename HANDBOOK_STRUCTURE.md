@@ -174,7 +174,7 @@ HANDBOOK (Посібник)
 | 4.2 Цілі тестування | - Знаходження дефектів<br>- Отримання інформації про якість<br>- Запобігання дефектам<br>- Побудова довіри до ПЗ | RWP ✓ / DATASET(QALight: osnovi/tsili-testuvannia) / MODERN ✓ |  |
 | 4.3 Психологія тестувальника | - Критичне мислення vs. позитивне сприйняття розробника<br>- Пошук дефектів vs. демонстрація функціональності<br>- Комунікація результатів без конфліктів<br>- Управління стресом | RWP ✓ / DATASET(QALight: osnovi/psikhologiia-testuvannia) / MODERN ✓ |  |
 | 4.4 Комунікація та конфліктність | - Як звітувати про дефекти конструктивно<br>- Інтерпретація результатів<br>- Робота з розробниками та менеджерами | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |  |
-| 4.5 Практичні психологічні техніки | - Mind-mapping для тестування<br>- Creative testing techniques<br>- Exploratory mindset | RWP ✓ / DATASET(books_pdf: Kaner 1999, Gregory 2014) / MODERN ✓ |  |
+| 4.5 Практичні психологічні техніки | - Mind-mapping для тестування<br>- Creative testing techniques<br> | RWP ✓ / DATASET(books_pdf: Kaner 1999, Gregory 2014) / MODERN ✓ |  |
 
 ---
 

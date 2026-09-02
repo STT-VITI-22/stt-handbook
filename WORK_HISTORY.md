@@ -257,3 +257,7 @@
 - **Goal**: Proofread Chapters 1, 2, and 3 for Russianisms and grammar errors (similar to upstream Chapter 4) and prepare a well-documented PR.
 - **Process**: Created branch `fix/ch1-3-proofreading`. I analyze the files sequentially and generate a Markdown table with errors and explanations. We do NOT modify files until the user reviews and approves the table via IDE hints.
 - **Status**: Chapter 1 analyzed. Full artifact table saved to `local-dev/proofreading_ch1.md`. Switched back to `main` branch to continue fetching Chapter 5 materials.
+
+### 2026-09-02: Розширення датасету та парсер QATestLab
+- **Новий інструмент:** Створено спеціалізований скрипт `tools/web_scrapers/qatestlab_parser.py` для `training.qatestlab.com`, який коректно витягує заголовок `h1` та ігнорує меню і футер.
+- **Нові статті:** Зібрано дві статті про рівні тестування (Smoke vs Sanity, UAT) з ресурсів QATestLab та Initialyze. Зображення збережено локально в `dataset/img/` для вирішення проблем з відносними шляхами (Next.js) та структурою сторінок.

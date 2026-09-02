@@ -252,3 +252,8 @@
   - Зображення витягуються безпосередньо з PDF через `PyMuPDF` (з фільтрацією водяних знаків та дрібних іконок), зберігаються локально і передаються в промпт Gemini.
   - Додано обробку помилки денної квоти `generate_content_free_tier_requests`: вичерпані ключі автоматично відключаються, а живі продовжують роботу.
 - **Результат:** 44 презентації успішно конвертовано в ідеальний Markdown. Файли збережено в `dataset/pptx_doc/popeliuha/parsed`, а всі вирізані слайдові зображення у папці `images/` поруч із ними.
+
+### 2026-09-02: Proofreading Chapters 1-3 Workflow setup
+- **Goal**: Proofread Chapters 1, 2, and 3 for Russianisms and grammar errors (similar to upstream Chapter 4) and prepare a well-documented PR.
+- **Process**: Created branch `fix/ch1-3-proofreading`. I analyze the files sequentially and generate a Markdown table with errors and explanations. We do NOT modify files until the user reviews and approves the table via IDE hints.
+- **Status**: Chapter 1 analyzed. Full artifact table saved to `local-dev/proofreading_ch1.md`. Switched back to `main` branch to continue fetching Chapter 5 materials.

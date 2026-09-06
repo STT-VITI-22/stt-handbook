@@ -6,16 +6,11 @@ from .base import BaseParser
 logger = logging.getLogger(__name__)
 
 class DouParser(BaseParser):
-    def __init__(self, output_dir: str = "dataset/articles/dou/parsed"):
+    def __init__(self, output_dir: str = "dataset/articles/dou/parsed", target_urls: list = None):
         # We will save all provided DOU articles directly into one category folder for now
         super().__init__(output_dir=output_dir)
         
-        # Hardcoded targets provided by the user
-        self.target_urls = [
-            "https://dou.ua/forums/topic/44882/",
-            "https://dou.ua/forums/topic/13389/",
-            "https://dou.ua/forums/topic/14015/"
-        ]
+        self.target_urls = target_urls if target_urls else []
 
     async def _process_article(self, url: str):
         soup = await self.fetch_html(url)

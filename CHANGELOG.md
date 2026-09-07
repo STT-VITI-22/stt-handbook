@@ -12,13 +12,15 @@
 
 ### Added / Додано
 
-- **(docs) Глава 6: Типи тестування — Версія 1.0 (Production-ready)** ✨
-  - (feature) **Основний файл:** `dist/Частина 2/Глава 6/Типи тестування.md` (709 рядків)
+- **(docs) Глава 6: Типи тестування — Версія 1.1 (Повна структура з усіма типами)** ✨
+  - (feature) **Основний файл:** `dist/Частина 2/Глава 6/Типи тестування.md` (1195 рядків, +486 рядків від v1.0)
     * 6.1 Функціональне тестування (Functional Testing) з прикладами
     * 6.2 Нефункціональне тестування й ISO/IEC 25010 стандарти
-    * 6.3 Тестування продуктивності (Load, Stress, Stability, Volume)
-    * 6.4 Тестування безпеки з OWASP 2025 updates (Supply Chain Failures)
-    * 6.5 Тестування юзабіліті, конфіграції, локалізації й інші типи
+    * **🆕 6.3 Структурне тестування (White-box)** — Code Coverage (C0-C2), McCabe Complexity
+    * **🆕 6.4 Тестування змін (Change-related)** — Regression, Retesting, Smoke, Sanity, BVT
+    * 6.5 Тестування продуктивності (Load, Stress, Stability, Volume)
+    * 6.6 Тестування безпеки з OWASP 2025 updates (Supply Chain Failures)
+    * 6.7 Тестування юзабіліті, конфіграції, локалізації й інші типи
   - (feature) **8 QR-кодів** до освітніх ресурсів:
     * JMeter, Locust, k6, Artillery (Performance Testing)
     * Snyk, CycloneDX (Security & Supply Chain)
@@ -28,9 +30,31 @@
     * Реальна атака 2025: "Shai-Hulud" npm worm case study
     * Black Friday навантаження на Amazon
     * Supply Chain Security Testing з SCA інструментами
-  - (feature) **10 питань для самоперевірки** (різноманітні сценарії)
+  - (feature) **Нові секції 6.3 та 6.4** (RESTORED + ENHANCED):
+    * **6.3 Структурне тестування (White-box):** Code Coverage (C0, C1, C2, Condition), McCabe Complexity, інструменти (Jest, Codecov, SonarQube)
+    * **6.4 Тестування змін (Change-related):** Regression, Retesting, Smoke, Sanity, BVT, 3 стратегії, практичні сценарії
+  - (feature) **15+ питань для самоперевірки** (усі розділи, різноманітні сценарії)
   - (feature) **Матриця Рівні × Типи тестування** для синтезу Глав 5-6
   - (docs) **Порівняльна таблиця:** всі типи тестування, їхні фокуси й інструменти
+  - (docs) **HANDBOOK_STRUCTURE.md оновлено** з явними посиланнями на dataset (усі 7 розділів):
+    * 6.1 Функціональне → [QALight: funktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/funktsionalne-testuvannia.md)
+    * 6.2 Нефункціональне → [QALight: nefunktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/nefunktsionalne-testuvannia.md), [QA_Bible: vidy-metody-urovni](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/)
+    * 6.3 Структурне → RWP ✓ / MODERN ✓
+    * 6.4 Тестування змін → [QALight: regresiine-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/regresiine-testuvannia.md), [QALight: dimne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/dimne-testuvannia.md)
+    * 6.5 Продуктивність → [QALight: testuvannia-produktivnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-produktivnosti.md), [QALight: stres-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/stres-testuvannia.md), [QA_Bible: testirovanie-proizvoditelnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-proizvoditelnosti-performance-testing.md)
+    * 6.6 Безпека → [QALight: testuvannia-bezpeki](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-bezpeki.md), [QA_Bible: testirovanie-bezopasnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-bezopasnosti-security-and-access-control-testing.md), [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+    * 6.7 Юзабіліті & Інші → [QALight: iuzabiliti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/iuzabiliti.md), [QALight: konfiguratsiine-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/konfiguratsiine-testuvannia.md), [QALight: internatsionalizatsiia-ta-lokalizatsiia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/internatsionalizatsiia-ta-lokalizatsiia.md), та інші
+
+### Fixed / Виправлено
+
+- **(fix) Глава 6: Структура розділу відновлена та розширена** 🔴
+  - (fix) **Проблема:** Розділи 6.3 (Структурне тестування) та 6.4 (Тестування змін) були видалені з файлу
+  - (fix) **Рішення:**
+    * Вставлено 6.3 Структурне тестування (242 рядки) з покриттям кодом (C0-C2), McCabe Complexity
+    * Вставлено 6.4 Тестування змін (237 рядків) з регресією, smoke, sanity, BVT тестуванням
+    * Перенумеровано наступні розділи: 6.5 (Performance), 6.6 (Security), 6.7 (Usability)
+  - (fix) **Результат:** Файл розширився з 953 на 1195 рядків (+242 рядки на нові розділи)
+  - (fix) **Структура тепер совідповідає HANDBOOK_STRUCTURE.md** з усіма 7 розділами (6.1-6.7)
 
 - **(docs) Глава 4: Психологія та принципи тестування — Версія 2.0 (суттєві розширення 2024-2026)** ✨
   - (feature) **Нова підсекція 4.5.3:** "Психологія тестування в еру AI, віддаленої роботи та Chaos Engineering"

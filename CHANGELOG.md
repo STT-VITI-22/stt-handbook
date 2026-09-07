@@ -12,8 +12,8 @@
 
 ### Added / Додано
 
-- **(docs) Глава 6: Типи тестування — Версія 1.1 (Повна структура з усіма типами)** ✨
-  - (feature) **Основний файл:** `dist/Частина 2/Глава 6/Типи тестування.md` (1195 рядків, +486 рядків від v1.0)
+- **(docs) Глава 6: Типи тестування — Версія 1.1 (Повна структура з усіма типами + QR-коди)** ✨
+  - (feature) **Основний файл:** `dist/Частина 2/Глава 6/Типи тестування.md` (1275 рядків, +566 рядків від v1.0)
     * 6.1 Функціональне тестування (Functional Testing) з прикладами
     * 6.2 Нефункціональне тестування й ISO/IEC 25010 стандарти
     * **🆕 6.3 Структурне тестування (White-box)** — Code Coverage (C0-C2), McCabe Complexity
@@ -21,10 +21,9 @@
     * 6.5 Тестування продуктивності (Load, Stress, Stability, Volume)
     * 6.6 Тестування безпеки з OWASP 2025 updates (Supply Chain Failures)
     * 6.7 Тестування юзабіліті, конфіграції, локалізації й інші типи
-  - (feature) **8 QR-кодів** до освітніх ресурсів:
-    * JMeter, Locust, k6, Artillery (Performance Testing)
-    * Snyk, CycloneDX (Security & Supply Chain)
-    * OWASP Top 10 2025
+  - (feature) **11 QR-кодів** (8 у контенті + 3 у розділі ДЖЕРЕЛА):
+    * **У контенті:** JMeter, Locust, k6, Artillery (Performance Testing), Snyk, CycloneDX (Security & Supply Chain), OWASP Top 10 2025
+    * **У ДЖЕРЕЛА:** QALight Типи тестування, QA_Bible Методи тестування, OWASP Top 10 2025 (основна ссилка)
   - (feature) **Практичні приклади & реальні сценарії:**
     * Калькулятор, форми входу, інтернет-магазин
     * Реальна атака 2025: "Shai-Hulud" npm worm case study

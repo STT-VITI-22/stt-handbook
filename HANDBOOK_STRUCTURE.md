@@ -6,13 +6,18 @@
    - Офіційна структура курсу та вимоги до навчання
    - Всі основні розділи відображені в Chapters 1-16 з покриттям 100%
 
-### 2. **Dataset Sources** (370 файлів, 181 МБ, 6 основних джерел)
-   - **QALight (89 файлів, 692 КБ)** — українські освітні матеріали, 13 категорій
-   - **QA_Bible (240+ файлів, 3.7 МБ)** — глибокі матеріали з 14 категорій
-   - **books_pdf (26 професійних книг, 170 МБ)** — класичні праці (1999-2024)
-   - **pptx_doc (8 презентацій, 5.6 МБ)** — практичні навчальні матеріали
-   - **dou (4 статті, 144 КБ)** — сучасні статті та тренди
-   - **youtube** — відеоресурси та практичні демонстрації
+### 2. **Dataset Sources** (3222 файлів, 194 МБ, 22 джерелами)
+   - **books_pdf (2477 файлів, ~125 МБ)** — професійні книги та матеріали (1999-2026)
+   - **pptx_doc (284 файлів, ~35 МБ)** — презентації та навчальні матеріали
+   - **QA_Bible (239 файлів, ~20 МБ)** — комплексні матеріали з теорії тестування (14 категорій)
+   - **QALight (89 файлів, ~3.5 МБ)** — українські освітні матеріали (13 категорій)
+   - **dou (11 файлів, ~400 КБ)** — сучасні статті та тренди (QA/DevOps)
+   - **Додаткові джерела (22+ сервісів):**
+     * martin_fowler, habr, medium — статті про тестування та архітектуру
+     * OWASP, SLSA, kubernetes_qa, opentelemetry — стандарти та безпека
+     * addyosmani, memfault, ibm, grafana, prometheus, cncf, testkube — спеціалізовані ресурси
+     * geeksforgeeks, qatestlab, initialyze — освітні платформи
+   - **practical_tasks (2 файлів)** — практичні завдання та проекти
 
 ### 3. **Сучасні стандарти та актуальність знань** (2024-2026)
    - **ISTQB v4.0 Syllabus** — міжнародний стандарт сертифікації (100% покриття)
@@ -21,9 +26,9 @@
    - **Сучасні тренди тестування** — AI Testing, Chaos Engineering, Cloud-Native Testing (85% покриття 2024-2026)
    - **Emerging Technologies** — Agentic AI (5% → 30% → 70% growth), Synthetic Monitoring (30% → 85% adoption)
 
-**Дата створення:** 17 серпня 2026 року
-**Версія:** v1.0 (INITIAL RELEASE)
-**Статус:** MASTER BLUEPRINT — Повна організаційна структура посібника
+**Дата останнього оновлення:** 8 вересня 2026 року
+**Версія:** v1.1 (DATASET ACTUALIZATION + Ch 1-7 COMPLETE)
+**Статус:** MASTER BLUEPRINT — Повна організаційна структура посібника, 7 розділів готово
 
 ---
 
@@ -36,7 +41,7 @@
 ```
 Working Program (RWP)
        +
-Dataset Sources (369 файлів)
+Dataset Sources (3222 файлів, 194 МБ)
        +
 ISTQB Standards v4.0
        +
@@ -58,11 +63,12 @@ HIERARCHICAL STRUCTURE
 | **Основні частини** | 5 | Introduction, Fundamentals, Advanced, Modern Practice, Embedded/IoT |
 | **Розділи** | 23 | З прямою відстежуваністю до Working Program |
 | **Підрозділи** | 100+ | З детальним вмістом та практичними завданнями |
-| **Практичні проекти** | 8+ | GitHub репозиторії з реальними сценаріями |
-| **Dataset файлів** | 370 | 181 МБ з 6 основних джерел |
-| **QALight матеріалів** | 89 | 692 КБ, 13 категорій, українська мова |
-| **QA_Bible матеріалів** | 240+ | 3.7 МБ, 14 категорій, глибока теорія |
-| **Професійних книг** | 26 | 170 МБ, період 1999-2024 |
+| **Практичні проекти** | 2 | practical_tasks директорія |
+| **Dataset файлів** | 3222 | 194 МБ з 22+ джерел |
+| **QALight матеріалів** | 89 | ~3.5 МБ, 13 категорій, українська мова |
+| **QA_Bible матеріалів** | 239 | ~20 МБ, 14 категорій, глибока теорія |
+| **Професійних книг** | 2477 | ~125 МБ, період 1999-2026 |
+| **Презентацій (pptx)** | 284 | ~35 МБ, практичні матеріали |
 | **Період літератури** | 25 років | Від основоположників до сучасних трендів |
 | **Стандарти** | 3 | ISTQB 4.0, ISO/IEC 25010, OWASP 2025 |
 | **Покриття Ch 1-16** | ✅ 95-100% | Основний контент повністю готовий до розробки |
@@ -188,13 +194,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння 4 основних рівнів тестування та їх характеристик
 
-| Підрозділ | Зміст | Джерела | Ресурси |
-|-----------|-------|---------|----------|
-| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Білий ящик<br>- Раннє перехоплення дефектів | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |  |
-| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |  |
-| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |  |
+| Підрозділ | Зміст                                                                                                                                                           | Джерела | Ресурси |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
+| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Біла скринька<br>- Раннє перехоплення дефектів             | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |  |
+| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти                                 | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |  |
+| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування                              | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |  |
 | 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |  |
-| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |  |
+| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування                                                                         | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |  |
 
 **Практичні приклади:** Для кожного рівня — реальний приклад з розробки web-застосунку
 **Матриця покриття:** Таблиця, яка показує кого тестує кожен рівень
@@ -205,14 +211,14 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння різних типів(видів) тестування за принципом 
 
-| Підрозділ                             | Зміст                                                                                                                                                                                                                                                                                                                     | Джерела | Ресурси |
-|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|
-| 6.1 Функціональне тестування          | - Базовий тип тестування<br>- Перевірка функцій аплікації відповідно до вимог<br>- Тестування поведінки (inputs → processing → outputs)<br>- Приклади: калькулятор, форми входу, оформлення замовлення<br>- Тестування чорного ящика (без доступу до коду)<br>- Різниця від нефункціонального                                                                                                                                                                                 | RWP ✓ / DATASET([QALight: funktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/funktsionalne-testuvannia.md)) / MODERN ✓ |         |
-| 6.2 Нефункціональне тестування        | - Performance Testing<br>- Security Testing<br>- Usability Testing<br>- Compliance Testing<br>- **ISO/IEC 25010:2011** (8 якісних caratteristicas)<br>- Надійність, Масштабованість, Портативність | RWP ✓ / DATASET([QALight: nefunktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/nefunktsionalne-testuvannia.md), [QA_Bible: vidy-metody-urovni](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/)) / MODERN ✓ |         |
-| 6.3 Структурне тестування             | - Строкове покриття (Statement Coverage)<br>- Покриття шляху (Path Coverage)<br>- Покриття рішення (Branch Coverage)<br>- Покриття умови (Condition Coverage)<br>- Цикломатична складність (McCabe Complexity)<br>- Code Coverage (C0, C1, C2, ..., C∞) | RWP ✓ / MODERN ✓ |         |
-| 6.4 Тестування змін                   | - Регресійне тестування (Regression testing)<br>- Повторне тестування (Retesting)<br>- Smoke Testing<br>- Sanity Testing<br>- Build Verification Testing | RWP ✓ / DATASET([QALight: regresiine-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/regresiine-testuvannia.md), [QALight: dimne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/dimne-testuvannia.md)) / MODERN ✓ |         |
-| 6.5 Тестування продуктивності         | - Performance characterization<br>- **Load Testing** (нормальне навантаження)<br>- **Stress Testing** (граничні навантаження)<br>- **Stability/Soak Testing** (довгострокова стабільність)<br>- **Volume Testing** (обсяги даних)<br>- Метрики: Response Time, Throughput, Error Rate, CPU, Memory, Disk I/O<br>- Tools: JMeter, Locust, k6, Artillery | RWP ✓ / DATASET([QALight: testuvannia-produktivnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-produktivnosti.md), [QALight: stres-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/stres-testuvannia.md), [QA_Bible: testirovanie-proizvoditelnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-proizvoditelnosti-performance-testing.md)) / MODERN ✓ |         |
-| 6.6 Тестування безпеки                | - **CIA Triad:** Конфіденційність, Цілісність, Доступність<br>- **Найпоширеніші вразливості:** XSS, SQL Injection, CSRF, Brute-Force<br>- OWASP Top 10<br>- Penetration testing<br>- **🆕 OWASP 2025 Updates:** Software Supply Chain Failures (#3 NEW)<br>- **Supply Chain Security Testing:** SCA tools (Snyk), SBOM generation (CycloneDX), Signed artifacts<br>- **Real-world threat:** Shai-Hulud (2025) — npm worm attack | RWP ✓ / DATASET([QALight: testuvannia-bezpeki](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-bezpeki.md), [QA_Bible: testirovanie-bezopasnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-bezopasnosti-security-and-access-control-testing.md), [OWASP Top 10](https://owasp.org/www-project-top-ten/)) / MODERN (OWASP 2025) ✓ | ![QR: OWASP Top 10](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://owasp.org/www-project-top-ten/&margin=10) |
+| Підрозділ                             | Зміст                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Джерела | Ресурси |
+|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|
+| 6.1 Функціональне тестування          | - Базовий тип тестування<br>- Перевірка функцій аплікації відповідно до вимог<br>- Тестування поведінки (inputs → processing → outputs)<br>- Приклади: калькулятор, форми входу, оформлення замовлення<br>- Тестування чорної скриньки (без доступу до коду)<br>- Різниця від нефункціонального                                                                                                                                                                       | RWP ✓ / DATASET([QALight: funktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/funktsionalne-testuvannia.md)) / MODERN ✓ |         |
+| 6.2 Нефункціональне тестування        | - Performance Testing<br>- Security Testing<br>- Usability Testing<br>- Compliance Testing<br>- **ISO/IEC 25010:2011** (8 якісних caratteristicas)<br>- Надійність, Масштабованість, Портативність                                                                                                                                                                                                                                                                    | RWP ✓ / DATASET([QALight: nefunktsionalne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/nefunktsionalne-testuvannia.md), [QA_Bible: vidy-metody-urovni](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/)) / MODERN ✓ |         |
+| 6.3 Структурне тестування             | - Строкове покриття (Statement Coverage)<br>- Покриття шляху (Path Coverage)<br>- Покриття рішення (Branch Coverage)<br>- Покриття умови (Condition Coverage)<br>- Цикломатична складність (McCabe Complexity)<br>- Code Coverage (C0, C1, C2, ..., C∞)                                                                                                                                                                                                               | RWP ✓ / MODERN ✓ |         |
+| 6.4 Тестування змін                   | - Регресійне тестування (Regression testing)<br>- Повторне тестування (Retesting)<br>- Smoke Testing<br>- Sanity Testing<br>- Build Verification Testing                                                                                                                                                                                                                                                                                                              | RWP ✓ / DATASET([QALight: regresiine-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/regresiine-testuvannia.md), [QALight: dimne-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/dimne-testuvannia.md)) / MODERN ✓ |         |
+| 6.5 Тестування продуктивності         | - Performance characterization<br>- **Load Testing** (нормальне навантаження)<br>- **Stress Testing** (граничні навантаження)<br>- **Stability/Soak Testing** (довгострокова стабільність)<br>- **Volume Testing** (обсяги даних)<br>- Метрики: Response Time, Throughput, Error Rate, CPU, Memory, Disk I/O<br>- Tools: JMeter, Locust, k6, Artillery                                                                                                                | RWP ✓ / DATASET([QALight: testuvannia-produktivnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-produktivnosti.md), [QALight: stres-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/stres-testuvannia.md), [QA_Bible: testirovanie-proizvoditelnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-proizvoditelnosti-performance-testing.md)) / MODERN ✓ |         |
+| 6.6 Тестування безпеки                | - **CIA Triad:** Конфіденційність, Цілісність, Доступність<br>- **Найпоширеніші вразливості:** XSS, SQL Injection, CSRF, Brute-Force<br>- OWASP Top 10<br>- Penetration testing<br>- **🆕 OWASP 2025 Updates:** Software Supply Chain Failures (#3 NEW)<br>- **Supply Chain Security Testing:** SCA tools (Snyk), SBOM generation (CycloneDX), Signed artifacts<br>- **Real-world threat:** Shai-Hulud (2025) — npm worm attack                                       | RWP ✓ / DATASET([QALight: testuvannia-bezpeki](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-bezpeki.md), [QA_Bible: testirovanie-bezopasnosti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-bezopasnosti-security-and-access-control-testing.md), [OWASP Top 10](https://owasp.org/www-project-top-ten/)) / MODERN (OWASP 2025) ✓ | ![QR: OWASP Top 10](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://owasp.org/www-project-top-ten/&margin=10) |
 | 6.7 Тестування юзабіліті та інші типи | - **Usability Testing:** 5 метрик (Understandability, Learnability, Efficiency, Attractiveness, Error-free)<br>- **Jakob Nielsen's 10 Principles** юзабіліті<br>- **Configuration Testing:** ОС, браузери, мережа, апаратура<br>- **Localization (L10N) & Internationalization (I18N):** Переклади, дати, валюти, RTL мови<br>- **Failover & Recovery Testing**<br>- **Installation & Upgrade Testing**<br>- **Compatibility Testing**<br>- **Documentation Testing** | RWP ✓ / DATASET([QALight: iuzabiliti](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/iuzabiliti.md), [QALight: konfiguratsiine-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/konfiguratsiine-testuvannia.md), [QALight: internatsionalizatsiia-ta-lokalizatsiia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/internatsionalizatsiia-ta-lokalizatsiia.md), [QALight: testuvannia-vzaiemodii](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-vzaiemodii.md), [QALight: testuvannia-dokumentatsii](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/vidi-testuvannia/testuvannia-dokumentatsii.md), [QA_Bible: testirovanie-udobstva-polzovaniya](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/QA_Bible/vidy-metody-urovni-testirovaniya/testirovanie-udobstva-polzovaniya-usability-testing.md)) / MODERN ✓ |         |
 
 ---
@@ -221,15 +227,15 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння методів розроблення тест-кейсів та проектування тестів
 
-| Підрозділ | Зміст | Джерела | Ресурси |
-|-----------|-------|---------|----------|
-| 7.1 Білий ящик тестування | - Static Analysis<br>- **Керуючий граф програми (Control Flow Graph - CFG)**<br>  - Графічне представлення потоку управління<br>  - Вузли та ребра, базові блоки коду<br>  - Характеристики CFG та застосування<br>- Code Coverage (C0, C1, C2, ..., C∞)<br>  - C0: Statement Coverage (всі оператори)<br>  - C1: Branch Coverage (всі розгалуження)<br>  - C2: Path Coverage (всі шляхи)<br>  - Більш високі рівні покриття<br>- **Цикломатична складність (McCabe Complexity)**<br>  - Вимір складності коду на основі CFG<br>  - Формула: M = E − N + 2P<br>  - Застосування при розробці та тестуванні<br>  - Рекомендовані межі складності (≤10)<br>- Statement Coverage<br>- Branch Coverage<br>- Path Coverage | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, QA_Bible: test-dizain/static-static-analysis, books_pdf: Copeland 2004, Avramenko 2017, Didkovska 2011) / MODERN ✓ |  |
-| 7.2 Чорний ящик тестування | - Functional specification focus<br>- No code knowledge<br>- Techniques (BVA, ECP, DTT)<br>- Test case design from requirements | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, books_pdf: Beizer 2004) / MODERN ✓ |  |
-| 7.3 Еквівалентне розподілення (Equivalence Partitioning) | - Теорія та принципи<br>- Практичні приклади<br>- Дійсні та невірні партиції<br>- Таблиця еквівалентного розподілення | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
-| 7.4 Аналіз граничних значень (Boundary Value Analysis) | - BVA Теорія<br>- Edge cases та corner cases<br>- Off-by-one errors<br>- Практичні приклади | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004, Kulikov 2020) / MODERN ✓ |  |
-| 7.5 Таблиці рішень (Decision Tables) | - Decision table structure<br>- Logical combinations<br>- Умови та дії<br>- Спрощення та мінімізація тестів | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
-| 7.6 Тестування переходів стану (State Transition Testing) | - State diagrams<br>- Transitions та events<br>- Valid та invalid transitions<br>- Практичні приклади (UI workflows) | RWP ✓ / DATASET(QA_Bible: test-dizain) / MODERN ✓ |  |
-| 7.7 Використання кейсів для тестування | - User Story vs. Use Case<br>- Test cases from use cases<br>- Happy path vs. exception paths | RWP ✓ / DATASET(QALight: osnovi, ISTQB 4.0) / MODERN ✓ |  |
+| Підрозділ                                                   | Зміст | Джерела | Ресурси |
+|-------------------------------------------------------------|-------|---------|----------|
+| 7.1 Біла скринька, тестування                               | - Static Analysis<br>- **Керуючий граф програми (Control Flow Graph - CFG)**<br>  - Графічне представлення потоку управління<br>  - Вузли та ребра, базові блоки коду<br>  - Характеристики CFG та застосування<br>- Code Coverage (C0, C1, C2, ..., C∞)<br>  - C0: Statement Coverage (всі оператори)<br>  - C1: Branch Coverage (всі розгалуження)<br>  - C2: Path Coverage (всі шляхи)<br>  - Більш високі рівні покриття<br>- **Цикломатична складність (McCabe Complexity)**<br>  - Вимір складності коду на основі CFG<br>  - Формула: M = E − N + 2P<br>  - Застосування при розробці та тестуванні<br>  - Рекомендовані межі складності (≤10)<br>- Statement Coverage<br>- Branch Coverage<br>- Path Coverage | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, QA_Bible: test-dizain/static-static-analysis, books_pdf: Copeland 2004, Avramenko 2017, Didkovska 2011) / MODERN ✓ |  |
+| 7.2 Чорна скринька, тестування                              | - Functional specification focus<br>- No code knowledge<br>- Techniques (BVA, ECP, DTT)<br>- Test case design from requirements | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, books_pdf: Beizer 2004) / MODERN ✓ |  |
+| 7.3 Еквівалентне розподілення (Equivalence Partitioning)    | - Теорія та принципи<br>- Практичні приклади<br>- Дійсні та невірні партиції<br>- Таблиця еквівалентного розподілення | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
+| 7.4 Аналіз граничних значень (Boundary Value Analysis)      | - BVA Теорія<br>- Edge cases та corner cases<br>- Off-by-one errors<br>- Практичні приклади | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004, Kulikov 2020) / MODERN ✓ |  |
+| 7.5 Таблиці рішень (Decision Tables)                        | - Decision table structure<br>- Logical combinations<br>- Умови та дії<br>- Спрощення та мінімізація тестів | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
+| 7.6 Тестування переходів стану (State Transition Testing)   | - State diagrams<br>- Transitions та events<br>- Valid та invalid transitions<br>- Практичні приклади (UI workflows) | RWP ✓ / DATASET(QA_Bible: test-dizain) / MODERN ✓ |  |
+| 7.7 Використання кейсів для тестування                      | - User Story vs. Use Case<br>- Test cases from use cases<br>- Happy path vs. exception paths | RWP ✓ / DATASET(QALight: osnovi, ISTQB 4.0) / MODERN ✓ |  |
 | **7.8 Практичне завдання: Unit тестування з Mocha/Chai** 🆕 | - **Проект stt-pz-1 (GitHub)**<br>- Налаштування браузерного тестового середовища<br>- BDD/TDD підходи в Mocha<br>- Assertion бібліотека Chai<br>- Test case для реальних функцій<br>- Browser-based test execution<br>- **Recursos:** https://github.com/STT-VITI-22/stt-pz-1 | RWP ✓ / DATASET(stt-pz-1, practical_tasks/stt-pz-1-mocha-chai, QALight: osnovi) / MODERN ✓ | ![QR: stt-pz-1](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-1&margin=10) |
 
 **Порівняльна таблиця:** Коли використовувати кожну техніку
@@ -799,22 +805,34 @@ Ch 13 → Ch 15 (Automation in specialization domains)
 ## 11. МЕТАІНФОРМАЦІЯ
 
 **Документ:** HANDBOOK_STRUCTURE.md
-**Версія:** v1.0 (INITIAL RELEASE)
-**Дата створення:** 17 серпня 2026
-**Статус:** ✅ READY FOR DEVELOPMENT
-**Автор:** STT Handbook Project Team
+**Версія:** v1.1 (DATASET ACTUALIZATION + Ch 1-7 COMPLETE)
+**Дата останнього оновлення:** 8 вересня 2026
+**Статус:** ✅ IN DEVELOPMENT — 7 з 23 розділів готово (30% готовності)
+**Автор:** STT Handbook Project Team + Claude Code AI
 
-**Характеристики v1.0:**
-- 23 глави, 5 частин, 100+ підрозділів
-- 85% актуальних технологій 2024-2025
-- 5 критичних нових розділів (Agentic AI, Synthetic Monitoring, Chaos Eng...)
-- Інтегровано 15 практичних проектів (8 існуючих + 7 нових)
+**Характеристики v1.1:**
+- **✅ Готово:** Глави 1-7 (Introduction, Fundamentals, Basic Theory)
+- ⏳ **В процесі:** Розділи 8-12 (Advanced Topics)
+- ⏳ **Планується:** Розділи 13-23 (Modern Practice, Embedded/IoT)
+- **Dataset:** 3222 файлів (194 МБ), 22+ джерелами
+- **85% актуальних технологій** 2024-2026 (OWASP 2025, Supply Chain Security, AI/LLM)
+- **5 критичних розділів:** AI Testing, Chaos Engineering, Cloud-Native, IoT Security, DefTech
+
+**Готові розділи (v1.1):**
+- ✅ dist/Частина 1/Глава 1/Вступ до тестування.md
+- ✅ dist/Частина 1/Глава 2/Основи контролю якості.md
+- ✅ dist/Частина 1/Глава 3/Процеси та цикли тестування.md
+- ✅ dist/Частина 1/Глава 4/Психологія та принципи тестування.md (Раунди вичитування 1-6)
+- ✅ dist/Частина 2/Глава 5/Рівні тестування.md
+- ✅ dist/Частина 2/Глава 6/Типи тестування.md (Раунди вичитування 1-6, 3222+ слова)
+- ✅ dist/Частина 2/Глава 7/Техніки тестування та дизайну.md
 
 **Файли для синхронізації:**
-- CHANGELOG.md (Запис версійної історії)
+- CHANGELOG.md (Запис версійної історії, оновлено для Раунду 6)
 - CONTENT_VERIFICATION_REPORT.md (Нова: детальна верифікація)
 - TERMINOLOGY.md (Посилання на терміни)
 - ABBREVIATIONS.md (Посилання на скорочення)
 - CLAUDE.md (Правила проекту)
+- HANDBOOK_STRUCTURE.md (v1.1 — оновлено)
 
-**Git комміт:** Ready for commit with expanded structure and verification report
+**Git комміт:** Ready for commit with dataset actualization and chapter 1-7 completion status

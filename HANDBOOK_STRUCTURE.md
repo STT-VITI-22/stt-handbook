@@ -229,18 +229,26 @@ HANDBOOK (Посібник)
 
 | Підрозділ                                                   | Зміст | Джерела | Ресурси |
 |-------------------------------------------------------------|-------|---------|----------|
-| 7.1 Біла скринька, тестування                               | - Static Analysis<br>- **Керуючий граф програми (Control Flow Graph - CFG)**<br>  - Графічне представлення потоку управління<br>  - Вузли та ребра, базові блоки коду<br>  - Характеристики CFG та застосування<br>- Code Coverage (C0, C1, C2, ..., C∞)<br>  - C0: Statement Coverage (всі оператори)<br>  - C1: Branch Coverage (всі розгалуження)<br>  - C2: Path Coverage (всі шляхи)<br>  - Більш високі рівні покриття<br>- **Цикломатична складність (McCabe Complexity)**<br>  - Вимір складності коду на основі CFG<br>  - Формула: M = E − N + 2P<br>  - Застосування при розробці та тестуванні<br>  - Рекомендовані межі складності (≤10)<br>- Statement Coverage<br>- Branch Coverage<br>- Path Coverage | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, QA_Bible: test-dizain/static-static-analysis, books_pdf: Copeland 2004, Avramenko 2017, Didkovska 2011) / MODERN ✓ |  |
-| 7.2 Чорна скринька, тестування                              | - Functional specification focus<br>- No code knowledge<br>- Techniques (BVA, ECP, DTT)<br>- Test case design from requirements | RWP ✓ / DATASET(QALight: tipi-testuvannia/white-black-grey-box, books_pdf: Beizer 2004) / MODERN ✓ |  |
-| 7.3 Еквівалентне розподілення (Equivalence Partitioning)    | - Теорія та принципи<br>- Практичні приклади<br>- Дійсні та невірні партиції<br>- Таблиця еквівалентного розподілення | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
-| 7.4 Аналіз граничних значень (Boundary Value Analysis)      | - BVA Теорія<br>- Edge cases та corner cases<br>- Off-by-one errors<br>- Практичні приклади | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004, Kulikov 2020) / MODERN ✓ |  |
-| 7.5 Таблиці рішень (Decision Tables)                        | - Decision table structure<br>- Logical combinations<br>- Умови та дії<br>- Спрощення та мінімізація тестів | RWP ✓ / DATASET(QA_Bible: test-dizain, books_pdf: Copeland 2004) / MODERN ✓ |  |
-| 7.6 Тестування переходів стану (State Transition Testing)   | - State diagrams<br>- Transitions та events<br>- Valid та invalid transitions<br>- Практичні приклади (UI workflows) | RWP ✓ / DATASET(QA_Bible: test-dizain) / MODERN ✓ |  |
-| 7.7 Використання кейсів для тестування                      | - User Story vs. Use Case<br>- Test cases from use cases<br>- Happy path vs. exception paths | RWP ✓ / DATASET(QALight: osnovi, ISTQB 4.0) / MODERN ✓ |  |
-| **7.8 Практичне завдання: Unit тестування з Mocha/Chai** 🆕 | - **Проект stt-pz-1 (GitHub)**<br>- Налаштування браузерного тестового середовища<br>- BDD/TDD підходи в Mocha<br>- Assertion бібліотека Chai<br>- Test case для реальних функцій<br>- Browser-based test execution<br>- **Recursos:** https://github.com/STT-VITI-22/stt-pz-1 | RWP ✓ / DATASET(stt-pz-1, practical_tasks/stt-pz-1-mocha-chai, QALight: osnovi) / MODERN ✓ | ![QR: stt-pz-1](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-1&margin=10) |
+| 7.1 Біла скринька: Тестування (White-box Testing)           | - Тестування внутрішньої структури, логіки та коду<br>- **Керуючий граф програми (Control Flow Graph - CFG)**<br>  - Графічне представлення потоку управління<br>  - Вузли та ребра, базові блоки коду<br>  - Характеристики CFG та застосування в тестуванні<br>- **Code Coverage (C0-C2)**<br>  - C0: Statement Coverage (всі оператори)<br>  - C1: Branch Coverage (всі розгалуження)<br>  - C2: Path Coverage (всі шляхи)<br>- **Цикломатична складність (McCabe Complexity)**<br>  - Формула: M = E − N + 2P<br>  - Застосування при оцінці тестування<br>  - Рекомендовані межі складності (≤10) | RWP ✓ / DATASET([QALight: white-black-grey-box-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md), QA_Bible: test-dizain) / MODERN(ISTQB 4.0) | ![QR: QALight](http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md&margin=10) |
+| 7.2 Чорна скринька: Тестування (Black-box Testing)         | - Тестування без знання внутрішньої структури<br>- Фокус на поведінці системи та вимогам<br>- Тестування функціональності та специфікації<br>- Технік (BVA, ECP, DTT) для розробки тест-кейсів<br>- Порівняння з білою скринькою | RWP ✓ / DATASET([QALight: white-black-grey-box-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/tipi-testuvannia/white-black-grey-box-testuvannia.md)) / MODERN(ISTQB 4.0) |  |
+| 7.3 Еквівалентне розділення (ECP)                           | - Розподіл вхідних даних на еквівалентні класи<br>- Валідні та невалідні партиції<br>- Практичні приклади (вік, ціна, стать)<br>- Зменшення кількості тест-кейсів без втрати покриття<br>- **Практичне завдання 1** | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), QA_Bible: vidy-metody-urovni-testirovaniya) / MODERN ✓ |  |
+| 7.4 Аналіз граничних значень (BVA)                          | - Тестування на межах діапазонів<br>- Off-by-one помилки та edge cases<br>- Мінімальні, нульові, граничні значення<br>- Комбінація з ECP<br>- **Практичне завдання 2:** Діапазон 1-100 | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), QA_Bible: vidy-metody-urovni-testirovaniya) / MODERN ✓ |  |
+| 7.5 Таблиці рішень (Decision Table Testing)                 | - Структура таблиці рішень<br>- Логічні комбінації умов та дій<br>- Оцінка правил та комбінацій<br>- Спрощення та мінімізація тестів<br>- **Практичне завдання 3:** Логіка системи знижок | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), QA_Bible: vidy-metody-urovni-testirovaniya) / MODERN ✓ |  |
+| 7.6 Тестування переходів стану (State Transition Testing)   | - Діаграми переходів стану (State Diagrams)<br>- Валідні та невалідні переходи<br>- Wydarzenia та умови переходу<br>- Практичні приклади (UI workflows, замовлення)<br>- **Практичне завдання 4:** Замовлення в магазині | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), QA_Bible: vidy-metody-urovni-testirovaniya) / MODERN ✓ |  |
+| 7.7 Використання кейсів (Use Case Testing)                  | - User Stories vs. Use Cases<br>- Happy path та exception paths<br>- Розроблення тест-кейсів з use cases<br>- Дослідницьке тестування (ET)<br>- **Практичне завдання 5:** Система бронювання | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), ISTQB 4.0) / MODERN ✓ |  |
+| 7.8 Додаткові техніки (Error Guessing, Exploratory, Checklists) | - **Error Guessing:** Здогадка на основі досвіду<br>- **Exploratory Testing (ET):** Дослідницьке тестування<br>- **Checklist-based Testing:** Використання чек-листів<br>- Комбінування технік для ефективного тестування | RWP ✓ / DATASET([QALight: osnovi/psikhologiia-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/psikhologiia-testuvannia.md), [QALight: checklists-dlia-testuvalnika](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/testovi-artefakti/checklists-dlia-testuvalnika.md)) / MODERN ✓ |  |
 
-**Порівняльна таблиця:** Коли використовувати кожну техніку
+**Питання для самоперевірки:** 12 питань з A/B/C/D варіантами для закріплення матеріалу
 
-**Практичні завдання:** Розділ 7 має практичне завдання для закріплення знань про техніки дизайну тестів
+**Практичні завдання:** 5 завдань (Завдання 1-5) для розроблення тест-кейсів за різними техніками
+
+**Матриця компетенцій:** Самооцінка за результатами вивчення розділу
+
+**YouTube матеріали:**
+- ![QR: Вступ в техніки тест дизайну - 3 категорії](http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.youtube.com/watch?v=cRLw3luZnN4&margin=10) [Вступ в техніки тест дизайну - 3 категорії](https://www.youtube.com/watch?v=cRLw3luZnN4)
+- ![QR: ISTQB Foundation 4. Техніки тест дизайну](http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.youtube.com/watch?v=ZXarjr3pCPY&margin=10) [ISTQB Foundation 4. Техніки тест дизайну](https://www.youtube.com/watch?v=ZXarjr3pCPY)
+
+**Статус:** ✅ Глава 7 v1.2 (Версія без мовних помилок, з YouTube посиланнями)
 
 ---
 
@@ -818,14 +826,14 @@ Ch 13 → Ch 15 (Automation in specialization domains)
 - **85% актуальних технологій** 2024-2026 (OWASP 2025, Supply Chain Security, AI/LLM)
 - **5 критичних розділів:** AI Testing, Chaos Engineering, Cloud-Native, IoT Security, DefTech
 
-**Готові розділи (v1.1):**
-- ✅ dist/Частина 1/Глава 1/Вступ до тестування.md
-- ✅ dist/Частина 1/Глава 2/Основи контролю якості.md
-- ✅ dist/Частина 1/Глава 3/Процеси та цикли тестування.md
-- ✅ dist/Частина 1/Глава 4/Психологія та принципи тестування.md (Раунди вичитування 1-6)
-- ✅ dist/Частина 2/Глава 5/Рівні тестування.md
-- ✅ dist/Частина 2/Глава 6/Типи тестування.md (Раунди вичитування 1-6, 3222+ слова)
-- ✅ dist/Частина 2/Глава 7/Техніки тестування та дизайну.md
+**Готові розділи (v1.2):**
+- ✅ dist/Частина 1/Глава 1/Вступ до тестування.md (708 рядків)
+- ✅ dist/Частина 1/Глава 2/Основи контролю якості.md (1200+ рядків)
+- ✅ dist/Частина 1/Глава 3/Процеси та цикли тестування.md (950+ рядків)
+- ✅ dist/Частина 1/Глава 4/Психологія та принципи тестування.md (1100+ рядків, Раунди вичитування 1-6)
+- ✅ dist/Частина 2/Глава 5/Рівні тестування.md (757 рядків)
+- ✅ dist/Частина 2/Глава 6/Типи тестування.md (1275 рядків, Раунди вичитування 1-6, 3222+ слова)
+- ✅ dist/Частина 2/Глава 7/Техніки тестування та дизайну.md (511 рядків, v1.2 — без мовних помилок, з YouTube посиланнями, 5 практичних завдань)
 
 **Файли для синхронізації:**
 - CHANGELOG.md (Запис версійної історії, оновлено для Раунду 6)

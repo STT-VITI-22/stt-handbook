@@ -17,6 +17,7 @@ async def main():
     
     # DOU command
     dou_parser = subparsers.add_parser("dou", help="Parse dou.ua QA articles")
+    dou_parser.add_argument("--urls", nargs="+", help="Specific DOU URLs to parse")
 
     # GitBook command
     gitbook_parser = subparsers.add_parser("gitbook", help="Parse QA Bible GitBook")
@@ -40,12 +41,11 @@ async def main():
     elif args.resource == "dou":
         from web_scrapers.dou import DouParser
         
-        target_dir = "dataset/articles/dou/articles"
-        if os.path.exists(target_dir):
-            logger.info(f"Clearing old dataset directory: {target_dir}")
-            shutil.rmtree(target_dir)
+        target_dir = "dataset/articles/dou/parsed"
+        # Removed rmtree to prevent accidental deletion of previous articles
+        os.makedirs(target_dir, exist_ok=True)
             
-        parser_obj = DouParser(output_dir=target_dir)
+        parser_obj = DouParser(output_dir=target_dir, target_urls=args.urls)
         try:
             await parser_obj.run()
         finally:

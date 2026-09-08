@@ -66,3 +66,16 @@ uv pip install beautifulsoup4 markdownify requests
 ```bash
 python tools/web_scrapers/fetch_and_parse_article.py "https://interrupt.memfault.com/blog/unit-testing-basics" "dataset/articles/memfault/unit_testing_basics.md"
 ```
+
+---
+
+## 3. `run_web_parsers.py` — Модульний парсер (DOU, QALight, GitBook)
+
+Цей скрипт є єдиною точкою входу для специфічних парсерів цілих ресурсів. Він використовує окремі класи для кожного ресурсу.
+
+### Приклад використання для DOU:
+Тепер парсер DOU підтримує динамічну передачу посилань через `--urls`. Усі зібрані статті автоматично зберігаються в `dataset/articles/dou/parsed`.
+
+```bash
+PYTHONPATH=tools python3 tools/web_scrapers/run_web_parsers.py dou --urls https://dou.ua/forums/topic/40666/ https://dou.ua/lenta/articles/five-qa-stories-in-deftech/
+```

@@ -238,16 +238,6 @@ HANDBOOK (Посібник)
 | 7.7 Використання кейсів (Use Case Testing)                  | - User Stories vs. Use Cases<br>- Happy path та exception paths<br>- Розроблення тест-кейсів з use cases<br>- Дослідницьке тестування (ET)<br>- **Практичне завдання 5:** Система бронювання | RWP ✓ / DATASET([QALight: test-dizain-test-design](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/test-dizain-test-design.md), ISTQB 4.0) / MODERN ✓ |  |
 | 7.8 Додаткові техніки (Error Guessing, Exploratory, Checklists) | - **Error Guessing:** Здогадка на основі досвіду<br>- **Exploratory Testing (ET):** Дослідницьке тестування<br>- **Checklist-based Testing:** Використання чек-листів<br>- Комбінування технік для ефективного тестування | RWP ✓ / DATASET([QALight: osnovi/psikhologiia-testuvannia](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/osnovi/psikhologiia-testuvannia.md), [QALight: checklists-dlia-testuvalnika](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/articles/qalight/parsed/testovi-artefakti/checklists-dlia-testuvalnika.md)) / MODERN ✓ |  |
 
-**Питання для самоперевірки:** 12 питань з A/B/C/D варіантами для закріплення матеріалу
-
-**Практичні завдання:** 5 завдань (Завдання 1-5) для розроблення тест-кейсів за різними техніками
-
-**Матриця компетенцій:** Самооцінка за результатами вивчення розділу
-
-**YouTube матеріали:**
-- ![QR: Вступ в техніки тест дизайну - 3 категорії](http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.youtube.com/watch?v=cRLw3luZnN4&margin=10) [Вступ в техніки тест дизайну - 3 категорії](https://www.youtube.com/watch?v=cRLw3luZnN4)
-- ![QR: ISTQB Foundation 4. Техніки тест дизайну](http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.youtube.com/watch?v=ZXarjr3pCPY&margin=10) [ISTQB Foundation 4. Техніки тест дизайну](https://www.youtube.com/watch?v=ZXarjr3pCPY)
-
 **Статус:** ✅ Глава 7 v1.2 (Версія без мовних помилок, з YouTube посиланнями)
 
 ---

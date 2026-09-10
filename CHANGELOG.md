@@ -12,6 +12,27 @@
 
 ### Added / Додано
 
+- **(docs) Глава 8: Управління дефектами — Версія 1.0 (439 рядків, ISTQB v4.0 standard)** ✨ 🆕
+  - (feature) **Основний файл:** `dist/Частина 2/Базова теорія тестування/Глава 8/Управління дефектами.md` (439 рядків)
+    * 8.1 Терміни: Error, Defect, Failure, Bug (ISTQB точні визначення + ланцюжок)
+    * 8.2 Класифікація дефектів (Severity: Blocker/Critical/Major/Minor/Trivial; Priority: High/Medium/Low)
+    * 8.3 Життєвий цикл дефекта (10 статусів: Submitted → New → Opened → Assigned → Fixed → Verified → Closed)
+    * 8.4 Bug Report структура (15 обов'язкових полів + приклад повного звіту)
+    * 8.5 Вартість дефектів (Крива Боема, правило 1:10:100, ROI тестування)
+    * 8.6 Інструменти управління (JIRA, Azure DevOps, Bugzilla, YouTrack, Trello, Worksection)
+  - (feature) **7 питань для самоперевірки** (A/B/C/D формат з детальними поясненнями)
+    * Питання про терміни, класифікацію, life cycle, bug report якість, вартість, інструменти
+  - (feature) **4 практичні завдання** з реальними сценаріями:
+    * Написання повного Bug Report для платіжної системи
+    * Класифікація 5 дефектів за Severity × Priority матрицею
+    * Аналіз life cycle дефекту (7 днів, 1 Reopened цикл)
+    * ROI розрахунок для QA команди за рік
+  - (feature) **4 QR-коди** до датасет ресурсів:
+    * QALight: klasifikatsiia-defektiv, zhittievii-tsikl-defektiv, bug-report-zvit-pro-pomilku, skilki-koshtuiut-defekti
+  - (feature) **15+ таблиць** для структурування: Severity × Priority матриця, інструменти порівняння, вартість фаз
+  - (feature) **Діаграми та ASCII arty:** Ланцюжок Error→Defect→Failure, Life cycle діаграма з 10 статусами
+  - (docs) **Лінгвістично чиста:** 100% українська мова, перевірена на русизми за CLAUDE.md стандартами
+
 - **(docs) Глава 5: Рівні тестування — Версія 1.2 (QR-коди для наявних посилань)** 📚
   - (feature) **Розділ ## Джерела** оновлено з 5 QR-кодами для всіх існуючих посилань:
     * QALight: Рівні тестування (GitHub dataset)

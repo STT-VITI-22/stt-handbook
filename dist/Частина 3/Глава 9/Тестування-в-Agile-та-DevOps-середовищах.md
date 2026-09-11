@@ -1282,10 +1282,10 @@ Agile та DevOps кардинально змінили роль QA з "конт
 
 ## Джерела та ресурси
 
-[Gregory та Crispin](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Gregory_2014_AgileTesting(SPOILED_by_img_REMOVING).md)
+- [Agile-тестування. Навчальний курс для всієї команди. Gregory та Crispin](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Gregory_2014_AgileTesting(SPOILED_by_img_REMOVING).md)
 
 ![QR: Gregory Crispin - Agile Testing](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Gregory_2014_AgileTesting(SPOILED_by_img_REMOVING).md&margin=10)
 
-[Тестування програмного забезпечення. Навчальний посібник. Авраменко А.С., Авраменко В.С., Косенюк Г.В.](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Avramenko_2017_SoftwareTesting.md)
+- [Тестування програмного забезпечення. Навчальний посібник. Авраменко А.С., Авраменко В.С., Косенюк Г.В.](https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Avramenko_2017_SoftwareTesting.md)
 
 ![QR: Avramenko - Software Testing](http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/STT-VITI-22/stt-handbook/blob/main/dataset/books_pdf/parsed/Avramenko_2017_SoftwareTesting.md&margin=10)

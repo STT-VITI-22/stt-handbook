@@ -274,8 +274,12 @@ HANDBOOK (Посібник)
 | 9.3 Тестування в Agile спринтах | - Тестування в спринті<br>- Acceptance testing та user stories<br>- Test automation для Agile<br>- Collaboration between QA and Developers | RWP ✓ / DATASET(QALight: osnovi/agile, QA_Bible: sdlc-i-stlc, books_pdf: Gregory 2014) / MODERN(ISTQB 4.0) |
 | 9.4 Continuous Integration & Continuous Deployment | - CI/CD Pipeline<br>- Automated testing у CI<br>- Test automation strategy для CD<br>- Quality gates та release cycles | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: sdlc-i-stlc) / MODERN ✓ |
 | 9.5 DevOps та тестування | - DevOps culture та collaboration<br>- Операційне тестування<br>- Production monitoring та defect detection<br>- Shift-left та shift-right testing | RWP ✓ / DATASET(books_pdf: SoftwareTestingHouse 2023, ITVDN 2024) / MODERN ✓ |
-| 9.6 BDD та TDD підходи | - Test-Driven Development (TDD)<br>- Behavior-Driven Development (BDD)<br>- Gherkin syntax (Given-When-Then)<br>- Tools: Cucumber, SpecFlow | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc) / MODERN ✓ |
-| **9.7 Практичні завдання: TDD та BDD у Agile** 🆕 | - **Проект stt-pz-2: TDD з Jest** (>90% покриття)<br>- **Проект stt-pz-4: BDD з Jest та spyOn mocking**<br>- Red-Green-Refactor цикл<br>- BDD Given-When-Then структура<br>- Mocking та спеціалізовані техніки<br>- Integration з CI/CD pipeline | RWP ✓ / DATASET(stt-pz-2, stt-pz-4, practical_tasks/stt-pz-2-jest-tdd, practical_tasks/stt-pz-4-jest-bdd) / MODERN ✓ | ![QR: stt-pz-2](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-2&margin=10) ![QR: stt-pz-4](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-4&margin=10) |
+| 9.6 BDD та TDD підходи | - Test-Driven Development (TDD)<br>- Behavior-Driven Development (BDD)<br>- Gherkin syntax (Given-When-Then)<br>- Tools: Cucumber, SpecFlow | RWP ✓ / DATASET(QA_Bible: sdlc-i-stlc) / MODERN ✓ |[understand BDD testing in javascript](https://github.com/STT-VITI-22/stt-pz-4) 
+![QR: stt-pz-4](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-4&margin=10) |
+| **9.7 Практичні завдання: TDD та BDD у Agile** 🆕 | - **Проект stt-pz-2: TDD з Jest** (>90% покриття)<br>- **Проект stt-pz-4: BDD з Jest та spyOn mocking**<br>- Red-Green-Refactor цикл<br>- BDD Given-When-Then структура<br>- Mocking та спеціалізовані техніки<br>- Integration з CI/CD pipeline | RWP ✓ / DATASET(stt-pz-2, stt-pz-4, practical_tasks/stt-pz-2-jest-tdd, practical_tasks/stt-pz-4-jest-bdd) / MODERN ✓ |[introduction to Browser auto testing in javascript.](https://github.com/STT-VITI-22/stt-pz-1)
+
+[introduction to TDD auto testing in javascript.](https://github.com/STT-VITI-22/stt-pz-2)
+![QR: stt-pz-2](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-2&margin=10) |
 
 ---
 

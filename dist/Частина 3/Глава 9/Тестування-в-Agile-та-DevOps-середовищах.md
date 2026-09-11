@@ -990,13 +990,17 @@ TDD базується на повторюваному циклі з **трьо�
 
 **1. RED (Червоний) — Напиши тест, який ПАДАЄ**
 
-```python
-def test_calculate_discount():
-    price = 100
-    discount_percent = 20
-    result = calculate_discount(price, discount_percent)
-    assert result == 80  # Очікуємо 100 - 20% = 80
+```javascript
+test('calculate discount', () => {
+  const price = 100;
+  const discountPercent = 20;
+
+  const result = calculateDiscount(price, discountPercent);
+
+  expect(result).toBe(80); // Очікуємо 100 - 20% = 80
+});
 ```
+
 
 На цьому етапі:
 - Функція `calculate_discount` **ще не існує**
@@ -1005,11 +1009,13 @@ def test_calculate_discount():
 
 **2. GREEN (Зелений) — Напиши мінімальний код для проходження тесту**
 
-```python
-def calculate_discount(price, discount_percent):
-    discount_amount = price * (discount_percent / 100)
-    return price - discount_amount
+```javascript
+function calculateDiscount(price, discountPercent) {
+  const discountAmount = price * (discountPercent / 100);
+  return price - discountAmount;
+}
 ```
+
 
 На цьому етапі:
 - Тест **ПРОХОДИТЬ** (Green стадія)
@@ -1018,12 +1024,14 @@ def calculate_discount(price, discount_percent):
 
 **3. REFACTOR (Рефакторинг) — Поліпши код без зміни функціональності**
 
-```python
-def calculate_discount(price, discount_percent):
-    """Calculate discounted price."""
-    discount_ratio = 1 - (discount_percent / 100)
-    return price * discount_ratio
+```javascript
+function calculateDiscount(price, discountPercent) {
+  // Calculate discounted price
+  const discountRatio = 1 - (discountPercent / 100);
+  return price * discountRatio;
+}
 ```
+
 
 На цьому етапі:
 - Тест **ВСЕ ЕЩЕ ПРОХОДИТЬ** (Green лишається)
@@ -1107,30 +1115,41 @@ def calculate_discount(price, discount_percent):
 **Проблема 2: Залежність тестів один від одного**
 
 ❌ **Неправильно:**
-```python
-def test_create_user():  # Тест 1
-    user = User.create("john@example.com", "password")
-    assert user.id > 0
+```javascript
+test('create user', () => { // Test 1
+  const user = User.create('john@example.com', 'password');
 
-def test_update_user_name():  # Тест 2 — залежить від Тесту 1!
-    user = User.find(1)  # Припускає що користувач з ID 1 існує з Тесту 1
-    user.update_name("John Doe")
-    assert user.name == "John Doe"
+  expect(user.id).toBeGreaterThan(0);
+});
+
+test('update user name', () => { // Test 2 — depends on Test 1
+  const user = User.find(1); // Assumes that user with ID 1 exists from Test 1
+
+  user.updateName('John Doe');
+
+  expect(user.name).toBe('John Doe');
+});
 ```
+
 
 Проблема: якщо Тест 1 падає, то і Тест 2 падає. Порядок тестів має значення.
 
 ✅ **Правильно:**
-```python
-def test_create_user():
-    user = User.create("john@example.com", "password")
-    assert user.id > 0
+```javascript
+test('create user', () => {
+  const user = User.create('john@example.com', 'password');
 
-def test_update_user_name():
-    user = User.create("jane@example.com", "password")  # Створи свого користувача
-    user.update_name("Jane Doe")
-    assert user.name == "Jane Doe"
+  expect(user.id).toBeGreaterThan(0);
+});
+
+test('update user name', () => {
+  const user = User.create('jane@example.com', 'password');
+  user.updateName('Jane Doe');
+
+  expect(user.name).toBe('Jane Doe');
+});
 ```
+
 
 Кожен тест **самостійний**, має свої дані, виконується незалежно.
 
@@ -1138,19 +1157,21 @@ def test_update_user_name():
 
 Коли функція залежить від зовнішніх ресурсів (БД, API, файли), використовуються **mock-об'єкти**:
 
-```python
-from unittest.mock import Mock
+```javascript
+test('user registration sends email', () => {
+  // Mock email service
+  const emailService = {
+    send: jest.fn()
+  };
 
-def test_user_registration_sends_email():
-    # Mock email service
-    email_service = Mock()
+  // Action
+  registerUser('john@example.com', emailService);
 
-    # Action
-    register_user("john@example.com", email_service)
-
-    # Assert that email was sent
-    email_service.send.assert_called_once()
+  // Assert that email was sent
+  expect(emailService.send).toHaveBeenCalledTimes(1);
+});
 ```
+
 
 Замість **справжнього** відправлення email (повільно, ненадійно), використовується **mock** (миттєво, передбачувано).
 
@@ -1191,7 +1212,7 @@ def test_user_registration_sends_email():
    - Назва знайдених дефектів
    - Посилання на баги в issue tracker
 
-#### 14 турів Вітакера для ET (за James Whittaker, 2009)
+#### 14 турів Вітакера для ET
 
 Джеймс Вітакер визначив **14 стандартних турів** (способів) для дослідницького тестування:
 

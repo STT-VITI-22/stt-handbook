@@ -19,6 +19,14 @@ async def main():
     dou_parser = subparsers.add_parser("dou", help="Parse dou.ua QA articles")
     dou_parser.add_argument("--urls", nargs="+", help="Specific DOU URLs to parse")
 
+    # Foxminded command
+    foxminded_parser = subparsers.add_parser("foxminded", help="Parse foxminded.ua articles")
+    foxminded_parser.add_argument("--urls", nargs="+", help="Specific Foxminded URLs to parse")
+
+    # Habr command
+    habr_parser = subparsers.add_parser("habr", help="Parse habr.com articles")
+    habr_parser.add_argument("--urls", nargs="+", help="Specific Habr URLs to parse")
+
     # GitBook command
     gitbook_parser = subparsers.add_parser("gitbook", help="Parse QA Bible GitBook")
 
@@ -58,6 +66,26 @@ async def main():
         # We do not rmtree this directory because it contains user files like README.md
             
         parser_obj = GitBookParser(base_url="https://vladislaveremeev.gitbook.io/qa_bible", output_dir=target_dir)
+        try:
+            await parser_obj.run()
+        finally:
+            await parser_obj.close()
+            
+    elif args.resource == "foxminded":
+        from web_scrapers.foxminded import FoxmindedParser
+        target_dir = "dataset/articles/foxminded"
+        os.makedirs(target_dir, exist_ok=True)
+        parser_obj = FoxmindedParser(output_dir=target_dir, target_urls=args.urls)
+        try:
+            await parser_obj.run()
+        finally:
+            await parser_obj.close()
+
+    elif args.resource == "habr":
+        from web_scrapers.habr import HabrParser
+        target_dir = "dataset/articles/habr"
+        os.makedirs(target_dir, exist_ok=True)
+        parser_obj = HabrParser(output_dir=target_dir, target_urls=args.urls)
         try:
             await parser_obj.run()
         finally:

@@ -84,31 +84,31 @@ HIERARCHICAL STRUCTURE
 ```
 HANDBOOK (Посібник)
     │
-    ├── ЧАСТИНА 1: Вступ та фундаментальні основи
+    ├── РОЗДІЛ 1: Вступ та фундаментальні основи
     │    ├── Глава 1: Вступ до тестування
     │    ├── Глава 2: Основи контролю якості
     │    ├── Глава 3: Процеси та цикли тестування
     │    └── Глава 4: Психологія та принципи тестування
     │
-    ├── ЧАСТИНА 2: Базова теорія тестування
+    ├── РОЗДІЛ 2: Базова теорія тестування
     │    ├── Глава 5: Рівні тестування
     │    ├── Глава 6: Типи тестування
     │    ├── Глава 7: Техніки тестування та дизайну
     │    └── Глава 8: Управління дефектами
     │
-    ├── ЧАСТИНА 3: Розширені теми
+    ├── РОЗДІЛ 3: Управління, організація та оцінювання тестування
     │    ├── Глава 9: Тестування у Agile/DevOps середовищах
     │    ├── Глава 10: Управління тестуванням та планування
     │    └── Глава 11: Метрики та оцінювання якості
     │
-    ├── ЧАСТИНА 4: Сучасна практика та ШІ
+    ├── РОЗДІЛ 4: Сучасна практика та ШІ
     │    ├── Глава 12: Технічні основи для тестувальників
     │    ├── Глава 13: Автоматизація тестування
     │    ├── Глава 14: Мобільне тестування
     │    ├── Глава 15: Тестування в еру ШІ та LLM моделей
     │    └── Глава 16: Кар'єра та сертифікація
     │
-    └── ЧАСТИНА 5: Embedded QA, IoT та DefTech
+    └── РОЗДІЛ 5: Embedded QA, IoT та DefTech
          ├── Глава 17: Основи схемотехніки та мікроконтролерів
          ├── Глава 18: Протокольний аналіз та робота з обладнанням
          ├── Глава 19: Нефункціональні сценарії «заліза» та надійність
@@ -121,7 +121,7 @@ HANDBOOK (Посібник)
 
 ## 3. ДЕТАЛЬНА СТРУКТУРА РОЗДІЛІВ
 
-### ЧАСТИНА 1: ВСТУП ТА ФУНДАМЕНТАЛЬНІ ОСНОВИ
+### РОЗДІЛ 1: ВСТУП ТА ФУНДАМЕНТАЛЬНІ ОСНОВИ
 
 Цільова аудиторія: Новачки, студенти, люди, що переходять у QA
 
@@ -184,7 +184,7 @@ HANDBOOK (Посібник)
 
 ---
 
-### ЧАСТИНА 2: БАЗОВА ТЕОРІЯ ТЕСТУВАННЯ
+### РОЗДІЛ 2: БАЗОВА ТЕОРІЯ ТЕСТУВАННЯ
 
 Цільова аудиторія: Практикуючі тестувальники, ISTQB Foundation
 
@@ -194,13 +194,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння 4 основних рівнів тестування та їх характеристик
 
-| Підрозділ | Зміст                                                                                                                                                           | Джерела | Ресурси |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------|
-| 5.1 Модульне тестування (Unit Testing) | - Визначення та сфера<br>- Сфера: Функції, методи, класи<br>- Інструменти: JUnit, pytest, NUnit<br>- Біла скринька<br>- Раннє перехоплення дефектів             | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ |  |
-| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти                                 | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |  |
-| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування                              | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |  |
-| 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |  |
-| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування                                                                         | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |  |
+| Підрозділ | Зміст                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Джерела | Ресурси                                                                                                                                                                                                                       |
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5.1 Модульне тестування (Unit Testing) | - **Unit Testing:** Визначення та сфера, Функції, методи, класи, Інструменти: JUnit, pytest, Раннє перехоплення дефектів<br>- **Test-Driven Development (TDD):** Red-Green-Refactor цикл, П'ять функцій TDD, Code Coverage, Практичні виклики (низьке покриття, залежність тестів, mock-об'єкти)<br>- **Behavior-Driven Development (BDD):** Поняття BDD, Three Amigos принцип, Gherkin мова (Given-When-Then), Scenario Outline, Step Definitions, Порівняння BDD/TDD/ATDD, BDD та Acceptance Criteria, Переваги та недоліки, SMART критерії, BDD lifecycle | RWP ✓ / DATASET(QALight: rivni-testuvannia/modulne-testuvannia) / MODERN ✓ | ![QR: TDD concepts](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-2&margin=10)<br>[Practical lesson: Introduction Test Development Driven (TDD) concepts](https://github.com/STT-VITI-22/stt-pz-2)<br><br>![QR: BDD testing in JavaScript](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-4&margin=10)<br>[Practical lesson: Introduction BDD testing in javascript](https://github.com/STT-VITI-22/stt-pz-4) |
+| 5.2 Інтеграційне тестування | - Визначення та сфера<br>- Види: Big Bang, Top-Down, Bottom-Up<br>- Тестування інтеграції компонентів<br>- Інтеграційні дефекти                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | RWP ✓ / DATASET(QALight: rivni-testuvannia/integratsiine-testuvannia, QA_Bible: vidy-metody-urovni) / MODERN ✓ |                                                                                                                                                                                                                               |
+| 5.3 Системне тестування | - Визначення та сфера<br>- Тестування цілої системи<br>- Функціональні та нефункціональні аспекти<br>- Мультиплатформне тестування                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | RWP ✓ / DATASET(QALight: rivni-testuvannia/sistemne-testuvannia) / MODERN ✓ |                                                                                                                                                                                                                               |
+| 5.4 Приймальне тестування (User Acceptance Testing) | - Визначення та сфера<br>- Business Acceptance Testing (BAT)<br>- UAT процес та критерії<br>- Alpha та Beta тестування<br>- User stories та acceptance criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | RWP ✓ / DATASET(QALight: rivni-testuvannia/priimalne-testuvannia, ISTQB 4.0) / MODERN ✓ |                                                                                                                                                                                                                               |
+| 5.5 Інші рівні тестування | - Regression testing<br>- Smoke testing<br>- Саніти-тестування<br>- Граничні тестування                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | RWP ✓ / DATASET(QALight, QA_Bible) / MODERN ✓ |                                                                                                                                                                                                                               |
 
 **Практичні приклади:** Для кожного рівня — реальний приклад з розробки web-застосунку
 **Матриця покриття:** Таблиця, яка показує кого тестує кожен рівень
@@ -260,7 +260,7 @@ HANDBOOK (Посібник)
 
 ---
 
-### ЧАСТИНА 3: РОЗШИРЕНІ ТЕМИ
+### РОЗДІЛ 3: УПРАВЛІННЯ, ОРГАНІЗАЦІЯ ТА ОЦІНЮВАННЯ ТЕСТУВАННЯ
 
 Цільова аудиторія: ISTQB Advanced, Test Managers, Lead Engineers
 
@@ -284,14 +284,13 @@ HANDBOOK (Посібник)
 
 **Мета:** Розуміння управління тестовим процесом на організаційному рівні
 
-| Підрозділ | Зміст | Джерела | Ресурси |
-|-----------|-------|---------|----------|
-| 10.1 Тестова стратегія | - Визначення тестової стратегії<br>- Рівні тестування за стратегією<br>- Типи тестування та розподіл ресурсів<br>- Вибір інструментів | RWP ✓ / DATASET(QALight: testovi-artefakti/testova-strategiia) / MODERN(ISTQB 4.0) |  |
-| 10.2 Тестовий план | - Структура тестового плану<br>- Обсяг та цілі<br>- Ресурси та розклад<br>- Ризики та рекомендації | RWP ✓ / DATASET(QALight: testovi-artefakti/test-plan) / MODERN ✓ |  |
-| 10.3 Оцінка та планування тестування | - Estimation techniques<br>- Effort estimation<br>- Risk-based testing<br>- Resource allocation | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
-| 10.4 Тестова документація | - Test case specifications<br>- Test procedures<br>- Test summary reports<br>- Dokumentation standards | RWP ✓ / DATASET(QALight: testovi-artefakti/) / MODERN ✓ |  |
-| 10.5 Метрики тестування | - Test coverage metrics<br>- Defect metrics<br>- Test execution metrics<br>- Quality metrics | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Hrytsiuk 2018) / MODERN ✓ |  |
-| 10.6 Управління ризиками в тестуванні | - Risk identification та analysis<br>- Risk-based testing approach<br>- Пріоритизація тестів<br>- Mitigation strategies | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Gregory 2014) / MODERN ✓ |  |
+| Підрозділ                             | Зміст | Джерела | Ресурси |
+|---------------------------------------|-------|---------|----------|
+| 10.1 Тестова стратегія                | - Визначення тестової стратегії<br>- Рівні тестування за стратегією<br>- Типи тестування та розподіл ресурсів<br>- Вибір інструментів | RWP ✓ / DATASET(QALight: testovi-artefakti/testova-strategiia) / MODERN(ISTQB 4.0) |  |
+| 10.2 Тестовий план                    | - Структура тестового плану<br>- Обсяг та цілі<br>- Ресурси та розклад<br>- Ризики та рекомендації | RWP ✓ / DATASET(QALight: testovi-artefakti/test-plan) / MODERN ✓ |  |
+| 10.3 Оцінка та планування тестування  | - Estimation techniques<br>- Effort estimation<br>- Risk-based testing<br>- Resource allocation | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| 10.4 Тестова документація             | - Test case specifications<br>- Test procedures<br>- Test summary reports<br>- Dokumentation standards | RWP ✓ / DATASET(QALight: testovi-artefakti/) / MODERN ✓ |  |
+| 10.5 Управління ризиками в тестуванні | - Risk identification та analysis<br>- Risk-based testing approach<br>- Пріоритизація тестів<br>- Mitigation strategies | RWP ✓ / DATASET(QA_Bible: obshee, books_pdf: Gregory 2014) / MODERN ✓ |  |
 
 ---
 
@@ -302,16 +301,16 @@ HANDBOOK (Посібник)
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
 | 11.1 ISO/IEC 25010:2011 стандарт якості | - 8 характеристик якості<br>- Функціональна відповідність<br>- Надійність<br>- Продуктивність<br>- Вживаність та ін. | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia-za-iso-iec-25010-2011) / MODERN(ISO 25010) |  |
-| 11.2 Метрики покриття тестування | - Code Coverage Levels (C0 до C∞):<br>  - **C0: Statement Coverage** — покриття всіх операторів коду<br>  - **C1: Branch Coverage** — покриття всіх розгалужень (if/else)<br>  - **C2: Path Coverage** — покриття всіх можливих шляхів<br>  - Вищі рівні (C∞) — покриття всіх циклічних комбінацій<br>- **Керуючий граф програми (CFG)** та метрики на його основі:<br>  - Графічне представлення потоку контролю<br>  - Незалежні шляхи в графі<br>  - Застосування для розрахунку кількості необхідних тестів<br>- **Цикломатична складність (Cyclomatic Complexity)**<br>  - Метрика складності на основі CFG<br>  - Визначає мінімальну кількість тестів для покриття шляхів<br>  - Формула: M = E − N + 2P (Е = ребра, N = вузли, P = компоненти)<br>- Requirement coverage %<br>- Test case execution rate<br>- Defect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, test-dizain/static-static-analysis, books_pdf: Hrytsiuk 2018, Copeland 2004, Avramenko 2017) / MODERN ✓ |  |
+| 11.2 Метрики тестування | - Code Coverage Levels (C0 до C∞):<br>  - **C0: Statement Coverage** — покриття всіх операторів коду<br>  - **C1: Branch Coverage** — покриття всіх розгалужень (if/else)<br>  - **C2: Path Coverage** — покриття всіх можливих шляхів<br>  - Вищі рівні (C∞) — покриття всіх циклічних комбінацій<br>- **Керуючий граф програми (CFG)** та метрики на його основі:<br>  - Графічне представлення потоку контролю<br>  - Незалежні шляхи в графі<br>  - Застосування для розрахунку кількості необхідних тестів<br>- **Цикломатична складність (Cyclomatic Complexity)**<br>  - Метрика складності на основі CFG<br>  - Визначає мінімальну кількість тестів для покриття шляхів<br>  - Формула: M = E − N + 2P (Е = ребра, N = вузли, P = компоненти)<br>- Requirement coverage %<br>- Test case execution rate<br>- Defect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, test-dizain/static-static-analysis, books_pdf: Hrytsiuk 2018, Copeland 2004, Avramenko 2017) / MODERN ✓ |  |
 | 11.3 Метрики дефектів | - Defect density (dpu)<br>- Defect distribution<br>- Defect escape rate<br>- Mean time between failures (MTBF) | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |  |
 | 11.4 Метрики процесу тестування | - Test execution time<br>- Effort spent on testing<br>- Cost per test case<br>- Schedule performance | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
 | 11.5 Звітування про якість | - Quality reports for management<br>- Trend analysis<br>- Risk assessment report<br>- Recommendations | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |  |
 | **11.6 Synthetic Monitoring & Observability** 🆕 | - **Synthetic Monitoring + Real User Monitoring (RUM)**<br>- Continuous quality checks з искусственных сценариев<br>- User Experience Observation (UXO) концепція<br>- OpenTelemetry integration для distributed tracing<br>- Grafana k6 для synthetic load tests<br>- Datadog, New Relic, Uptrace integrzioni<br>- Alerting та Quality Gates у production<br>- **Adoption growth:** 30% (2024) → 65% (2025) → 85% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |  |
-| **11.7 Практичне завдання: ELK + MCP AI Log Analysis** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, practical_tasks/stt-elk-mcp-logging, books_pdf) / MODERN ✓ | ![QR: stt-elk-mcp-logging](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-elk-mcp-logging&margin=10) |
+| **11.7 Практичне завдання: Monitoring and Observability** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, books_pdf) / MODERN ✓ |  [Practical lesson stt-elk-mcp-logging](https://github.com/STT-VITI-22/stt-elk-mcp-logging) |
 
 ---
 
-### ЧАСТИНА 4: СУЧАСНА ПРАКТИКА ТА ШІ
+### РОЗДІЛ 4: СУЧАСНА ПРАКТИКА ТА ШІ
 
 Цільова аудиторія: ISTQB Advanced, Specialists, Senior Engineers
 
@@ -409,7 +408,7 @@ HANDBOOK (Посібник)
 
 ---
 
-### ЧАСТИНА 5: EMBEDDED QA, IoT ТА DefTech 🆕
+### РОЗДІЛ 5: EMBEDDED QA, IoT ТА DefTech 🆕
 
 Цільова аудиторія: Embedded Engineers, IoT testers, Hardware QA, Military/Defence specialists
 
@@ -818,13 +817,13 @@ Ch 13 → Ch 15 (Automation in specialization domains)
 - **5 критичних розділів:** AI Testing, Chaos Engineering, Cloud-Native, IoT Security, DefTech
 
 **Готові розділи (v1.2):**
-- ✅ dist/Частина 1/Глава 1/Вступ до тестування.md (708 рядків)
-- ✅ dist/Частина 1/Глава 2/Основи контролю якості.md (1200+ рядків)
-- ✅ dist/Частина 1/Глава 3/Процеси та цикли тестування.md (950+ рядків)
-- ✅ dist/Частина 1/Глава 4/Психологія та принципи тестування.md (1100+ рядків, Раунди вичитування 1-6)
-- ✅ dist/Частина 2/Глава 5/Рівні тестування.md (757 рядків)
-- ✅ dist/Частина 2/Глава 6/Типи тестування.md (1275 рядків, Раунди вичитування 1-6, 3222+ слова)
-- ✅ dist/Частина 2/Глава 7/Техніки тестування та дизайну.md (511 рядків, v1.2 — без мовних помилок, з YouTube посиланнями, 5 практичних завдань)
+- ✅ dist/Розділ 1/Глава 1/Вступ до тестування.md (708 рядків)
+- ✅ dist/Розділ 1/Глава 2/Основи контролю якості.md (1200+ рядків)
+- ✅ dist/Розділ 1/Глава 3/Процеси та цикли тестування.md (950+ рядків)
+- ✅ dist/Розділ 1/Глава 4/Психологія та принципи тестування.md (1100+ рядків, Раунди вичитування 1-6)
+- ✅ dist/Розділ 2/Глава 5/Рівні тестування.md (1637 рядків, v2.0 — додано BDD розділ з 15 підсекціями, Gherkin приклади, Step Definitions, SMART критерії, Three Amigos принцип)
+- ✅ dist/Розділ 2/Глава 6/Типи тестування.md (1275 рядків, Раунди вичитування 1-6, 3222+ слова)
+- ✅ dist/Розділ 2/Глава 7/Техніки тестування та дизайну.md (511 рядків, v1.2 — без мовних помилок, з YouTube посиланнями, 5 практичних завдань)
 
 **Файли для синхронізації:**
 - CHANGELOG.md (Запис версійної історії, оновлено для Раунду 6)

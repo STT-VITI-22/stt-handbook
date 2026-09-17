@@ -17,7 +17,7 @@ class BaseParser:
     def __init__(self, output_dir: str):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
-        self.client = httpx.AsyncClient(timeout=20.0, follow_redirects=True, limits=httpx.Limits(max_connections=5))
+        self.client = httpx.AsyncClient(timeout=20.0, follow_redirects=True, limits=httpx.Limits(max_connections=5), headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
 
     async def fetch_html(self, url: str) -> BeautifulSoup | None:
         try:

@@ -855,6 +855,34 @@ CFG:
 
 ---
 
+### SQuaRE — Systems and software Quality Requirements and Evaluation
+
+**Розшифровка:** Systems and software Quality Requirements and Evaluation
+**Українська:** Системи та якість програмного забезпечення: вимоги та оцінювання
+
+**Визначення:** Міжнародна серія стандартів (ISO/IEC 25000) для визначення та оцінювання якості програмного забезпечення. Наступник стандарту ISO 9126, що розширює та уточнює модель якості продукту.
+
+**Основна серія стандартів SQuaRE:**
+- ISO/IEC 25010:2011 — Software product Quality model (модель якості продукту)
+- ISO/IEC 25020 — Measurement of software product quality (вимірювання якості)
+- ISO/IEC 25030 — Software product quality requirements specification (специфікація вимог якості)
+- ISO/IEC 25040 — Evaluation process (процес оцінювання якості)
+- ISO/IEC 25050 — Software product evaluation and assessment (оцінка готового продукту COTS)
+
+**Рівні якості в SQuaRE:**
+1. **Internal Quality** — якість під час розробки (властивості коду)
+2. **External Quality** — якість готового продукту (поведінка системи)
+3. **Quality in Use** — якість при використанні (досвід користувача)
+
+**Контекст у посібнику:**
+- Базова модель для Глави 11 "Метрики та оцінювання якості"
+- Визначає 8 характеристик якості продукту
+- Забезпечує фреймворк для розробки метрик якості
+
+**Джерело:** `dataset/books_pdf/parsed/Krepich_2020_Software_Quality_And_Testing.md` (глава про якість) та міжнародний стандарт ISO/IEC 25010
+
+---
+
 ### DSTU — ДСТУ
 
 **Розшифровка:** ДСТУ — Державний стандарт України

@@ -26,9 +26,9 @@
    - **Сучасні тренди тестування** — AI Testing, Chaos Engineering, Cloud-Native Testing (85% покриття 2024-2026)
    - **Emerging Technologies** — Agentic AI (5% → 30% → 70% growth), Synthetic Monitoring (30% → 85% adoption)
 
-**Дата останнього оновлення:** 8 вересня 2026 року
-**Версія:** v1.1 (DATASET ACTUALIZATION + Ch 1-7 COMPLETE)
-**Статус:** MASTER BLUEPRINT — Повна організаційна структура посібника, 7 розділів готово
+**Дата останнього оновлення:** 18 вересня 2026 року
+**Версія:** v1.2 (DATASET ACTUALIZATION + Ch 1-7 COMPLETE + Ch 11-12 UPDATED)
+**Статус:** MASTER BLUEPRINT — Повна організаційна структура посібника, Розділ 3 з главами 11-12 готово (ISO/IEC 25010:2023 + Метрики якості)
 
 ---
 
@@ -99,22 +99,23 @@ HANDBOOK (Посібник)
     ├── РОЗДІЛ 3: Управління, організація та оцінювання тестування
     │    ├── Глава 9: Тестування у Agile/DevOps середовищах
     │    ├── Глава 10: Управління тестуванням та планування
-    │    └── Глава 11: Метрики та оцінювання якості
+    │    ├── Глава 11: Забезпечення якості програмного забезпечення (ISO/IEC 25010:2023)
+    │    └── Глава 12: Метрики та оцінювання якості
     │
     ├── РОЗДІЛ 4: Сучасна практика та ШІ
-    │    ├── Глава 12: Технічні основи для тестувальників
-    │    ├── Глава 13: Автоматизація тестування
-    │    ├── Глава 14: Мобільне тестування
-    │    ├── Глава 15: Тестування в еру ШІ та LLM моделей
-    │    └── Глава 16: Кар'єра та сертифікація
+    │    ├── Глава 13: Технічні основи для тестувальників
+    │    ├── Глава 14: Автоматизація тестування
+    │    ├── Глава 15: Мобільне тестування
+    │    ├── Глава 16: Тестування в еру ШІ та LLM моделей
+    │    └── Глава 17: Кар'єра та сертифікація
     │
     └── РОЗДІЛ 5: Embedded QA, IoT та DefTech
-         ├── Глава 17: Основи схемотехніки та мікроконтролерів
-         ├── Глава 18: Протокольний аналіз та робота з обладнанням
-         ├── Глава 19: Нефункціональні сценарії «заліза» та надійність
-         ├── Глава 20: Автоматизація тестування прошивок (Firmware)
-         ├── Глава 21: Мережевий IoT-рівень, Connectivity та поле
-         └── Глава 22: Методологія RCA та звіти для заліза
+         ├── Глава 18: Основи схемотехніки та мікроконтролерів
+         ├── Глава 19: Протокольний аналіз та робота з обладнанням
+         ├── Глава 20: Нефункціональні сценарії «заліза» та надійність
+         ├── Глава 21: Автоматизація тестування прошивок (Firmware)
+         ├── Глава 22: Мережевий IoT-рівень, Connectivity та поле
+         └── Глава 23: Методологія RCA та звіти для заліза
 ```
 
 ---
@@ -294,19 +295,33 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **Глава 11: МЕТРИКИ ТА ОЦІНЮВАННЯ ЯКОСТІ**
+#### **Глава 11: ЗАБЕЗПЕЧЕННЯ ЯКОСТІ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ**
 
-**Мета:** Розуміння як вимірювати та оцінювати якість ПЗ
+**Мета:** Розуміння міжнародних стандартів якості ПЗ та їх практичного застосування
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 11.1 ISO/IEC 25010:2011 стандарт якості | - 8 характеристик якості<br>- Функціональна відповідність<br>- Надійність<br>- Продуктивність<br>- Вживаність та ін. | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia-za-iso-iec-25010-2011) / MODERN(ISO 25010) |  |
-| 11.2 Метрики тестування | - Code Coverage Levels (C0 до C∞):<br>  - **C0: Statement Coverage** — покриття всіх операторів коду<br>  - **C1: Branch Coverage** — покриття всіх розгалужень (if/else)<br>  - **C2: Path Coverage** — покриття всіх можливих шляхів<br>  - Вищі рівні (C∞) — покриття всіх циклічних комбінацій<br>- **Керуючий граф програми (CFG)** та метрики на його основі:<br>  - Графічне представлення потоку контролю<br>  - Незалежні шляхи в графі<br>  - Застосування для розрахунку кількості необхідних тестів<br>- **Цикломатична складність (Cyclomatic Complexity)**<br>  - Метрика складності на основі CFG<br>  - Визначає мінімальну кількість тестів для покриття шляхів<br>  - Формула: M = E − N + 2P (Е = ребра, N = вузли, P = компоненти)<br>- Requirement coverage %<br>- Test case execution rate<br>- Defect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, test-dizain/static-static-analysis, books_pdf: Hrytsiuk 2018, Copeland 2004, Avramenko 2017) / MODERN ✓ |  |
-| 11.3 Метрики дефектів | - Defect density (dpu)<br>- Defect distribution<br>- Defect escape rate<br>- Mean time between failures (MTBF) | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |  |
-| 11.4 Метрики процесу тестування | - Test execution time<br>- Effort spent on testing<br>- Cost per test case<br>- Schedule performance | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
-| 11.5 Звітування про якість | - Quality reports for management<br>- Trend analysis<br>- Risk assessment report<br>- Recommendations | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |  |
-| **11.6 Synthetic Monitoring & Observability** 🆕 | - **Synthetic Monitoring + Real User Monitoring (RUM)**<br>- Continuous quality checks з искусственных сценариев<br>- User Experience Observation (UXO) концепція<br>- OpenTelemetry integration для distributed tracing<br>- Grafana k6 для synthetic load tests<br>- Datadog, New Relic, Uptrace integrzioni<br>- Alerting та Quality Gates у production<br>- **Adoption growth:** 30% (2024) → 65% (2025) → 85% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |  |
-| **11.7 Практичне завдання: Monitoring and Observability** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, books_pdf) / MODERN ✓ |  [Practical lesson stt-elk-mcp-logging](https://github.com/STT-VITI-22/stt-elk-mcp-logging) |
+| 11.1 ISO/IEC 25010:2023 стандарт якості | - 9 характеристик якості<br>- Internal Quality (Functional Suitability, Reliability, Performance, Maintainability, Portability)<br>- External Quality (Compatibility, Usability, Security)<br>- Quality in Use (SQuaRE 25019:2023 модель з 3 характеристик і 10 sub-characteristics)<br>- Взаємозв'язок між рівнями якості | RWP ✓ / DATASET(QALight: osnovi/iakist-programnogo-zabezpechennia-za-iso-iec-25010-2011) / MODERN(ISO 25010:2023, ISO/IEC 25019:2023) |  |
+| 11.2 SQuaRE Framework (Systems and Software Quality Requirements and Evaluation) | - Визначення та архітектура SQuaRE<br>- ISO/IEC 2501x серія стандартів<br>- Впровадження вимог якості<br>- Оцінення якості продукту | RWP ✓ / DATASET / MODERN(ISO/IEC SQuaRE 2023) |  |
+| 11.3 Практичне застосування стандартів | - Інтеграція ISO 25010 у процес розробки<br>- Вибір релевантних характеристик для домену<br>- Метрики та вимірювання якості<br>- Звітування про якість | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| **11.4 QR-коди до ресурсів** | - ISO/IEC 25010:2023 специфікація<br>- ISO/IEC 25019:2023 Quality in Use<br>- SQuaRE Framework документація<br>- Практичні приклади тестування якості | MODERN ✓ |  |
+
+---
+
+#### **Глава 12: МЕТРИКИ ТА ОЦІНЮВАННЯ ЯКОСТІ**
+
+**Мета:** Розуміння як вимірювати та оцінювати якість ПЗ через метрики та аналіз
+
+| Підрозділ | Зміст | Джерела | Ресурси |
+|-----------|-------|---------|----------|
+| 12.1 Метрики тестування та покриття | - Code Coverage Levels (C0 до C∞):<br>  - **C0: Statement Coverage** — покриття всіх операторів коду<br>  - **C1: Branch Coverage** — покриття всіх розгалужень (if/else)<br>  - **C2: Path Coverage** — покриття всіх можливих шляхів<br>  - Вищі рівні (C∞) — покриття всіх циклічних комбінацій<br>- **Керуючий граф програми (CFG)** та метрики на його основі<br>- **Цикломатична складність (Cyclomatic Complexity)**<br>- Requirement coverage %<br>- Test case execution rate<br>- Defect detection effectiveness | RWP ✓ / DATASET(QA_Bible: obshee, test-dizain/static-static-analysis, books_pdf: Hrytsiuk 2018, Copeland 2004, Avramenko 2017) / MODERN ✓ |  |
+| 12.2 Метрики дефектів та якості | - Defect Density (кількість дефектів на одиницю коду)<br>- Defect Distribution (розподіл за типами та важкістю)<br>- Defect Removal Efficiency (DRE) — ефективність виловлювання<br>- Mean Time Between Failures (MTBF)<br>- Defect Escape Rate (відсоток дефектів, що пройшли у production)<br>- Bug Trends та Prediction | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018, Katayeva 2020) / MODERN ✓ |  |
+| 12.3 Метрики процесу тестування | - Test Execution Rate<br>- Test Execution Time<br>- Effort Spent on Testing<br>- Cost per Test Case<br>- Schedule Performance Index (SPI)<br>- Cost Performance Index (CPI) | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| 12.4 Метрики надійності коду | - Code Complexity Metrics<br>- Maintainability Index<br>- Halstead Metrics (Program Length, Vocabulary, Volume, Difficulty)<br>- Lines of Code (LOC) та Logical Lines<br>- Cohesion та Coupling метрики | RWP ✓ / DATASET(books_pdf: Hrytsiuk 2018) / MODERN ✓ |  |
+| 12.5 Метрики на ранніх етапах розробки | - Inspection Metrics (кількість дефектів при інспекції)<br>- Defect Density при Code Review<br>- Requirements Quality Metrics<br>- Design Quality Metrics | RWP ✓ / DATASET(QA_Bible: obshee) / MODERN ✓ |  |
+| 12.6 Звітування та аналіз якості | - Quality Reports для management<br>- Trend Analysis та історичні дані<br>- Risk Assessment Report<br>- Quality Gates та Exit Criteria<br>- Recommendations та follow-up | RWP ✓ / DATASET(books_pdf) / MODERN ✓ |  |
+| **12.7 Synthetic Monitoring & Observability** 🆕 | - **Synthetic Monitoring + Real User Monitoring (RUM)**<br>- Continuous quality checks з штучних сценаріїв<br>- User Experience Observation (UXO) концепція<br>- OpenTelemetry integration для distributed tracing<br>- Grafana k6 для synthetic load tests<br>- Datadog, New Relic, Uptrace інтеграції<br>- Alerting та Quality Gates у production<br>- **Adoption growth:** 30% (2024) → 65% (2025) → 85% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |  |
+| **12.8 Практичне завдання: Monitoring and Observability** 🆕 | - **Проект stt-elk-mcp-logging**<br>- Elasticsearch, Logstash, Kibana (ELK) стек<br>- Структуроване логування з Python/Node.js<br>- Logstash pipelines для парсингу та збагачення<br>- Kibana dashboards для моніторингу<br>- **MCP сервер для AI аналізу** (NEW)<br>- Claude AI integration для аномалій та RCA<br>- Anomaly detection та alerting<br>- Docker Compose full stack<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-elk-mcp-logging | RWP ✓ / DATASET(stt-elk-mcp-logging, books_pdf) / MODERN ✓ | ![Practical lesson stt-elk-mcp-logging](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-elk-mcp-logging&margin=10) |
 
 ---
 
@@ -316,66 +331,66 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **Глава 12: ТЕХНІЧНІ ОСНОВИ ДЛЯ ТЕСТУВАЛЬНИКІВ**
+#### **Глава 13: ТЕХНІЧНІ ОСНОВИ ДЛЯ ТЕСТУВАЛЬНИКІВ**
 
 **Мета:** Розуміння технічних концепцій, необхідних для сучасного тестування
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 12.1 Основи веб-технологій | - HTML, CSS базиці<br>- JavaScript основи<br>- HTTP/HTTPS protocol<br>- Web browsers та rendering | RWP ✓ / DATASET(QALight: osnovi/html-ta-css-dlia-testuvalnikiv, zagalne/) / MODERN ✓ |  |
-| 12.2 API та веб-сервіси | - REST API basics<br>- HTTP методи (GET, POST, PUT, DELETE)<br>- JSON та XML формати<br>- API testing tools (Postman, Insomnia) | RWP ✓ / DATASET(QALight: zagalne/shcho-take-api, zagalne/shcho-take-json, zagalne/protses-komunikatsii-pri-vikoristanni-api) / MODERN ✓ |  |
-| 12.3 Мережі та протоколи | - IP адреси та DNS<br>- TCP/IP, UDP<br>- HTTP, HTTPS, FTP<br>- Cookies та Sessions | RWP ✓ / DATASET(QALight: protokoli/) / MODERN ✓ |  |
-| 12.4 Бази даних для тестувальників | - SQL базиці<br>- SELECT, WHERE, JOIN statements<br>- Database verification in tests<br>- Tools: DBeaver, MySQL Workbench | RWP ✓ / DATASET(QALight: bazi-danikh-v-testuvanni/) / MODERN ✓ |  |
-| 12.5 Git та версійне контролю | - Git basics (clone, pull, push)<br>- Branches та commits<br>- Pull requests<br>- Collaboration in development | RWP ✓ / DATASET(QALight: zagalne/shcho-take-git) / MODERN ✓ |  |
-| 12.6 Архітектура ПЗ для тестування | - Monolithic vs. Microservices<br>- Client-Server architecture<br>- APIs, interfaces<br>- Deployment models | RWP ✓ / DATASET(QALight: zagalne/monolitna-arkhitektura, zagalne/mikroservisna-arkhitektura) / MODERN ✓ |  |
-| **12.7 Практичне завдання: API тестування та Mock дані** 🆕 | - **Проект stt-pz-3: Jest API тестування**<br>- Mock функції та Jest.mock()<br>- Ice and Fire API приклади<br>- JSON валідація та структури<br>- Handling асинхронних операцій<br>- Mock data management та fixtures | RWP ✓ / DATASET(stt-pz-3, practical_tasks/stt-pz-3-jest-api, QALight: zagalne/shcho-take-api) / MODERN ✓ | ![QR: stt-pz-3](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-3&margin=10) |
+| 13.1 Основи веб-технологій | - HTML, CSS базиці<br>- JavaScript основи<br>- HTTP/HTTPS protocol<br>- Web browsers та rendering | RWP ✓ / DATASET(QALight: osnovi/html-ta-css-dlia-testuvalnikiv, zagalne/) / MODERN ✓ |  |
+| 13.2 API та веб-сервіси | - REST API basics<br>- HTTP методи (GET, POST, PUT, DELETE)<br>- JSON та XML формати<br>- API testing tools (Postman, Insomnia) | RWP ✓ / DATASET(QALight: zagalne/shcho-take-api, zagalne/shcho-take-json, zagalne/protses-komunikatsii-pri-vikoristanni-api) / MODERN ✓ |  |
+| 13.3 Мережі та протоколи | - IP адреси та DNS<br>- TCP/IP, UDP<br>- HTTP, HTTPS, FTP<br>- Cookies та Sessions | RWP ✓ / DATASET(QALight: protokoli/) / MODERN ✓ |  |
+| 13.4 Бази даних для тестувальників | - SQL базиці<br>- SELECT, WHERE, JOIN statements<br>- Database verification in tests<br>- Tools: DBeaver, MySQL Workbench | RWP ✓ / DATASET(QALight: bazi-danikh-v-testuvanni/) / MODERN ✓ |  |
+| 13.5 Git та версійне контролю | - Git basics (clone, pull, push)<br>- Branches та commits<br>- Pull requests<br>- Collaboration in development | RWP ✓ / DATASET(QALight: zagalne/shcho-take-git) / MODERN ✓ |  |
+| 13.6 Архітектура ПЗ для тестування | - Monolithic vs. Microservices<br>- Client-Server architecture<br>- APIs, interfaces<br>- Deployment models | RWP ✓ / DATASET(QALight: zagalne/monolitna-arkhitektura, zagalne/mikroservisna-arkhitektura) / MODERN ✓ |  |
+| **13.7 Практичне завдання: API тестування та Mock дані** 🆕 | - **Проект stt-pz-3: Jest API тестування**<br>- Mock функції та Jest.mock()<br>- Ice and Fire API приклади<br>- JSON валідація та структури<br>- Handling асинхронних операцій<br>- Mock data management та fixtures | RWP ✓ / DATASET(stt-pz-3, practical_tasks/stt-pz-3-jest-api, QALight: zagalne/shcho-take-api) / MODERN ✓ | ![QR: stt-pz-3](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-3&margin=10) |
 
 ---
 
 
-#### **Глава 13: АВТОМАТИЗАЦІЯ ТЕСТУВАННЯ**
+#### **Глава 14: АВТОМАТИЗАЦІЯ ТЕСТУВАННЯ**
 
 **Мета:** Розуміння інструментів та техник автоматизованого тестування
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 13.1 Основи автоматизації | - Коли автоматизувати<br>- Переваги та недоліки<br>- Інвестиції та ROI<br>- Стратегія автоматизації | RWP ✓ / DATASET(QALight: avtomatizatsiia/avtomatizovane-testuvannia) / MODERN ✓ |  |
-| 13.2 Вибір інструментів автоматизації | - Web automation: Selenium, Cypress, Playwright<br>- API automation: REST Assured, Postman<br>- Mobile automation: Appium<br>- Вибір за критеріями | RWP ✓ / DATASET(QALight: avtomatizatsiia/iak-obrati-instrument-avtomatizatsii) / MODERN ✓ |  |
-| 13.3 Локатори та селектори | - XPath (абсолютний та відносний)<br>- CSS Selectors<br>- ID, Name, Class, Tag селектори<br>- Best practices | RWP ✓ / DATASET(QALight: avtomatizatsiia/x-path-lokatori-teoriia, avtomatizatsiia/iak-napisati-x-path-lokator, avtomatizatsiia/vikoristannia-tagname) / MODERN ✓ |  |
-| 13.4 Page Object Model | - Design pattern для тестів<br>- Організація коду<br>- Повторне використання та обслуговування<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
-| 13.5 CI/CD інтеграція | - Jenkins pipeline<br>- GitHub Actions<br>- GitLab CI<br>- Test execution в pipeline | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
-| 13.6 API automation | - REST API testing<br>- Request-Response cycle<br>- JSON schema validation<br>- Mock servers | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
-| **13.7 Cloud-Native & Kubernetes Testing** 🆕 | - **Kubernetes adoption 96%, але готовність тестування тільки 34%**<br>- Testkube framework для K8s tестування<br>- Container image scanning та security<br>- K8s manifest validation та policy testing<br>- Network policies та service mesh тестування<br>- Helm charts verification<br>- CRD (Custom Resource Definition) тестування<br>- GitOps integration (ArgoCD, Flux)<br>- Tools: Testkube, Kubetest, Kyverno<br>- **Adoption gap:** 96% use K8s (2024), 82% deploy AI models, but only 34% adapted testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |  |
-| **13.8 Практичне завдання: Modern Test Automation з Cypress** 🆕 | - **Проект stt-pz-5: End-to-End тестування**<br>- Cypress порівняно з Selenium/Playwright<br>- Real user interactions та workflows<br>- Element selection та assertions<br>- E2E test organization і patterns<br>- Real-world calculator testing<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-5 | RWP ✓ / DATASET(stt-pz-5, practical_tasks/stt-pz-5-cypress-e2e) / MODERN ✓ | ![QR: stt-pz-5](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-5&margin=10) |
+| 14.1 Основи автоматизації | - Коли автоматизувати<br>- Переваги та недоліки<br>- Інвестиції та ROI<br>- Стратегія автоматизації | RWP ✓ / DATASET(QALight: avtomatizatsiia/avtomatizovane-testuvannia) / MODERN ✓ |  |
+| 14.2 Вибір інструментів автоматизації | - Web automation: Selenium, Cypress, Playwright<br>- API automation: REST Assured, Postman<br>- Mobile automation: Appium<br>- Вибір за критеріями | RWP ✓ / DATASET(QALight: avtomatizatsiia/iak-obrati-instrument-avtomatizatsii) / MODERN ✓ |  |
+| 14.3 Локатори та селектори | - XPath (абсолютний та відносний)<br>- CSS Selectors<br>- ID, Name, Class, Tag селектори<br>- Best practices | RWP ✓ / DATASET(QALight: avtomatizatsiia/x-path-lokatori-teoriia, avtomatizatsiia/iak-napisati-x-path-lokator, avtomatizatsiia/vikoristannia-tagname) / MODERN ✓ |  |
+| 14.4 Page Object Model | - Design pattern для тестів<br>- Організація коду<br>- Повторне використання та обслуговування<br>- Best practices | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
+| 14.5 CI/CD інтеграція | - Jenkins pipeline<br>- GitHub Actions<br>- GitLab CI<br>- Test execution в pipeline | RWP ✓ / DATASET(QALight: zagalne/shcho-take-ci-continuous-integration, QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
+| 14.6 API automation | - REST API testing<br>- Request-Response cycle<br>- JSON schema validation<br>- Mock servers | RWP ✓ / DATASET(QA_Bible: avtomatizaciya-testirovaniya) / MODERN ✓ |  |
+| **14.7 Cloud-Native & Kubernetes Testing** 🆕 | - **Kubernetes adoption 96%, але готовність тестування тільки 34%**<br>- Testkube framework для K8s tестування<br>- Container image scanning та security<br>- K8s manifest validation та policy testing<br>- Network policies та service mesh тестування<br>- Helm charts verification<br>- CRD (Custom Resource Definition) тестування<br>- GitOps integration (ArgoCD, Flux)<br>- Tools: Testkube, Kubetest, Kyverno<br>- **Adoption gap:** 96% use K8s (2024), 82% deploy AI models, but only 34% adapted testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |  |
+| **14.8 Практичне завдання: Modern Test Automation з Cypress** 🆕 | - **Проект stt-pz-5: End-to-End тестування**<br>- Cypress порівняно з Selenium/Playwright<br>- Real user interactions та workflows<br>- Element selection та assertions<br>- E2E test organization і patterns<br>- Real-world calculator testing<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-pz-5 | RWP ✓ / DATASET(stt-pz-5, practical_tasks/stt-pz-5-cypress-e2e) / MODERN ✓ | ![QR: stt-pz-5](http://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/STT-VITI-22/stt-pz-5&margin=10) |
 
 ---
 
-#### **Глава 14: МОБІЛЬНЕ ТЕСТУВАННЯ**
+#### **Глава 15: МОБІЛЬНЕ ТЕСТУВАННЯ**
 
 **Мета:** Розуміння особливостей тестування мобільних додатків
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 14.1 Особливості мобільного тестування | - Різноманіття пристроїв та ОС<br>- Network conditions<br>- Battery та memory constraints<br>- Screen size variations | RWP ✓ / DATASET(QALight: android/, defekt/testuvannia-mobilnikh-dodatkiv, QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
-| 14.2 iOS тестування | - iPhone/iPad devices<br>- XCUITest framework<br>- TestFlight for beta testing<br>- Specifics та вызовы | RWP ✓ / DATASET(QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
-| 14.3 Android тестування | - Android devices та emulator<br>- Appium framework<br>- Android Studio testing tools<br>- Native apps vs. Web apps | RWP ✓ / DATASET(QALight: android/, QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
-| 14.4 Мобільні на відміну від веб-додатків | - Architectural differences<br>- User experience expectations<br>- Performance considerations<br>- Security aspects | RWP ✓ / DATASET(QALight: osnovi/mobilnii-ta-veb-dodatok-u-chomu-riznitsia) / MODERN ✓ |  |
-| 14.5 Тестування у різних мережевих умовах | - 3G, 4G, 5G, WiFi<br>- Offline functionality<br>- Network switching scenarios<br>- Bandwidth limitations | RWP ✓ / DATASET(QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
+| 15.1 Особливості мобільного тестування | - Різноманіття пристроїв та ОС<br>- Network conditions<br>- Battery та memory constraints<br>- Screen size variations | RWP ✓ / DATASET(QALight: android/, defekt/testuvannia-mobilnikh-dodatkiv, QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
+| 15.2 iOS тестування | - iPhone/iPad devices<br>- XCUITest framework<br>- TestFlight for beta testing<br>- Specifics та вызовы | RWP ✓ / DATASET(QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
+| 15.3 Android тестування | - Android devices та emulator<br>- Appium framework<br>- Android Studio testing tools<br>- Native apps vs. Web apps | RWP ✓ / DATASET(QALight: android/, QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
+| 15.4 Мобільні на відміну від веб-додатків | - Architectural differences<br>- User experience expectations<br>- Performance considerations<br>- Security aspects | RWP ✓ / DATASET(QALight: osnovi/mobilnii-ta-veb-dodatok-u-chomu-riznitsia) / MODERN ✓ |  |
+| 15.5 Тестування у різних мережевих умовах | - 3G, 4G, 5G, WiFi<br>- Offline functionality<br>- Network switching scenarios<br>- Bandwidth limitations | RWP ✓ / DATASET(QA_Bible: mobilnoe-testirovanie) / MODERN ✓ |  |
 
 ---
 
-#### **Глава 15: ТЕСТУВАННЯ У РІЗНИХ СФЕРАХ**
+#### **Глава 16: ТЕСТУВАННЯ У РІЗНИХ СФЕРАХ**
 
 **Мета:** Розуміння специфіки тестування в різних галузях
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 15.1 Фінансова та банківська сфера | - Security вимоги (PCI DSS)<br>- Regulatory compliance<br>- Транзакційна цілісність<br>- High-volume processing | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
-| 15.2 Медицина та healthcare | - FDA regulations<br>- HIPAA compliance<br>- Safety-critical systems<br>- Data privacy | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
-| 15.3 Телекомунікаційні системи | - Масштабування та надійність<br>- Інтерфейс з третіми сторонами<br>- Глобальна покривність<br>- Специфічні стандарти | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
-| 15.4 ІоТ та вбудовані системи | - Hardware integration<br>- Real-time constraints<br>- Firmware testing<br>- Specifics та challenges | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
-| 15.5 E-commerce та веб-сервіси | - Performance under load<br>- Payment processing<br>- User experience<br>- Security considerations | RWP ✓ / DATASET(QALight: osnovi/testuvannia-veb-proiektiv-osnovni-etapi-ta-poradi, QA_Bible) / MODERN ✓ |  |
-| 15.6 Інші сфери та специфіка | - Game development<br>- VR/AR applications<br>- AI/ML systems<br>- Cloud-based services | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii, testirovanie-v-raznykh-sferakh) / MODERN ✓ |  |
+| 16.1 Фінансова та банківська сфера | - Security вимоги (PCI DSS)<br>- Regulatory compliance<br>- Транзакційна цілісність<br>- High-volume processing | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
+| 16.2 Медицина та healthcare | - FDA regulations<br>- HIPAA compliance<br>- Safety-critical systems<br>- Data privacy | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
+| 16.3 Телекомунікаційні системи | - Масштабування та надійність<br>- Інтерфейс з третіми сторонами<br>- Глобальна покривність<br>- Специфічні стандарти | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
+| 16.4 ІоТ та вбудовані системи | - Hardware integration<br>- Real-time constraints<br>- Firmware testing<br>- Specifics та challenges | RWP ✓ / DATASET(QA_Bible: testirovanie-v-raznykh-sferakh-oblastyakh) / MODERN ✓ |  |
+| 16.5 E-commerce та веб-сервіси | - Performance under load<br>- Payment processing<br>- User experience<br>- Security considerations | RWP ✓ / DATASET(QALight: osnovi/testuvannia-veb-proiektiv-osnovni-etapi-ta-poradi, QA_Bible) / MODERN ✓ |  |
+| 16.6 Інші сфери та специфіка | - Game development<br>- VR/AR applications<br>- AI/ML systems<br>- Cloud-based services | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii, testirovanie-v-raznykh-sferakh) / MODERN ✓ |  |
 
 ---
 
@@ -393,18 +408,18 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **Глава 16: КАР'ЄРА ТА СЕРТИФІКАЦІЯ**
+#### **Глава 17: КАР'ЄРА ТА СЕРТИФІКАЦІЯ**
 
 **Мета:** Розуміння кар'єрного шляху у тестуванні та професійного розвитку
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 16.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Нові сертифікації: CT-AI, CT-GenAI | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |  |
-| 16.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director<br>- Спеціалізація (Security QA, Performance, AI QA) | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
-| 16.3 Професійні навички | - Technical skills (Automation, API, DB, Linux)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
-| 16.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Спільнота та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
-| 16.5 Технологічні тренди та майбутнє | - AI-augmented testing<br>- DevOps та автоматизація<br>- Embedded та IoT тестування<br>- Вибір спеціалізації | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |  |
-| 16.6 Спільнота та відкриті ресурси | - Професійні спільноти<br>- Open-source проекти для практики<br>- Конференції та зустрічі<br>- Online платформи навчання | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |  |
+| 17.1 ISTQB сертифікація | - ISTQB Foundation Level<br>- ISTQB Advanced (Test Analyst, Test Manager)<br>- ISTQB Specialist (Security, Performance, AI)<br>- Нові сертифікації: CT-AI, CT-GenAI | RWP ✓ / DATASET(QALight: osnovi/shcho-novogo-v-istqb-foundation-level-syllabus-v-4-0) / MODERN(ISTQB 4.0) |  |
+| 17.2 Кар'єрні шляхи в QA | - Junior QA Engineer<br>- QA Engineer (Manual & Automation)<br>- Senior QA / Lead QA<br>- QA Manager / QA Director<br>- Спеціалізація (Security QA, Performance, AI QA) | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 17.3 Професійні навички | - Technical skills (Automation, API, DB, Linux)<br>- Soft skills (Communication, Problem-solving)<br>- Domain knowledge<br>- Continuous learning | RWP ✓ / DATASET(QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 17.4 Практичні поради для новачків | - Як почати у QA<br>- Перші проекти та помилки<br>- Побудова портфоліо<br>- Спільнота та ресурси | RWP ✓ / DATASET(QALight: osnovi, QA_Bible: faq-dlya-novichkov) / MODERN ✓ |  |
+| 17.5 Технологічні тренди та майбутнє | - AI-augmented testing<br>- DevOps та автоматизація<br>- Embedded та IoT тестування<br>- Вибір спеціалізації | RWP ✓ / DATASET(QA_Bible: ai-v-testirovanii) / MODERN ✓ |  |
+| 17.6 Спільнота та відкриті ресурси | - Професійні спільноти<br>- Open-source проекти для практики<br>- Конференції та зустрічі<br>- Online платформи навчання | RWP ✓ / DATASET(QALight: osnovi) / MODERN ✓ |  |
 
 ---
 
@@ -414,19 +429,19 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **Глава 17: ОСНОВИ СХЕМОТЕХНІКИ ТА МІКРОКОНТРОЛЕРІВ ДЛЯ QA** 🆕
+#### **Глава 18: ОСНОВИ СХЕМОТЕХНІКИ ТА МІКРОКОНТРОЛЕРІВ ДЛЯ QA** 🆕
 
 **Мета:** Розуміння базових концепцій апаратури для тестування вбудованих систем
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 17.1 Читання архітектурних схем | - Компоненти та їх символи<br>- Технічні специфікації (Datasheet)<br>- Взаємозв'язки сигналів<br>- Робота з документацією виробника | DATASET(QA_Bible: телекомунікаційний домен) / MODERN ✓ |  |
-| 17.2 GPIO та цифрові входи/виходи | - General Purpose I/O порти<br>- Рівні сигналу (HIGH/LOW)<br>- Pull-up та pull-down резистори<br>- Режими I/O (input, output, PWM) | DATASET(LIMITED) / MODERN ✓ |  |
-| 17.3 Апаратні переривання (ISR) | - Interrupt Service Routine принципи<br>- Приорітизація переривань<br>- Дебаунсинг та фільтрація сигналів<br>- Синхронізація та Race Conditions | DATASET(LIMITED) / MODERN ✓ |  |
-| 17.4 Button Bouncing та Debounce | - Фізичне явище контакту<br>- Hardware debounce-фільтри<br>- Software debounce-алгоритми<br>- Тестування у системах miltech | DATASET(LIMITED) / MODERN ✓ |  |
-| 17.5 Аналогові входи та ADC | - Analog-to-Digital Converter (ADC)<br>- Роздільна здатність та точність<br>- Voltage reference та калібрування<br>- Читання сенсорів | DATASET(LIMITED) / MODERN ✓ |  |
-| 17.6 Тактова частота та таймери | - Clock speed та періоди виконання<br>- Hardware timers<br>- Watchdog timer basics<br>- Timing constraints | DATASET(LIMITED) / MODERN ✓ |  |
-| 17.7 Живлення та споживання | - Voltage levels (3.3V, 5V)<br>- Current draw та energy budgets<br>- Power modes (active, sleep)<br>- Battery-powered considerations | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.1 Читання архітектурних схем | - Компоненти та їх символи<br>- Технічні специфікації (Datasheet)<br>- Взаємозв'язки сигналів<br>- Робота з документацією виробника | DATASET(QA_Bible: телекомунікаційний домен) / MODERN ✓ |  |
+| 18.2 GPIO та цифрові входи/виходи | - General Purpose I/O порти<br>- Рівні сигналу (HIGH/LOW)<br>- Pull-up та pull-down резистори<br>- Режими I/O (input, output, PWM) | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.3 Апаратні переривання (ISR) | - Interrupt Service Routine принципи<br>- Приорітизація переривань<br>- Дебаунсинг та фільтрація сигналів<br>- Синхронізація та Race Conditions | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.4 Button Bouncing та Debounce | - Фізичне явище контакту<br>- Hardware debounce-фільтри<br>- Software debounce-алгоритми<br>- Тестування у системах miltech | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.5 Аналогові входи та ADC | - Analog-to-Digital Converter (ADC)<br>- Роздільна здатність та точність<br>- Voltage reference та калібрування<br>- Читання сенсорів | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.6 Тактова частота та таймери | - Clock speed та періоди виконання<br>- Hardware timers<br>- Watchdog timer basics<br>- Timing constraints | DATASET(LIMITED) / MODERN ✓ |  |
+| 18.7 Живлення та споживання | - Voltage levels (3.3V, 5V)<br>- Current draw та energy budgets<br>- Power modes (active, sleep)<br>- Battery-powered considerations | DATASET(LIMITED) / MODERN ✓ |  |
 
 **Статус джерел:** ⚠️ 30% покрито
 
@@ -450,81 +465,81 @@ HANDBOOK (Посібник)
 
 ---
 
-#### **Глава 19: НЕФУНКЦІОНАЛЬНІ СЦЕНАРІЇ «ЗАЛІЗА» ТА НАДІЙНІСТЬ** 🆕
+#### **Глава 20: НЕФУНКЦІОНАЛЬНІ СЦЕНАРІЇ «ЗАЛІЗА» ТА НАДІЙНІСТЬ** 🆕
 
 **Мета:** Розуміння нефункціональних вимог у вбудованих системах
 
 | Підрозділ | Зміст | Джерела | Ресурси |
 |-----------|-------|---------|----------|
-| 19.1 Watchdog Timer та захист від зависань | - Концепція WDT та переповнення<br>- Резет-механізми<br>- Тестування захисту від нескінченних циклів<br>- Таймаути і затримки | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.2 Енергозбереження та режими сну | - Normal Mode vs Deep Sleep<br>- Wake-up механізми<br>- Споживання електроенергії при тестуванні<br>- Батарейні системи | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.3 Аварійні умови та надійність | - Brown-out (падіння напруги)<br>- Міттєве знеструмлення та відновлення<br>- Дані в EEPROM/RTC при крахі<br>- Fault injection тестування | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.4 ESD та EMI стійкість | - Електростатичний розряд<br>- Електромагнітні завади<br>- Тестування у стресових умовах<br>- Стандарти та сертифікація (IEC, FCC) | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.5 Температурні випробування | - Extended temperature ranges<br>- Thermal stress testing<br>- Heat dissipation analysis<br>- Cold start scenarios | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.6 Механічні впливи | - Vibration testing<br>- Shock resistance<br>- Mounting and enclosure<br>- Military standards (MIL-STD) | DATASET(LIMITED) / MODERN ✓ |  |
-| 19.7 Довговічність та деградація | - Component aging effects<br>- MTBF calculations<br>- Wear-out mechanisms<br>- Long-term reliability testing | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.1 Watchdog Timer та захист від зависань | - Концепція WDT та переповнення<br>- Резет-механізми<br>- Тестування захисту від нескінченних циклів<br>- Таймаути і затримки | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.2 Енергозбереження та режими сну | - Normal Mode vs Deep Sleep<br>- Wake-up механізми<br>- Споживання електроенергії при тестуванні<br>- Батарейні системи | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.3 Аварійні умови та надійність | - Brown-out (падіння напруги)<br>- Міттєве знеструмлення та відновлення<br>- Дані в EEPROM/RTC при крахі<br>- Fault injection тестування | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.4 ESD та EMI стійкість | - Електростатичний розряд<br>- Електромагнітні завади<br>- Тестування у стресових умовах<br>- Стандарти та сертифікація (IEC, FCC) | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.5 Температурні випробування | - Extended temperature ranges<br>- Thermal stress testing<br>- Heat dissipation analysis<br>- Cold start scenarios | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.6 Механічні впливи | - Vibration testing<br>- Shock resistance<br>- Mounting and enclosure<br>- Military standards (MIL-STD) | DATASET(LIMITED) / MODERN ✓ |  |
+| 20.7 Довговічність та деградація | - Component aging effects<br>- MTBF calculations<br>- Wear-out mechanisms<br>- Long-term reliability testing | DATASET(LIMITED) / MODERN ✓ |  |
 
 **Статус джерел:** ⚠️ 25% покрито
 
 ---
 
-#### **Глава 20: АВТОМАТИЗАЦІЯ ТЕСТУВАННЯ ПРОШИВОК (FIRMWARE AUTOMATION)** 🆕
+#### **Глава 21: АВТОМАТИЗАЦІЯ ТЕСТУВАННЯ ПРОШИВОК (FIRMWARE AUTOMATION)** 🆕
 
 **Мета:** Розуміння побудови фреймворків для тестування вбудованого ПО
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 20.1 Специфіка Firmware Automation | - На базі Python та Pytest<br>- Відмінності від web automation<br>- Hardware integration challenges<br>- CI/CD для embedded систем | DATASET(LIMITED) / MODERN ✓ |
-| 20.2 Робота з послідовним портом | - Бібліотека pyserial<br>- UART комунікація та CLI пристрою<br>- Парсинг відповідей мікроконтролера<br>- Асинхронна обробка даних | DATASET(LIMITED) / MODERN ✓ |
-| 20.3 Граничне тестування CLI-команд | - Boundary Value Testing для вводу<br>- Переповнення буфера мікроконтролера<br>- Обробка помилок та исключень<br>- Fuzzing та поломані команди | DATASET(LIMITED) / MODERN ✓ |
-| 20.4 Mock та емуляція обладнання | - Hardware mocking у тестах<br>- Віртуальний COM port<br>- Симуляція сенсорів та датчиків<br>- In-the-loop тестування (SIL, HIL) | DATASET(LIMITED) / MODERN ✓ |
+| 21.1 Специфіка Firmware Automation | - На базі Python та Pytest<br>- Відмінності від web automation<br>- Hardware integration challenges<br>- CI/CD для embedded систем | DATASET(LIMITED) / MODERN ✓ |
+| 21.2 Робота з послідовним портом | - Бібліотека pyserial<br>- UART комунікація та CLI пристрою<br>- Парсинг відповідей мікроконтролера<br>- Асинхронна обробка даних | DATASET(LIMITED) / MODERN ✓ |
+| 21.3 Граничне тестування CLI-команд | - Boundary Value Testing для вводу<br>- Переповнення буфера мікроконтролера<br>- Обробка помилок та исключень<br>- Fuzzing та поломані команди | DATASET(LIMITED) / MODERN ✓ |
+| 21.4 Mock та емуляція обладнання | - Hardware mocking у тестах<br>- Віртуальний COM port<br>- Симуляція сенсорів та датчиків<br>- In-the-loop тестування (SIL, HIL) | DATASET(LIMITED) / MODERN ✓ |
 
 **Статус джерел:** ⚠️ 35% покрито
 
 ---
 
-#### **Глава 21: МЕРЕЖЕВИЙ IoT-РІВЕНЬ, CONNECTIVITY ТА ПОЛЬОВІ УМОВИ** 🆕
+#### **Глава 22: МЕРЕЖЕВИЙ IoT-РІВЕНЬ, CONNECTIVITY ТА ПОЛЬОВІ УМОВИ** 🆕
 
 **Мета:** Розуміння мережевого рівня та комунікації IoT пристроїв
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 21.1 RTOS та Embedded Linux | - Real-Time Operating Systems (FreeRTOS, RTOS)<br>- Embedded Linux (Yocto, Buildroot)<br>- Linux kernel за ШІ для embedded<br>- Процесні моделі та scheduling | DATASET(LIMITED) / MODERN ✓ |
-| 21.2 Wi-Fi/MQTT та комунікація | - MQTT протокол та publish-subscribe<br>- Wi-Fi підключення та дисконекти<br>- Автоматичне переконнектування<br>- Кешування даних на пристрої | DATASET(LIMITED) / MODERN ✓ |
-| 21.3 Тестування сумісності та взаємодії | - Interoperability з різними маршрутизаторами<br>- Мережевий обладнання (коммутатори, точки доступу)<br>- Версійна сумісність протоколів<br>- Cross-platform тестування | DATASET(LIMITED) / MODERN ✓ |
-| 21.4 DefTech та польові умови | - Базові навички паяння та ремонту<br>- Експлуатація у складних умовах<br>- Вологість, температура, вібрація<br>- Військові та критичні системи | DATASET(LIMITED) / MODERN ✓ |
+| 22.1 RTOS та Embedded Linux | - Real-Time Operating Systems (FreeRTOS, RTOS)<br>- Embedded Linux (Yocto, Buildroot)<br>- Linux kernel за ШІ для embedded<br>- Процесні моделі та scheduling | DATASET(LIMITED) / MODERN ✓ |
+| 22.2 Wi-Fi/MQTT та комунікація | - MQTT протокол та publish-subscribe<br>- Wi-Fi підключення та дисконекти<br>- Автоматичне переконнектування<br>- Кешування даних на пристрої | DATASET(LIMITED) / MODERN ✓ |
+| 22.3 Тестування сумісності та взаємодії | - Interoperability з різними маршрутизаторами<br>- Мережевий обладнання (коммутатори, точки доступу)<br>- Версійна сумісність протоколів<br>- Cross-platform тестування | DATASET(LIMITED) / MODERN ✓ |
+| 22.4 DefTech та польові умови | - Базові навички паяння та ремонту<br>- Експлуатація у складних умовах<br>- Вологість, температура, вібрація<br>- Військові та критичні системи | DATASET(LIMITED) / MODERN ✓ |
 
 **Статус джерел:** ⚠️ 30% покрито
 
 ---
 
-#### **Глава 22: МЕТОДОЛОГІЯ ROOT CAUSE ANALYSIS (RCA) ТА ЗВІТИ ДЛЯ ЗАЛІЗА** 🆕
+#### **Глава 23: МЕТОДОЛОГІЯ ROOT CAUSE ANALYSIS (RCA) ТА ЗВІТИ ДЛЯ ЗАЛІЗА** 🆕
 
 **Мета:** Розуміння аналізу першопричин та документування у Embedded QA
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 22.1 Root Cause Analysis (RCA) | - Поняття та застосування RCA<br>- Локалізація багів: «код чи залізо»<br>- 5 Why техніка<br>- Fishbone (Ishikawa) діаграми | DATASET(LIMITED) / MODERN ✓ |
-| 22.2 Hardware Validation Report | - Шаблон звіту для апаратури<br>- Умови тестування та конфігурація<br>- Результати та висновки<br>- Рекомендації та follow-up | DATASET(LIMITED) / MODERN ✓ |
-| 22.3 Master Test Plan для Embedded | - Структура плану для заліза<br>- Risk Matrix та пріоритизація<br>- Ресурси та часовий графік<br>- Exit Criteria для embedded | DATASET(LIMITED) / MODERN ✓ |
-| 22.4 Документація та трейсбілити | - Requirements Traceability для hardware<br>- Test Case стандартизація<br>- Revision control для документації<br>- Архівування та історія версій | DATASET(LIMITED) / MODERN ✓ |
+| 23.1 Root Cause Analysis (RCA) | - Поняття та застосування RCA<br>- Локалізація багів: «код чи залізо»<br>- 5 Why техніка<br>- Fishbone (Ishikawa) діаграми | DATASET(LIMITED) / MODERN ✓ |
+| 23.2 Hardware Validation Report | - Шаблон звіту для апаратури<br>- Умови тестування та конфігурація<br>- Результати та висновки<br>- Рекомендації та follow-up | DATASET(LIMITED) / MODERN ✓ |
+| 23.3 Master Test Plan для Embedded | - Структура плану для заліза<br>- Risk Matrix та пріоритизація<br>- Ресурси та часовий графік<br>- Exit Criteria для embedded | DATASET(LIMITED) / MODERN ✓ |
+| 23.4 Документація та трейсбілити | - Requirements Traceability для hardware<br>- Test Case стандартизація<br>- Revision control для документації<br>- Архівування та історія версій | DATASET(LIMITED) / MODERN ✓ |
 
 **Статус джерел:** ⚠️ 25% покрито
 
 ---
 
-#### **Глава 23: CHAOS ENGINEERING & RESILIENCE TESTING** 🆕
+#### **Глава 24: CHAOS ENGINEERING & RESILIENCE TESTING** 🆕
 
 **Мета:** Розуміння тестування стійкості системи через контрольоване впровадження відмов
 
 | Підрозділ | Зміст | Джерела |
 |-----------|-------|---------|
-| 23.1 Основи Chaos Engineering | - Поняття та філософія Chaos Engineering<br>- Steady-state hypothesis<br>- Fault injection testing (FIT)<br>- Controlled chaos vs catastrophic failures<br>- **Adoption growth:** 15% (2024) → 40% (2025) → 65% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
-| 23.2 Chaos Engineering Tools & Platforms | - **Harness** — chaos-as-a-service platform<br>- **Gremlin** — production chaos engineering<br>- **LitmusChaos** — Kubernetes-native chaos<br>- **Chaos Toolkit** — opensource framework<br>- Resilience testing у K8s середовищах | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
-| 23.3 Сценарії та типи збоїв | - Infrastructure failures (network, storage, compute)<br>- Application failures (memory leaks, timeouts)<br>- Dependency failures (third-party services)<br>- Cascading failures та circuit breakers<br>- Graceful degradation testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
-| 23.4 Fault Injection Testing (FIT) | - Впровадження помилок у controlled environment<br>- FIT як regression test у CI/CD<br>- Measuring system resilience<br>- Observability та monitoring під час chaos<br>- Maturity levels та governance | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
-| 23.5 Production Chaos та Observability | - Безпечне тестування у production<br>- Feature flags та canary deployments<br>- Real-time monitoring та alerting<br>- Blast radius control<br>- Learning та continuous improvement | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
-| **23.6 Практичне завдання: Chaos Engineering з LitmusChaos** 🆕 | - **Проект stt-chaos-engineering**<br>- Kubernetes cluster setup з chaos<br>- LitmusChaos workflows та experiments<br>- Network chaos (latency, packet loss)<br>- Pod chaos (termination, resource exhaustion)<br>- Observability з Prometheus + Grafana<br>- Incident response scenarios<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-chaos-engineering | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 24.1 Основи Chaos Engineering | - Поняття та філософія Chaos Engineering<br>- Steady-state hypothesis<br>- Fault injection testing (FIT)<br>- Controlled chaos vs catastrophic failures<br>- **Adoption growth:** 15% (2024) → 40% (2025) → 65% (2026) | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN (2024-2026) ✓ |
+| 24.2 Chaos Engineering Tools & Platforms | - **Harness** — chaos-as-a-service platform<br>- **Gremlin** — production chaos engineering<br>- **LitmusChaos** — Kubernetes-native chaos<br>- **Chaos Toolkit** — opensource framework<br>- Resilience testing у K8s середовищах | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 24.3 Сценарії та типи збоїв | - Infrastructure failures (network, storage, compute)<br>- Application failures (memory leaks, timeouts)<br>- Dependency failures (third-party services)<br>- Cascading failures та circuit breakers<br>- Graceful degradation testing | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 24.4 Fault Injection Testing (FIT) | - Впровадження помилок у controlled environment<br>- FIT як regression test у CI/CD<br>- Measuring system resilience<br>- Observability та monitoring під час chaos<br>- Maturity levels та governance | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| 24.5 Production Chaos та Observability | - Безпечне тестування у production<br>- Feature flags та canary deployments<br>- Real-time monitoring та alerting<br>- Blast radius control<br>- Learning та continuous improvement | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
+| **24.6 Практичне завдання: Chaos Engineering з LitmusChaos** 🆕 | - **Проект stt-chaos-engineering**<br>- Kubernetes cluster setup з chaos<br>- LitmusChaos workflows та experiments<br>- Network chaos (latency, packet loss)<br>- Pod chaos (termination, resource exhaustion)<br>- Observability з Prometheus + Grafana<br>- Incident response scenarios<br>- **Ресурс:** https://github.com/STT-VITI-22/stt-chaos-engineering | DATASET(TRENDS_2024_2026_RESEARCH.md) / MODERN ✓ |
 
 **Статус:** 🆕 НОВИЙ РОЗДІЛ для modern cloud-native testing
 
